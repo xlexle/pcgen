@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>PCgen</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel='stylesheet' href='//fonts.googleapis.com/css?family=Noto Sans'>
+    <link rel="icon" href="{{rootURL}}favicon.ico">
+
+    {{content-for "head"}}
+
+    <link rel="stylesheet" href="{{rootURL}}css/bootstrap.min.css" >
+    <link rel="stylesheet" href="{{rootURL}}assets/vendor.css">
+    <link rel="stylesheet" href="{{rootURL}}assets/pcgen-front.css">
+
+    {{content-for "head-footer"}}
+
+  </head>
+  <body>
+
+    {{content-for "body"}}
+
+    <script src="{{rootURL}}assets/vendor.js"></script>
+    <script src="{{rootURL}}assets/pcgen-front.js"></script>
+
+    {{content-for "body-footer"}}
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="{{rootURL}}js/jquery.min.js"><\/script>')</script> -->
+    <script src="{{rootURL}}js/jquery.min.js"></script>
+    <script src="{{rootURL}}js/bootstrap.min.js"></script>
+  </body>
+</html>
