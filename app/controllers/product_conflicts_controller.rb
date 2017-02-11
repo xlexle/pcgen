@@ -3,12 +3,12 @@ class ProductConflictsController < ApplicationController
 
   # GET /product_conflicts
   def index
-    render json: ProductConflict.all
+    render json: ProductConflict.all, include: ['product', 'conflict']
   end
 
   # GET /product_conflicts/1
   def show
-    render json: @product_conflict
+    render json: @product_conflict, include: ['product', 'conflict']
   end
 
   # POST /product_conflicts

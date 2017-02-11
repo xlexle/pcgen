@@ -55,7 +55,7 @@ fan3 = Fan.create(
 # has many sources
 psu1 = PowerSupply.create(
   form_factor: "ATX",
-  amps_12v: 40.0,
+  amps12v: "40.0",
   semi_modular: true,
   efficiency: "80+ Bronze",
   oem: "Channel Well Tech",
@@ -63,15 +63,15 @@ psu1 = PowerSupply.create(
   has_fan_switch: false,
   quiet: false,
   eps_length_cm: 60,
-  pcie_8pin_qty: 4,
-  pcie_6pin_qty: 0,
+  pcie8pin_qty: 4,
+  pcie6pin_qty: 0,
   sata_qty: 6,
   has_pretty_cables: false,
   fan: fan1
 )
 psu2 = PowerSupply.create(
   form_factor: "ATX",
-  amps_12v: 40.0,
+  amps12v: "40.0",
   full_modular: true,
   efficiency: "80+ Gold",
   oem: "Channel Well Tech",
@@ -79,15 +79,15 @@ psu2 = PowerSupply.create(
   has_fan_switch: false,
   quiet: false,
   eps_length_cm: 60,
-  pcie_8pin_qty: 4,
-  pcie_6pin_qty: 0,
+  pcie8pin_qty: 4,
+  pcie6pin_qty: 0,
   sata_qty: 6,
   has_pretty_cables: false,
   fan: fan1
 )
 psu3 = PowerSupply.create(
   form_factor: "ATX",
-  amps_12v: 60.0,
+  amps12v: "60.0",
   semi_modular: true,
   efficiency: "80+ Bronze",
   oem: "Channel Well Tech",
@@ -95,8 +95,8 @@ psu3 = PowerSupply.create(
   has_fan_switch: true,
   quiet: true,
   eps_length_cm: 80,
-  pcie_8pin_qty: 6,
-  pcie_6pin_qty: 0,
+  pcie8pin_qty: 6,
+  pcie6pin_qty: 0,
   sata_qty: 8,
   has_pretty_cables: true,
   fan: fan1

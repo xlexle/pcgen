@@ -3,12 +3,12 @@ class PowerSuppliesController < ApplicationController
 
   # GET /power_supplies
   def index
-    render json: PowerSupply.all
+    render json: PowerSupply.all, include: ['property_list', 'fan']
   end
 
   # GET /power_supplies/1
   def show
-    render json: @power_supply
+    render json: @power_supply, include: ['property_list', 'fan']
   end
 
   # POST /power_supplies
@@ -44,7 +44,7 @@ class PowerSuppliesController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def power_supply_params
-      # params.require(:power_supply).permit(:form_factor, :amps_12v, :full_modular, :semi_modular, :efficiency, :oem, :semipassive, :has_fan_switch, :quiet, :eps_length_cm, :pcie_8pin_qty, :pcie_6pin_qty, :sata_qty, :has_pretty_cables)
+      # params.require(:power_supply).permit(:form_factor, :amps12v, :full_modular, :semi_modular, :efficiency, :oem, :semipassive, :has_fan_switch, :quiet, :eps_length_cm, :pcie8pin_qty, :pcie6pin_qty, :sata_qty, :has_pretty_cables)
       ActiveModelSerializers::Deserialization.jsonapi_parse(params)
     end
 end

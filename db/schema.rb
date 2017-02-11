@@ -39,7 +39,7 @@ ActiveRecord::Schema.define(version: 20170211133701) do
 
   create_table "power_supplies", force: :cascade do |t|
     t.string   "form_factor"
-    t.decimal  "amps_12v",          precision: 4, scale: 1
+    t.decimal  "amps12v",           precision: 4, scale: 1
     t.boolean  "full_modular"
     t.boolean  "semi_modular"
     t.string   "efficiency"
@@ -48,8 +48,8 @@ ActiveRecord::Schema.define(version: 20170211133701) do
     t.boolean  "has_fan_switch"
     t.boolean  "quiet"
     t.integer  "eps_length_cm"
-    t.integer  "pcie_8pin_qty"
-    t.integer  "pcie_6pin_qty"
+    t.integer  "pcie8pin_qty"
+    t.integer  "pcie6pin_qty"
     t.integer  "sata_qty"
     t.boolean  "has_pretty_cables"
     t.integer  "fan_id"

@@ -16,5 +16,25 @@ export default Product.extend({
   pcie6pinQty: DS.attr('number'),
   sataQty: DS.attr('number'),
   hasPrettyCables: DS.attr('boolean'),
-  powerSupplyFanSlot: DS.belongsTo('power-supply-fan-slot')
+  fan: DS.belongsTo('fan'),
+
+  // quantity of PCIe of connectors as a string for displaying
+  pcieConnectors: Ember.computed('pcie8pinQty', 'pcie6pinQty', function() {
+    let eights = this.get('pcie8pinQty');
+    let sixes = this.get('pcie6pinQty');
+    let connectors = "";
+
+    if (eights != 0) {
+      connectors += eights + "x 8-pin";
+      if (sixes != 0) {
+        connectors += ", ";
+      }
+    }
+
+    if (sixes != 0) {
+      connectors += sixes + "x 6-pin";
+    }
+
+    return connectors;
+  })
 });

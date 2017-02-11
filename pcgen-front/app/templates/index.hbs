@@ -24,301 +24,71 @@
 
 <div class="container-fluid">
   <div class="row">
-    <div class="col-sm-3 col-md-2 sidebar">
+    <div class="col-sm-3 col-md-2 col-lg-1 sidebar">
       <ul class="nav nav-sidebar">
-        <li class="active"><a href="#">Prosessorit<span class="sr-only">(current)</span></a></li>
+        <li><a href="#">Prosessorit</a></li>
         <li><a href="#">Jäähdyttimet</a></li>
         <li><a href="#">Emolevyt</a></li>
         <li><a href="#">Muistit</a></li>
         <li><a href="#">Näytönohjaimet</a></li>
         <li><a href="#">SSD-levyt</a></li>
         <li><a href="#">Kiintolevyt</a></li>
-        <li><a href="#">Virtalähteet</a></li>
+        <li class="active"><a href="#">Virtalähteet<span class="sr-only">(current)</span></a></li>
         <li><a href="#">Kotelot</a></li>
         <li><a href="#">Tuulettimet</a></li>
         <li><a href="#">Lisätarvikkeet</a></li>
       </ul>
       <ul class="nav nav-sidebar">
-        <li><a href="">Näytöt</a></li>
-        <li><a href="">Näppäimistöt</a></li>
-        <li><a href="">Hiiret</a></li>
-        <li><a href="">Hiirimatot</a></li>
-        <li><a href="">Kuulokkeet</a></li>
-        <li><a href="">Kaiuttimet</a></li>
+        <li><a href="#">Näytöt</a></li>
+        <li><a href="#">Näppäimistöt</a></li>
+        <li><a href="#">Hiiret</a></li>
+        <li><a href="#">Hiirimatot</a></li>
+        <li><a href="#">Kuulokkeet</a></li>
+        <li><a href="#">Kaiuttimet</a></li>
       </ul>
     </div>
-    <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+    <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 col-lg-11 col-lg-offset-1 main">
       <div class="table-responsive text-nowrap">
         <table class="table table-striped">
           <thead>
             <tr>
-              <th>First Column</th>
-              <th>Header Bigger than Content</th>
-              <th>Third</th>
-              <th>Third</th>
-              <th>Third</th>
-              <th>Third</th>
-              <th>Third</th>
-              <th>Third</th>
-              <th>Third</th>
-              <th>Third</th>
-              <th>Third</th>
-              <th>Third</th>
+              <th>Merkki</th>
+              <th>Tuote</th>
+              <th>Tuotenumero</th>
+              <th>+12V watit</th>
+              <th>Semipassiivinen</th>
+              <th>Kaapelit</th>
+              <th>PCIe-liittimet</th>
+              <th>SATA-liittimet</th>
+              <th>Takuu</th>
+              <th>Pituus</th>
+              <th>OEM</th>
+              <th>Tuuletin</th>
   					</tr>
   				</thead>
           <tbody>
+            {{#each model as |psu|}}
             <tr>
-              <td>First</td>
-              <td>First</td>
-              <td>First</td>
-              <td>First</td>
-              <td>First</td>
-              <td>First</td>
-              <td>First</td>
-              <td>First</td>
-              <td>First</td>
-              <td>First</td>
-              <td>First</td>
-              <td>First</td>
+              <td>{{psu.propertyList.brand}}</td>
+              <td>{{psu.propertyList.productName}}</td>
+              <td>{{psu.propertyList.sku}}</td>
+              <td>{{psu.amps12v}}</td>
+              <td>{{if psu.semipassive "kyllä" "ei"}}</td>
+              {{#if psu.fullModular}}
+                <td>Täysmodulaariset</td>
+              {{else if psu.semiModular}}
+                <td>Semimodulaariset</td>
+              {{else}}
+                <td>Kiinteät</td>
+              {{/if}}
+              <td>{{psu.pcieConnectors}}</td>
+              <td>{{psu.sataQty}}x</td>
+              <td>{{psu.propertyList.warranty}} vuotta</td>
+              <td>{{psu.propertyList.lengthMm}} mm</td>
+              <td>{{psu.oem}}</td>
+              <td>{{psu.fan.propertyList.sku}}</td>
             </tr>
-            <tr>
-              <td>First</td>
-              <td>Second</td>
-              <td>Third</td>
-              <td>Third</td>
-              <td>Third</td>
-              <td>Third</td>
-              <td>Third</td>
-              <td>Third</td>
-              <td>Third</td>
-              <td>Third</td>
-              <td>Third</td>
-              <td>Third</td>
-            </tr>
-            <tr>
-              <td>First</td>
-              <td>Second</td>
-              <td>Third</td>
-              <td>Third</td>
-              <td>Third</td>
-              <td>Third</td>
-              <td>Third</td>
-              <td>Third</td>
-              <td>Third</td>
-              <td>Third</td>
-              <td>Third</td>
-              <td>Third</td>
-            </tr>
-            <tr>
-              <td>First</td>
-              <td>Second</td>
-              <td>Content Bigger than Header</td>
-              <td>Third</td>
-              <td>Third</td>
-              <td>Third</td>
-              <td>Third</td>
-              <td>Third</td>
-              <td>Third</td>
-              <td>Third</td>
-              <td>Third</td>
-              <td>Third</td>
-            </tr>
-  					<tr>
-              <td>First</td>
-              <td>Second</td>
-              <td>Third</td>
-              <td>Third</td>
-              <td>Third</td>
-              <td>Third</td>
-              <td>Third</td>
-              <td>Third</td>
-              <td>Third</td>
-              <td>Third</td>
-              <td>Third</td>
-              <td>Third</td>
-            </tr>
-            <tr>
-              <td>First</td>
-              <td>Second</td>
-              <td>Third</td>
-              <td>Third</td>
-              <td>Third</td>
-              <td>Third</td>
-              <td>Third</td>
-              <td>Third</td>
-              <td>Third</td>
-              <td>Third</td>
-              <td>Third</td>
-              <td>Third</td>
-            </tr>
-            <tr>
-              <td>First</td>
-              <td>Second</td>
-              <td>Third</td>
-              <td>Third</td>
-              <td>Third</td>
-              <td>Third</td>
-              <td>Third</td>
-              <td>Third</td>
-              <td>Third</td>
-              <td>Third</td>
-              <td>Third</td>
-              <td>Third</td>
-            </tr>
-            <tr>
-              <td>First</td>
-              <td>Second</td>
-              <td>Third</td>
-              <td>Third</td>
-              <td>Third</td>
-              <td>Third</td>
-              <td>Third</td>
-              <td>Third</td>
-              <td>Third</td>
-              <td>Third</td>
-              <td>Third</td>
-              <td>Third</td>
-            </tr>
-            <tr>
-              <td>First</td>
-              <td>Second</td>
-              <td>Third</td>
-              <td>Third</td>
-              <td>Third</td>
-              <td>Third</td>
-              <td>Third</td>
-              <td>Third</td>
-              <td>Third</td>
-              <td>Third</td>
-              <td>Third</td>
-              <td>Third</td>
-            </tr>
-            <tr>
-              <td>First</td>
-              <td>Second</td>
-              <td>Third</td>
-              <td>Third</td>
-              <td>Third</td>
-              <td>Third</td>
-              <td>Third</td>
-              <td>Third</td>
-              <td>Third</td>
-              <td>Third</td>
-              <td>Third</td>
-              <td>Third</td>
-            </tr>
-            <tr>
-              <td>First</td>
-              <td>Second</td>
-              <td>Third</td>
-              <td>Third</td>
-              <td>Third</td>
-              <td>Third</td>
-              <td>Third</td>
-              <td>Third</td>
-              <td>Third</td>
-              <td>Third</td>
-              <td>Third</td>
-              <td>Third</td>
-            </tr>
-            <tr>
-              <td>First</td>
-              <td>Second</td>
-              <td>Third</td>
-              <td>Third</td>
-              <td>Third</td>
-              <td>Third</td>
-              <td>Third</td>
-              <td>Third</td>
-              <td>Third</td>
-              <td>Third</td>
-              <td>Third</td>
-              <td>Third</td>
-            </tr>
-            <tr>
-              <td>First</td>
-              <td>Second</td>
-              <td>Third</td>
-              <td>Third</td>
-              <td>Third</td>
-              <td>Third</td>
-              <td>Third</td>
-              <td>Third</td>
-              <td>Third</td>
-              <td>Third</td>
-              <td>Third</td>
-              <td>Third</td>
-            </tr>
-            <tr>
-              <td>First</td>
-              <td>Second</td>
-              <td>Third</td>
-              <td>Third</td>
-              <td>Third</td>
-              <td>Third</td>
-              <td>Third</td>
-              <td>Third</td>
-              <td>Third</td>
-              <td>Third</td>
-              <td>Third</td>
-              <td>Third</td>
-            </tr>
-            <tr>
-              <td>First</td>
-              <td>Second</td>
-              <td>Third</td>
-              <td>Third</td>
-              <td>Third</td>
-              <td>Third</td>
-              <td>Third</td>
-              <td>Third</td>
-              <td>Third</td>
-              <td>Third</td>
-              <td>Third</td>
-              <td>Third</td>
-            </tr>
-            <tr>
-              <td>First</td>
-              <td>Second</td>
-              <td>Third</td>
-              <td>Third</td>
-              <td>Third</td>
-              <td>Third</td>
-              <td>Third</td>
-              <td>Third</td>
-              <td>Third</td>
-              <td>Third</td>
-              <td>Third</td>
-              <td>Third</td>
-            </tr>
-            <tr>
-              <td>First</td>
-              <td>Second</td>
-              <td>Third</td>
-              <td>Third</td>
-              <td>Third</td>
-              <td>Third</td>
-              <td>Third</td>
-              <td>Third</td>
-              <td>Third</td>
-              <td>Third</td>
-              <td>Third</td>
-              <td>Third</td>
-            </tr>
-            <tr>
-              <td>First</td>
-              <td>Second</td>
-              <td>Third</td>
-              <td>Third</td>
-              <td>Third</td>
-              <td>Third</td>
-              <td>Third</td>
-              <td>Third</td>
-              <td>Third</td>
-              <td>Third</td>
-              <td>Third</td>
-              <td>Third</td>
-            </tr>
+            {{/each}}
           </tbody>
         </table>
       </div>

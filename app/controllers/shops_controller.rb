@@ -3,12 +3,12 @@ class ShopsController < ApplicationController
 
   # GET /shops
   def index
-    render json: Shop.all
+    render json: Shop.all, include: ['service']
   end
 
   # GET /shops/1
   def show
-    render json: @shop
+    render json: @shop, include: ['service']
   end
 
   # POST /shops
