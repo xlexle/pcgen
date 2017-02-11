@@ -14,5 +14,6 @@ FactoryGirl.define do
     pcie_6pin_qty 0
     sata_qty 6
     has_pretty_cables false
+    fan nil
   end
 end

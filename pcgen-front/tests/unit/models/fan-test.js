@@ -1,8 +1,15 @@
 import { moduleForModel, test } from 'ember-qunit';
 
-moduleForModel('product', 'Unit | Model | product', {
+moduleForModel('fan', 'Unit | Model | fan', {
   // Specify the other units that are required for this test.
-  needs: ['model:property-list', 'model:product-conflict', 'model:source']
+  needs: [
+    'model:property-list',
+    'model:power-supply',
+    // 'model:cooler-fan-slot',
+    // 'model:case-fan-slot',
+    'model:product-conflict',
+    'model:source'
+  ]
 });
 
 test('it exists', function(assert) {
