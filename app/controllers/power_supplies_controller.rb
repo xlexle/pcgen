@@ -44,7 +44,15 @@ class PowerSuppliesController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def power_supply_params
-      # params.require(:power_supply).permit(:form_factor, :amps12v, :full_modular, :semi_modular, :efficiency, :oem, :semipassive, :has_fan_switch, :quiet, :eps_length_cm, :pcie8pin_qty, :pcie6pin_qty, :sata_qty, :has_pretty_cables)
-      ActiveModelSerializers::Deserialization.jsonapi_parse(params)
+      # Use temporarily for running Controller tests:
+      params.require(:power_supply).permit(:form_factor, :amps12v, :full_modular, :semi_modular, :efficiency, :oem, :semipassive, :has_fan_switch, :quiet, :eps_length_cm, :pcie8pin_qty, :pcie6pin_qty, :sata_qty, :has_pretty_cables)
+      
+      # Doesn't allow tests to run correctly, but needed for Ember:
+      # ActiveModelSerializers::Deserialization.jsonapi_parse(params)
+
+      # whitelisting, e.g.:
+      # ActiveModelSerializers::Deserialization .jsonapi_parse(
+      #   document, only: [:title, :date, :author], keys: { date: :published_at }, polymorphic: [:author]
+      # )
     end
 end

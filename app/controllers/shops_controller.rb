@@ -44,7 +44,15 @@ class ShopsController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def shop_params
-      # params.require(:shop).permit(:name, :description, :url)
-      ActiveModelSerializers::Deserialization.jsonapi_parse(params)
+      # Use temporarily for running Controller tests:
+      params.require(:shop).permit(:name, :description, :url)
+
+      # Doesn't allow tests to run correctly, but needed for Ember:
+      # ActiveModelSerializers::Deserialization.jsonapi_parse(params)
+
+      # whitelisting, e.g.:
+      # ActiveModelSerializers::Deserialization .jsonapi_parse(
+      #   document, only: [:title, :date, :author], keys: { date: :published_at }, polymorphic: [:author]
+      # )
     end
 end

@@ -1,0 +1,14 @@
+one:
+  name: "Jimm's PC Store"
+  description: "Tietotekniikan erikoisliike."
+  url: "https://www.jimms.fi/"
+
+two:
+  name: "Systemastore"
+  description: "Tietotekniikan roskaliike."
+  url: "https://www.systemastore.fi/"
+
+three:
+  name: "Hardwarium"
+  description: "Pieni komponenttien halpisliike."
+  url: "https://hardwarium.com/"

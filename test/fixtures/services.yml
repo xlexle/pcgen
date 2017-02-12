@@ -1,0 +1,17 @@
+one:
+  service_type: "Kasaus"
+  description: "Kokoonpanon kasaus ja testaus"
+  price_eur: "79.90"
+  shop: shops(:one)
+
+two:
+  service_type: "Kasaus"
+  description: "Pikainen kasaus."
+  price_eur: "49.90"
+  shop: shops(:two)
+
+three:
+  service_type: "BIOS-päivitys"
+  description: "Emolevyn BIOSin päivitys uusimpaan versioon."
+  price_eur: "14.90"
+  shop: shops(:one)

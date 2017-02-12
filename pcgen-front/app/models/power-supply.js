@@ -1,4 +1,5 @@
 import DS from 'ember-data';
+import Ember from 'ember';
 import Product from './product';
 
 export default Product.extend({
@@ -24,14 +25,14 @@ export default Product.extend({
     let sixes = this.get('pcie6pinQty');
     let connectors = "";
 
-    if (eights != 0) {
+    if (eights !== 0) {
       connectors += eights + "x 8-pin";
-      if (sixes != 0) {
+      if (sixes !== 0) {
         connectors += ", ";
       }
     }
 
-    if (sixes != 0) {
+    if (sixes !== 0) {
       connectors += sixes + "x 6-pin";
     }
 

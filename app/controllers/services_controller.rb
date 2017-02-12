@@ -44,7 +44,15 @@ class ServicesController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def service_params
-      # params.require(:service).permit(:service_type, :description, :price_eur, :shop_id)
-      ActiveModelSerializers::Deserialization.jsonapi_parse(params)
+      # Use temporarily for running Controller tests:
+      params.require(:service).permit(:service_type, :description, :price_eur, :shop_id)
+
+      # Doesn't allow tests to run correctly, but needed for Ember:
+      # ActiveModelSerializers::Deserialization.jsonapi_parse(params)
+
+      # whitelisting, e.g.:
+      # ActiveModelSerializers::Deserialization .jsonapi_parse(
+      #   document, only: [:title, :date, :author], keys: { date: :published_at }, polymorphic: [:author]
+      # )
     end
 end

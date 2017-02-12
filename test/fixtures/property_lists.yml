@@ -1,0 +1,99 @@
+one:
+  listed: true
+  quality: 50
+  product_name: "Vengeance 550M"
+  sku: "ABCD0"
+  brand: "Corsair"
+  prices_url: "hinta.fi/10001"
+  specs_url: "corsair.com/ABCD0"
+  description: "Entry level PSU."
+  warranty: 5
+  length_mm: 165
+  width_mm: 150
+  height_mm: 90
+  primary_colors: "Black"
+  secondary_colors: "Black White"
+  product: power_supplies(:one)
+
+two:
+  listed: true
+  quality: 50
+  product_name: "CS550M"
+  sku: "ABCD1"
+  brand: "Corsair"
+  prices_url: "hinta.fi/10002"
+  specs_url: "corsair.com/ABCD1"
+  description: "Mid range PSU."
+  warranty: 3
+  length_mm: 165
+  width_mm: 150
+  height_mm: 90
+  primary_colors: "Black"
+  secondary_colors: "Black White"
+  product: power_supplies(:two)
+
+three:
+  listed: true
+  quality: 50
+  product_name: "RM750x"
+  sku: "ABCD2"
+  brand: "Corsair"
+  prices_url: "hinta.fi/10003"
+  specs_url: "corsair.com/ABCD2"
+  description: "High end PSU."
+  warranty: 10
+  length_mm: 180
+  width_mm: 150
+  height_mm: 90
+  primary_colors: "Black"
+  secondary_colors: "Black White"
+  product: power_supplies(:three)
+
+four:
+  listed: true
+  quality: 50
+  product_name: "F12"
+  sku: "EFGH0"
+  brand: "Arctic"
+  prices_url: "hinta.fi/10004"
+  specs_url: "arctic.ac/EFGH0"
+  description: "Standard Case Fan."
+  warranty: 3
+  width_mm: 120
+  height_mm: 120
+  primary_colors: "White"
+  secondary_colors: "Black White"
+  product: fans(:one)
+
+five:
+  listed: true
+  quality: 50
+  product_name: "F12 PWM"
+  sku: "EFGH1"
+  brand: "Arctic"
+  prices_url: "hinta.fi/10005"
+  specs_url: "arctic.ac/EFGH1"
+  description: "Standard PSU Fan."
+  warranty: 3
+  width_mm: 120
+  height_mm: 120
+  primary_colors: "White"
+  secondary_colors: "Black White"
+  product: fans(:two)
+
+six:
+  listed: true
+  quality: 50
+  product_name: "F14"
+  sku: "EFGH2"
+  brand: "Arctic"
+  prices_url: "hinta.fi/10006"
+  specs_url: "arctic.ac/EFGH2"
+  description: "Standard but bigger Case Fan with LEDs."
+  warranty: 1
+  width_mm: 140
+  height_mm: 140
+  primary_colors: "White"
+  secondary_colors: "White"
+  led_color: "Blue"
+  product: fans(:three)
