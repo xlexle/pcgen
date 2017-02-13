@@ -1,14 +1,14 @@
 one:
-  name: "Jimm's PC Store"
-  description: "Tietotekniikan erikoisliike."
-  url: "https://www.jimms.fi/"
+  name: "Best PC store"
+  description: "Great parts at great prices."
+  url: "https://www.bestpcstore.com/"
 
 two:
-  name: "Systemastore"
-  description: "Tietotekniikan roskaliike."
-  url: "https://www.systemastore.fi/"
+  name: "Second best PC's Co."
+  description: "Not so good parts, but cheap, and lots of them."
+  url: "https://www.secondbestpcs.com/"
 
 three:
-  name: "Hardwarium"
-  description: "Pieni komponenttien halpisliike."
-  url: "https://hardwarium.com/"
+  name: "Component Shoppe"
+  description: "A small time dealer in PC parts."
+  url: "https://www.componentshoppe.com/"

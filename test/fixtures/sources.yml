@@ -3,7 +3,7 @@ one:
   delivery_time_min: 1
   delivery_time_max: 4
   delivery_cost_min: "0"
-  shop_url: "https://hinta.fi/kauppaan?1"
+  shop_url: "https://prices.com/tostore?=1product?=1"
   product: one (PowerSupply)
   shop: one
 
@@ -12,7 +12,7 @@ two:
   delivery_time_min: 1
   delivery_time_max: 4
   delivery_cost_min: "0"
-  shop_url: "https://hinta.fi/kauppaan?2"
+  shop_url: "https://prices.com/tostore?=1product?=2"
   product: two (PowerSupply)
   shop: one
 
@@ -21,6 +21,6 @@ three:
   delivery_time_min: 7
   delivery_time_max: 7
   delivery_cost_min: "9.90"
-  shop_url: "https://hinta.fi/kauppaan?3"
+  shop_url: "https://prices.com/tostore?=1product?=3"
   product: three (PowerSupply)
   shop: one

@@ -4,7 +4,7 @@ one:
   full_modular: false
   semi_modular: true
   efficiency: "80+ Bronze"
-  oem: "Channel Well Tech"
+  oem: "Nice PSU's Company"
   semipassive: false
   has_fan_switch: false
   quiet: false
@@ -21,7 +21,7 @@ two:
   full_modular: true
   semi_modular: false
   efficiency: "80+ Gold"
-  oem: "Channel Well Tech"
+  oem: "Nice PSU's Company"
   semipassive: true
   has_fan_switch: false
   quiet: false
@@ -38,7 +38,7 @@ three:
   full_modular: false
   semi_modular: true
   efficiency: "80+ Bronze"
-  oem: "Channel Well Tech"
+  oem: "Nice PSU's Company"
   semipassive: true
   has_fan_switch: true
   quiet: true

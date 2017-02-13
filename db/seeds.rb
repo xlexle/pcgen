@@ -58,7 +58,7 @@ psu1 = PowerSupply.create(
   amps12v: "40.0",
   semi_modular: true,
   efficiency: "80+ Bronze",
-  oem: "Channel Well Tech",
+  oem: "Nice PSU's Company",
   semipassive: false,
   has_fan_switch: false,
   quiet: false,
@@ -74,7 +74,7 @@ psu2 = PowerSupply.create(
   amps12v: "40.0",
   full_modular: true,
   efficiency: "80+ Gold",
-  oem: "Channel Well Tech",
+  oem: "Nice PSU's Company",
   semipassive: true,
   has_fan_switch: false,
   quiet: false,
@@ -90,7 +90,7 @@ psu3 = PowerSupply.create(
   amps12v: "60.0",
   semi_modular: true,
   efficiency: "80+ Bronze",
-  oem: "Channel Well Tech",
+  oem: "Nice PSU's Company",
   semipassive: true,
   has_fan_switch: true,
   quiet: true,
@@ -106,11 +106,11 @@ psu3 = PowerSupply.create(
 property_list1 = PropertyList.create(
   listed: true,
   quality: 50,
-  product_name: "Vengeance 550M",
+  product_name: "Power Supply Product1",
   sku: "00240ABC1",
-  brand: "Corsair",
-  prices_url: "hinta.fi/10001",
-  specs_url: "corsair.com/00240ABC1",
+  brand: "Products Company",
+  prices_url: "prices.com/10001",
+  specs_url: "productscompany.com/00240ABC1",
   description: "Great PSU m8",
   warranty: 5,
   length_mm: 165,
@@ -123,11 +123,11 @@ property_list1 = PropertyList.create(
 property_list2 = PropertyList.create(
   listed: true,
   quality: 50,
-  product_name: "CS550M",
+  product_name: "Power Supply Product2",
   sku: "00240ABC2",
-  brand: "Corsair",
-  prices_url: "hinta.fi/10002",
-  specs_url: "corsair.com/00240ABC2",
+  brand: "Products Company",
+  prices_url: "prices.com/10002",
+  specs_url: "productscompany.com/00240ABC2",
   description: "Great PSU m8",
   warranty: 3,
   length_mm: 165,
@@ -140,11 +140,11 @@ property_list2 = PropertyList.create(
 property_list3 = PropertyList.create(
   listed: true,
   quality: 50,
-  product_name: "RM750x",
+  product_name: "Power Supply Product3",
   sku: "00240ABC3",
-  brand: "Corsair",
-  prices_url: "hinta.fi/10003",
-  specs_url: "corsair.com/00240ABC3",
+  brand: "Products Company",
+  prices_url: "prices.com/10003",
+  specs_url: "productscompany.com/00240ABC3",
   description: "Great PSU m8",
   warranty: 10,
   length_mm: 180,
@@ -157,11 +157,11 @@ property_list3 = PropertyList.create(
 property_list4 = PropertyList.create(
   listed: true,
   quality: 50,
-  product_name: "NiceFan1",
+  product_name: "Fan Product1",
   sku: "00240ABC4",
-  brand: "Arctic",
-  prices_url: "hinta.fi/10004",
-  specs_url: "arctic.ac/00240ABC4",
+  brand: "Products Company",
+  prices_url: "prices.com/10004",
+  specs_url: "productscompany.com/00240ABC4",
   description: "Nice Fan m8",
   warranty: 3,
   width_mm: 120,
@@ -173,11 +173,11 @@ property_list4 = PropertyList.create(
 property_list5 = PropertyList.create(
   listed: true,
   quality: 50,
-  product_name: "NiceFan2",
+  product_name: "Fan Product2",
   sku: "00240ABC5",
-  brand: "Arctic",
-  prices_url: "hinta.fi/10005",
-  specs_url: "arctic.ac/00240ABC5",
+  brand: "Products Company",
+  prices_url: "prices.com/10005",
+  specs_url: "productscompany.com/00240ABC5",
   description: "Nice Fan m8",
   warranty: 3,
   width_mm: 120,
@@ -189,11 +189,11 @@ property_list5 = PropertyList.create(
 property_list6 = PropertyList.create(
   listed: true,
   quality: 50,
-  product_name: "NiceFan3",
+  product_name: "Fan Product3",
   sku: "00240ABC6",
-  brand: "Arctic",
-  prices_url: "hinta.fi/10006",
-  specs_url: "arctic.ac/00240ABC6",
+  brand: "Products Company",
+  prices_url: "prices.com/10006",
+  specs_url: "productscompany.com/00240ABC6",
   description: "Nice Fan m8",
   warranty: 1,
   width_mm: 120,
@@ -206,8 +206,13 @@ property_list6 = PropertyList.create(
 
 # has many product conflicts (exactly 2)
 conflict1 = Conflict.create(
-  reason: "Just can't even.",
+  reason: "Wrong size.",
   strict: true
+)
+
+conflict2 = Conflict.create(
+  reason: "It fits, but still.",
+  strict: false
 )
 
 # belongs to conflict
@@ -224,14 +229,19 @@ product_conflict2 = ProductConflict.create(
 # has many service_items
 # has many sources
 shop1 = Shop.create(
-  name: "Jimm's PC Store",
-  description: "Tietotekniikan erikoisliike.",
-  url: "https://www.jimms.fi/"
+  name: "Best PC store",
+  description: "Great parts at great prices.",
+  url: "https://www.bestpcstore.com/"
 )
 shop2 = Shop.create(
-  name: "Systemastore",
-  description: "Tietotekniikan roskaliike.",
-  url: "https://www.systemastore.fi/"
+  name: "Second best PC's Co.",
+  description: "Not so good parts, but cheap, and lots of them.",
+  url: "https://www.secondbestpcs.com/"
+)
+shop3 = Shop.create(
+  name: "Component Shoppe",
+  description: "A small time dealer in PC parts.",
+  url: "https://www.componentshoppe.com/"
 )
 
 # belongs to shop
@@ -249,7 +259,7 @@ source1 = Source.create(
   delivery_time_min: 1,
   delivery_time_max: 4,
   delivery_cost_min: "0",
-  shop_url: "https://hinta.fi/kauppaan?1",
+  shop_url: "https://prices.com/tostore?=1product?=1",
   product: psu1,
   shop: shop1
 )
@@ -258,7 +268,7 @@ source1 = Source.create(
   delivery_time_min: 10,
   delivery_time_max: 20,
   delivery_cost_min: "4.90",
-  shop_url: "https://hinta.fi/kauppaan?2",
+  shop_url: "https://prices.com/tostore?=1product?=2",
   product: psu1,
   shop: shop2
 )

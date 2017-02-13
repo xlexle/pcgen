@@ -1,11 +1,11 @@
 one:
   listed: true
   quality: 50
-  product_name: "Vengeance 550M"
+  product_name: "Power Supply Product1"
   sku: "ABCD0"
-  brand: "Corsair"
-  prices_url: "hinta.fi/10001"
-  specs_url: "corsair.com/ABCD0"
+  brand: "Products Company"
+  prices_url: "prices.com/10001"
+  specs_url: "productscompany.com/ABCD0"
   description: "Entry level PSU."
   warranty: 5
   length_mm: 165
@@ -18,11 +18,11 @@ one:
 two:
   listed: true
   quality: 50
-  product_name: "CS550M"
+  product_name: "Power Supply Product2"
   sku: "ABCD1"
-  brand: "Corsair"
-  prices_url: "hinta.fi/10002"
-  specs_url: "corsair.com/ABCD1"
+  brand: "Products Company"
+  prices_url: "prices.com/10002"
+  specs_url: "productscompany.com/ABCD1"
   description: "Mid range PSU."
   warranty: 3
   length_mm: 165
@@ -35,11 +35,11 @@ two:
 three:
   listed: true
   quality: 50
-  product_name: "RM750x"
+  product_name: "Power Supply Product3"
   sku: "ABCD2"
-  brand: "Corsair"
-  prices_url: "hinta.fi/10003"
-  specs_url: "corsair.com/ABCD2"
+  brand: "Products Company"
+  prices_url: "prices.com/10003"
+  specs_url: "productscompany.com/ABCD2"
   description: "High end PSU."
   warranty: 10
   length_mm: 180
@@ -52,11 +52,11 @@ three:
 four:
   listed: true
   quality: 50
-  product_name: "F12"
+  product_name: "Fan Product1"
   sku: "EFGH0"
-  brand: "Arctic"
-  prices_url: "hinta.fi/10004"
-  specs_url: "arctic.ac/EFGH0"
+  brand: "Products Company"
+  prices_url: "prices.com/10004"
+  specs_url: "productscompany.com/EFGH0"
   description: "Standard Case Fan."
   warranty: 3
   width_mm: 120
@@ -68,11 +68,11 @@ four:
 five:
   listed: true
   quality: 50
-  product_name: "F12 PWM"
+  product_name: "Fan Product2"
   sku: "EFGH1"
-  brand: "Arctic"
-  prices_url: "hinta.fi/10005"
-  specs_url: "arctic.ac/EFGH1"
+  brand: "Products Company"
+  prices_url: "prices.com/10005"
+  specs_url: "productscompany.com/EFGH1"
   description: "Standard PSU Fan."
   warranty: 3
   width_mm: 120
@@ -84,11 +84,11 @@ five:
 six:
   listed: true
   quality: 50
-  product_name: "F14"
+  product_name: "Fan Product3"
   sku: "EFGH2"
-  brand: "Arctic"
-  prices_url: "hinta.fi/10006"
-  specs_url: "arctic.ac/EFGH2"
+  brand: "Products Company"
+  prices_url: "prices.com/10006"
+  specs_url: "productscompany.com/EFGH2"
   description: "Standard but bigger Case Fan with LEDs."
   warranty: 1
   width_mm: 140
