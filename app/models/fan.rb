@@ -1,5 +1,5 @@
 class Fan < ApplicationRecord
-  validates: :max_rpm, :thickness_mm, presence: true
+  validates :max_rpm, :thickness_mm, presence: true
 
   has_one :property_list, as: :product, dependent: :destroy
   has_many :power_supplies
