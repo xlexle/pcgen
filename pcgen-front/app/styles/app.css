@@ -1,20 +1,13 @@
 /* Non-main fonts */
 table {
   font-family: 'Noto Sans', sans-serif;
-  font-size: 11px;
+  font-size: 12px;
 }
 
 tr.header-group {
   font-family: 'Raleway', sans-serif;
-  font-size: 14px;
-}
-
-tr.header-group > th {
-  text-align: center;
-}
-
-tr.header-item {
-
+  font-size: 16px;
+  letter-spacing: 1px;
 }
 
 .navbar-header {
@@ -22,6 +15,16 @@ tr.header-item {
   font-weight: 600;
   letter-spacing: 1px;
 }
+
+/* Column borders */
+.first-column { border-left: 1px solid #ddd; }
+.last-column { border-right: 1px solid #ddd; }
+.mid-column { border-right: 2px solid #ddd; }
+.top-row { border-top: 1px solid #ddd; }
+.bottom-row { border-bottom: 1px solid #ddd; }
+
+tr.header-group > th { text-align: center; }
+
 /*!
  * IE10 viewport hack for Surface/desktop Windows 8 bug
  * Copyright 2014-2015 Twitter, Inc.
@@ -81,7 +84,12 @@ body {
 
 /* Smaller table cells */
 .table>tbody>tr>td {
-  padding: 6px 8px 6px 8px;
+  padding: 4px 6px 4px 6px;
+}
+
+/* Smaller table bottom margin */
+.table {
+  margin-bottom: 10px;
 }
 
 /* SIDEBAR */

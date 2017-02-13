@@ -26,16 +26,20 @@ export default Product.extend({
     let connectors = "";
 
     if (eights !== 0) {
-      connectors += eights + "x 8-pin";
+      connectors += eights + " kpl 8-pin";
       if (sixes !== 0) {
         connectors += ", ";
       }
     }
 
     if (sixes !== 0) {
-      connectors += sixes + "x 6-pin";
+      connectors += sixes + " kpl 6-pin";
     }
 
     return connectors;
+  }),
+
+  watts12v: Ember.computed('amps12v', function() {
+    return 12 * this.get('amps12v');
   })
 });

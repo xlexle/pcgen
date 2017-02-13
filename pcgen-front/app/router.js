@@ -15,6 +15,7 @@ Router.map(function() {
   this.route('fans');
   this.route('product-conflicts');
   this.route('conflicts');
+  this.route('products', { path: '/tuotteet' });
 });
 
 export default Router;
