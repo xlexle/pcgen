@@ -53,8 +53,8 @@ class SetupAll < ActiveRecord::Migration[5.0]
       t.timestamps
     end
 
-    create_table :services do |t|
-      t.string :service_type
+    create_table :service_items do |t|
+      t.string :service_name
       t.text :description
       t.decimal :price_eur, precision: 5, scale: 2
       t.references :shop, foreign_key: true, index: true

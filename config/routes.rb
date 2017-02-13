@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   resources :fans
-  resources :services
+  resources :service_items
   resources :shops
   resources :sources
   resources :product_conflicts

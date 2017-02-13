@@ -1,5 +1,5 @@
 class ConflictsController < ApplicationController
-  before_action :set_conflict, only: [:show, :update, :destroy]
+  before_action :set_conflict, only: [:show, :destroy]
 
   # GET /conflicts
   def index
@@ -17,15 +17,6 @@ class ConflictsController < ApplicationController
 
     if @conflict.save
       render json: @conflict, status: :created, location: @conflict
-    else
-      render json: @conflict.errors, status: :unprocessable_entity
-    end
-  end
-
-  # PATCH/PUT /conflicts/1
-  def update
-    if @conflict.update(conflict_params)
-      render json: @conflict
     else
       render json: @conflict.errors, status: :unprocessable_entity
     end

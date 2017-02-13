@@ -36,8 +36,7 @@ class ConflictsControllerTest < ActionDispatch::IntegrationTest
   test "should not create conflict with invalid parameters" do
     assert_no_difference('Conflict.count') do
       post conflicts_url, params: { conflict: {
-        reason: nil,
-        strict: nil
+        reason: nil
       } }, as: :json
     end
 
@@ -45,25 +44,25 @@ class ConflictsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update conflict" do
+    new_reason = "This is the new reason."
+    new_strict = !(@conflict.strict)
 
     patch conflict_url(@conflict), params: { conflict: {
-      reason: @conflict.reason,
-      strict: @conflict.strict
+      reason: new_reason,
+      strict: new_strict
     } }, as: :json
 
     assert_response 200
 
     # Test that the values are actually updated:
-    # @conflict.reload
-    # assert_equal 'new attribute_name1', @conflict.body
-    # assert_equal 'new attribute_name2', @conflict.author
-    # assert_equal 1, @conflict.referred_model_id
+    @conflict.reload
+    assert_equal new_reason, @conflict.reason
+    assert_equal new_strict, @conflict.strict
   end
 
   test "should not update conflict with invalid parameters" do
     patch conflict_url(@conflict), params: { conflict: {
-      reason: nil,
-      strict: nil
+      reason: nil
     } }, as: :json
 
     assert_response 422

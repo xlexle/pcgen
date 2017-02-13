@@ -1,5 +1,5 @@
 class ProductConflictsController < ApplicationController
-  before_action :set_product_conflict, only: [:show, :update, :destroy]
+  before_action :set_product_conflict, only: [:show, :destroy]
 
   # GET /product_conflicts
   def index
@@ -17,15 +17,6 @@ class ProductConflictsController < ApplicationController
 
     if @product_conflict.save
       render json: @product_conflict, status: :created, location: @product_conflict
-    else
-      render json: @product_conflict.errors, status: :unprocessable_entity
-    end
-  end
-
-  # PATCH/PUT /product_conflicts/1
-  def update
-    if @product_conflict.update(product_conflict_params)
-      render json: @product_conflict
     else
       render json: @product_conflict.errors, status: :unprocessable_entity
     end

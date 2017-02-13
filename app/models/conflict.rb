@@ -1,4 +1,7 @@
 class Conflict < ApplicationRecord
-  validates :reason, :strict, presence: true
-  has_many :product_conflicts, dependent: :destroy
+  validates :reason, presence: true
+  validates :strict, inclusion: { in: [true, false] }, exclusion: { in: [nil] }
+
+  # has_many :product_conflicts, inverse_of: :conflict, dependent: :destroy
+  has_many :product_conflicts, inverse_of: :conflict
 end

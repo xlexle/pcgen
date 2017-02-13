@@ -89,14 +89,14 @@ ActiveRecord::Schema.define(version: 20170211133701) do
     t.index ["product_type", "product_id"], name: "index_property_lists_on_product_type_and_product_id", using: :btree
   end
 
-  create_table "services", force: :cascade do |t|
-    t.string   "service_type"
+  create_table "service_items", force: :cascade do |t|
+    t.string   "service_name"
     t.text     "description"
     t.decimal  "price_eur",    precision: 5, scale: 2
     t.integer  "shop_id"
     t.datetime "created_at",                           null: false
     t.datetime "updated_at",                           null: false
-    t.index ["shop_id"], name: "index_services_on_shop_id", using: :btree
+    t.index ["shop_id"], name: "index_service_items_on_shop_id", using: :btree
   end
 
   create_table "shops", force: :cascade do |t|
@@ -124,6 +124,6 @@ ActiveRecord::Schema.define(version: 20170211133701) do
 
   add_foreign_key "power_supplies", "fans"
   add_foreign_key "product_conflicts", "conflicts"
-  add_foreign_key "services", "shops"
+  add_foreign_key "service_items", "shops"
   add_foreign_key "sources", "shops"
 end

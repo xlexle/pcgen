@@ -13,7 +13,7 @@ one:
   height_mm: 90
   primary_colors: "Black"
   secondary_colors: "Black White"
-  product: power_supplies(:one)
+  product: one (PowerSupply)
 
 two:
   listed: true
@@ -30,7 +30,7 @@ two:
   height_mm: 90
   primary_colors: "Black"
   secondary_colors: "Black White"
-  product: power_supplies(:two)
+  product: two (PowerSupply)
 
 three:
   listed: true
@@ -47,7 +47,7 @@ three:
   height_mm: 90
   primary_colors: "Black"
   secondary_colors: "Black White"
-  product: power_supplies(:three)
+  product: three (PowerSupply)
 
 four:
   listed: true
@@ -63,7 +63,7 @@ four:
   height_mm: 120
   primary_colors: "White"
   secondary_colors: "Black White"
-  product: fans(:one)
+  product: one (Fan)
 
 five:
   listed: true
@@ -79,7 +79,7 @@ five:
   height_mm: 120
   primary_colors: "White"
   secondary_colors: "Black White"
-  product: fans(:two)
+  product: two (Fan)
 
 six:
   listed: true
@@ -96,4 +96,4 @@ six:
   primary_colors: "White"
   secondary_colors: "White"
   led_color: "Blue"
-  product: fans(:three)
+  product: three (Fan)

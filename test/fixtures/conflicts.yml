@@ -2,8 +2,8 @@
 
 one:
   reason: "Wrong fan size."
-  strict: true
+  strict: false
 
 two:
   reason: "It fits, but still."
-  strict: false
+  strict: true

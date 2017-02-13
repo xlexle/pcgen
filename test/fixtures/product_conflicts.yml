@@ -1,15 +1,15 @@
 one:
-  conflict: conflicts(:one)
-  product: power_supplies(:one)
+  conflict: one
+  product: one (PowerSupply)
 
 two:
-  conflict: conflicts(:one)
-  product: fans(:three)
+  conflict: one
+  product: three (Fan)
 
 three:
-  conflict: conflicts(:two)
-  product: power_supplies(:one)
+  conflict: two
+  product: one (PowerSupply)
 
 four:
-  conflict: conflicts(:two)
-  product: fans(:one)
+  conflict: two
+  product: one (Fan)

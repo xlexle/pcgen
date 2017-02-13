@@ -221,7 +221,7 @@ product_conflict2 = ProductConflict.create(
   product: fan1
 )
 
-# has many services
+# has many service_items
 # has many sources
 shop1 = Shop.create(
   name: "Jimm's PC Store",
@@ -235,8 +235,8 @@ shop2 = Shop.create(
 )
 
 # belongs to shop
-service1 = Service.create(
-  service_type: "Kasaus",
+service_item1 = ServiceItem.create(
+  service_name: "Kasaus",
   description: "Kokoonpanon kasaus ja testaus",
   price_eur: "79.90",
   shop: shop1
