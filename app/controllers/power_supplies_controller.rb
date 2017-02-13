@@ -67,8 +67,25 @@ class PowerSuppliesController < ApplicationController
       # ActiveModelSerializers::Deserialization.jsonapi_parse(params)
 
       # whitelisting, e.g.:
-      # ActiveModelSerializers::Deserialization .jsonapi_parse(
-      #   document, only: [:title, :date, :author], keys: { date: :published_at }, polymorphic: [:author]
+      # ActiveModelSerializers::Deserialization .jsonapi_parse(params, only: [
+      #     :form_factor,
+      #     :amps12v,
+      #     :full_modular,
+      #     :semi_modular,
+      #     :efficiency,
+      #     :oem,
+      #     :semipassive,
+      #     :has_fan_switch,
+      #     :quiet,
+      #     :eps_length_cm,
+      #     :pcie8pin_qty,
+      #     :pcie6pin_qty,
+      #     :sata_qty,
+      #     :has_pretty_cables,
+      #     :fan_id,
+      #     :created_at,
+      #     :updated_at
+      #   ]
       # )
     end
 end

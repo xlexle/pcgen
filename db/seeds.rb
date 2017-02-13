@@ -6,8 +6,6 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-
-
 # has one property list
 # has many power supplies
 # has many product conflicts
@@ -56,6 +54,7 @@ fan3 = Fan.create(
 psu1 = PowerSupply.create(
   form_factor: "ATX",
   amps12v: "40.0",
+  full_modular: false,
   semi_modular: true,
   efficiency: "80+ Bronze",
   oem: "Nice PSU's Company",
@@ -73,6 +72,7 @@ psu2 = PowerSupply.create(
   form_factor: "ATX",
   amps12v: "40.0",
   full_modular: true,
+  semi_modular: false,
   efficiency: "80+ Gold",
   oem: "Nice PSU's Company",
   semipassive: true,
@@ -88,6 +88,7 @@ psu2 = PowerSupply.create(
 psu3 = PowerSupply.create(
   form_factor: "ATX",
   amps12v: "60.0",
+  full_modular: false,
   semi_modular: true,
   efficiency: "80+ Bronze",
   oem: "Nice PSU's Company",
@@ -109,8 +110,8 @@ property_list1 = PropertyList.create(
   product_name: "Power Supply Product1",
   sku: "00240ABC1",
   brand: "Products Company",
-  prices_url: "prices.com/10001",
-  specs_url: "productscompany.com/00240ABC1",
+  prices_url: "http://prices.com/10001",
+  specs_url: "http://productscompany.com/00240ABC1",
   description: "Great PSU m8",
   warranty: 5,
   length_mm: 165,
@@ -126,8 +127,8 @@ property_list2 = PropertyList.create(
   product_name: "Power Supply Product2",
   sku: "00240ABC2",
   brand: "Products Company",
-  prices_url: "prices.com/10002",
-  specs_url: "productscompany.com/00240ABC2",
+  prices_url: "http://prices.com/10002",
+  specs_url: "http://productscompany.com/00240ABC2",
   description: "Great PSU m8",
   warranty: 3,
   length_mm: 165,
@@ -143,8 +144,8 @@ property_list3 = PropertyList.create(
   product_name: "Power Supply Product3",
   sku: "00240ABC3",
   brand: "Products Company",
-  prices_url: "prices.com/10003",
-  specs_url: "productscompany.com/00240ABC3",
+  prices_url: "http://prices.com/10003",
+  specs_url: "http://productscompany.com/00240ABC3",
   description: "Great PSU m8",
   warranty: 10,
   length_mm: 180,
@@ -160,8 +161,8 @@ property_list4 = PropertyList.create(
   product_name: "Fan Product1",
   sku: "00240ABC4",
   brand: "Products Company",
-  prices_url: "prices.com/10004",
-  specs_url: "productscompany.com/00240ABC4",
+  prices_url: "http://prices.com/10004",
+  specs_url: "http://productscompany.com/00240ABC4",
   description: "Nice Fan m8",
   warranty: 3,
   width_mm: 120,
@@ -176,8 +177,8 @@ property_list5 = PropertyList.create(
   product_name: "Fan Product2",
   sku: "00240ABC5",
   brand: "Products Company",
-  prices_url: "prices.com/10005",
-  specs_url: "productscompany.com/00240ABC5",
+  prices_url: "http://prices.com/10005",
+  specs_url: "http://productscompany.com/00240ABC5",
   description: "Nice Fan m8",
   warranty: 3,
   width_mm: 120,
@@ -192,8 +193,8 @@ property_list6 = PropertyList.create(
   product_name: "Fan Product3",
   sku: "00240ABC6",
   brand: "Products Company",
-  prices_url: "prices.com/10006",
-  specs_url: "productscompany.com/00240ABC6",
+  prices_url: "http://prices.com/10006",
+  specs_url: "http://productscompany.com/00240ABC6",
   description: "Nice Fan m8",
   warranty: 1,
   width_mm: 120,

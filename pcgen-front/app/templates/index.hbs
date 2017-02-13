@@ -51,42 +51,62 @@
       <div class="table-responsive text-nowrap">
         <table class="table table-striped">
           <thead>
-            <tr>
+            <tr class="header-group">
+              <th colspan=4>Yleistiedot</th>
+              <th colspan=9>Speksit</th>
+              <th colspan=4>Tuuletin</th>
+            </tr>
+            <tr class="header-item">
               <th>Merkki</th>
               <th>Tuote</th>
-              <th>Tuotenumero</th>
-              <th>+12V watit</th>
-              <th>Semipassiivinen</th>
-              <th>Kaapelit</th>
-              <th>PCIe-liittimet</th>
-              <th>SATA-liittimet</th>
+              <th>SKU</th>
               <th>Takuu</th>
+
+              <th >+12V watit</th>
+              <th>Hyötysuhde</th>
+              <th>Valmistaja</th>
+              <th>Koko</th>
               <th>Pituus</th>
-              <th>OEM</th>
-              <th>Tuuletin</th>
+              <th>Kaapelit</th>
+              <th>PCIe-liittimiä</th>
+              <th>SATA-liittimiä</th>
+              <th>Jäähdytys</th>
+
+              <th>Malli</th>
+              <th>Koko</th>
+              <th>Pyörimisnopeus</th>
+              <th>Laakeri</th>
   					</tr>
   				</thead>
           <tbody>
             {{#each model as |psu|}}
             <tr>
               <td>{{psu.propertyList.brand}}</td>
-              <td>{{psu.propertyList.productName}}</td>
-              <td>{{psu.propertyList.sku}}</td>
-              <td>{{psu.amps12v}}</td>
-              <td>{{if psu.semipassive "kyllä" "ei"}}</td>
+              <td><a href={{psu.propertyList.pricesUrl}}><div>{{psu.propertyList.productName}}</div></a></td>
+              <td><a href={{psu.propertyList.specsUrl}}><div>{{psu.propertyList.sku}}</div></a></td>
+              <td>{{psu.propertyList.warranty}} vuotta</td>
+
+              <td>{{psu.amps12v}} W</td>
+              <td>{{psu.efficiency}}</td>
+              <td>{{psu.oem}}</td>
+              <td>{{psu.formFactor}}</td>
+              <td>{{psu.propertyList.lengthMm}} mm</td>
               {{#if psu.fullModular}}
-                <td>Täysmodulaariset</td>
+                <td>täysmodulaariset</td>
               {{else if psu.semiModular}}
-                <td>Semimodulaariset</td>
+                <td>semimodulaarinen</td>
               {{else}}
-                <td>Kiinteät</td>
+                <td>kiinteät</td>
               {{/if}}
               <td>{{psu.pcieConnectors}}</td>
               <td>{{psu.sataQty}}x</td>
-              <td>{{psu.propertyList.warranty}} vuotta</td>
-              <td>{{psu.propertyList.lengthMm}} mm</td>
-              <td>{{psu.oem}}</td>
-              <td>{{psu.fan.propertyList.sku}}</td>
+              <td>{{if psu.semipassive "Semiassiivinen" "Aktiivinen"}}</td>
+
+              <td><a href={{psu.fan.propertyList.specsUrl}}><div>{{psu.fan.propertyList.sku}}</div></a>
+              </td>
+              <td>{{psu.fan.propertyList.widthMm}} mm</td>
+              <td>{{psu.fan.minRpm}}-{{psu.fan.maxRpm}} RPM</td>
+              <td>{{psu.fan.bearing}}</td>
             </tr>
             {{/each}}
           </tbody>

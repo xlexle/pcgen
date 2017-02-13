@@ -1,8 +1,27 @@
 /* Non-main fonts */
 table {
-  font-family: 'Noto Sans';font-size: 10px;
+  font-family: 'Noto Sans', sans-serif;
+  font-size: 11px;
 }
 
+tr.header-group {
+  font-family: 'Raleway', sans-serif;
+  font-size: 14px;
+}
+
+tr.header-group > th {
+  text-align: center;
+}
+
+tr.header-item {
+
+}
+
+.navbar-header {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
 /*!
  * IE10 viewport hack for Surface/desktop Windows 8 bug
  * Copyright 2014-2015 Twitter, Inc.
