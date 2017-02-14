@@ -13,8 +13,7 @@ class SetupAll < ActiveRecord::Migration[5.0]
       t.integer :length_mm
       t.integer :width_mm
       t.integer :height_mm
-      t.string :primary_colors
-      t.string :secondary_colors
+      t.string :colors
       t.string :led_color
       t.references :product, polymorphic: true, index:true
 
@@ -69,6 +68,7 @@ class SetupAll < ActiveRecord::Migration[5.0]
       t.integer :starting_voltage
       t.decimal :max_amps, precision: 3, scale: 2
       t.integer :mtbf_hours
+      t.integer :cable_length_cm
       t.boolean :has_pwm
       t.boolean :high_pressure
       t.boolean :quiet

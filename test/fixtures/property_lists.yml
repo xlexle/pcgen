@@ -6,13 +6,12 @@ one:
   brand: "Products Company"
   prices_url: "prices.com/10001"
   specs_url: "productscompany.com/ABCD0"
-  description: "Entry level PSU."
+  description: "Perustason poweri."
   warranty: 5
   length_mm: 165
   width_mm: 150
   height_mm: 90
-  primary_colors: "Black"
-  secondary_colors: "Black White"
+  colors: "musta, valkoinen"
   product: one (PowerSupply)
 
 two:
@@ -23,13 +22,12 @@ two:
   brand: "Products Company"
   prices_url: "prices.com/10002"
   specs_url: "productscompany.com/ABCD1"
-  description: "Mid range PSU."
+  description: "Keskitason poweri."
   warranty: 3
   length_mm: 165
   width_mm: 150
   height_mm: 90
-  primary_colors: "Black"
-  secondary_colors: "Black White"
+  colors: "musta, valkoinen"
   product: two (PowerSupply)
 
 three:
@@ -40,13 +38,12 @@ three:
   brand: "Products Company"
   prices_url: "prices.com/10003"
   specs_url: "productscompany.com/ABCD2"
-  description: "High end PSU."
+  description: "High end poweri."
   warranty: 10
   length_mm: 180
   width_mm: 150
   height_mm: 90
-  primary_colors: "Black"
-  secondary_colors: "Black White"
+  colors: "musta, valkoinen"
   product: three (PowerSupply)
 
 four:
@@ -57,12 +54,11 @@ four:
   brand: "Products Company"
   prices_url: "prices.com/10004"
   specs_url: "productscompany.com/EFGH0"
-  description: "Standard Case Fan."
+  description: "Tavallinen kotelotuuletin."
   warranty: 3
   width_mm: 120
   height_mm: 120
-  primary_colors: "White"
-  secondary_colors: "Black White"
+  colors: "valkoinen"
   product: one (Fan)
 
 five:
@@ -73,12 +69,11 @@ five:
   brand: "Products Company"
   prices_url: "prices.com/10005"
   specs_url: "productscompany.com/EFGH1"
-  description: "Standard PSU Fan."
+  description: "Tavallinen virtalähdetuuletin."
   warranty: 3
   width_mm: 120
   height_mm: 120
-  primary_colors: "White"
-  secondary_colors: "Black White"
+  colors: "musta, valkoinen"
   product: two (Fan)
 
 six:
@@ -89,11 +84,10 @@ six:
   brand: "Products Company"
   prices_url: "prices.com/10006"
   specs_url: "productscompany.com/EFGH2"
-  description: "Standard but bigger Case Fan with LEDs."
+  description: "Isokokoinen ledituuletin."
   warranty: 1
   width_mm: 140
   height_mm: 140
-  primary_colors: "White"
-  secondary_colors: "White"
+  colors: "musta, valkoinen"
   led_color: "Blue"
   product: three (Fan)

@@ -58,8 +58,7 @@ class PropertyListsController < ApplicationController
         :length_mm,
         :width_mm,
         :height_mm,
-        :primary_colors,
-        :secondary_colors,
+        :colors,
         :led_color,
         :product_id,
         :product_type

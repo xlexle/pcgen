@@ -2,7 +2,7 @@ require 'test_helper'
 
 class ServiceItemTest < ActiveSupport::TestCase
   test "should be valid" do
-    assert services_items(:one).valid?
+    assert service_items(:one).valid?
     refute ServiceItem.new.valid?
   end
 

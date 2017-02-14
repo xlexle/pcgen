@@ -1,5 +1,5 @@
 class FanSerializer < ActiveModel::Serializer
-  attributes :id, :bearing, :min_rpm, :max_rpm, :starting_voltage, :max_amps
+  attributes :id, :bearing, :min_rpm, :max_rpm, :starting_voltage, :max_amps, :cable_length_cm
   attributes :mtbf_hours, :has_pwm, :high_pressure, :quiet, :thickness_mm
 
   has_one :property_list

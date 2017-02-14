@@ -29,6 +29,7 @@ ActiveRecord::Schema.define(version: 20170211133701) do
     t.integer  "starting_voltage"
     t.decimal  "max_amps",         precision: 3, scale: 2
     t.integer  "mtbf_hours"
+    t.integer  "cable_length_cm"
     t.boolean  "has_pwm"
     t.boolean  "high_pressure"
     t.boolean  "quiet"
@@ -79,13 +80,12 @@ ActiveRecord::Schema.define(version: 20170211133701) do
     t.integer  "length_mm"
     t.integer  "width_mm"
     t.integer  "height_mm"
-    t.string   "primary_colors"
-    t.string   "secondary_colors"
+    t.string   "colors"
     t.string   "led_color"
     t.string   "product_type"
     t.integer  "product_id"
-    t.datetime "created_at",       null: false
-    t.datetime "updated_at",       null: false
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
     t.index ["product_type", "product_id"], name: "index_property_lists_on_product_type_and_product_id", using: :btree
   end
 

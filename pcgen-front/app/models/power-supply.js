@@ -4,6 +4,7 @@ import Product from './product';
 
 export default Product.extend({
   formFactor: DS.attr('string'),
+  // capacity: DS.attr('capacity'), 
   amps12v: DS.attr('number'),
   fullModular: DS.attr('boolean'),
   semiModular: DS.attr('boolean'),
@@ -39,6 +40,7 @@ export default Product.extend({
     return connectors;
   }),
 
+  // W = V*A
   watts12v: Ember.computed('amps12v', function() {
     return 12 * this.get('amps12v');
   })

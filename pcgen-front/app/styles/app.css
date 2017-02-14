@@ -10,10 +10,19 @@ tr.header-group {
   letter-spacing: 1px;
 }
 
-.navbar-header {
+/*.navbar-header {
   font-family: 'Raleway', sans-serif;
   font-weight: 600;
   letter-spacing: 1px;
+}*/
+
+/* Custom styles */
+.current-filters {
+  padding: 6px 30px 6px 20px;
+}
+
+.filter-button {
+  margin: 2px 0px 1px 0px;
 }
 
 /* Column borders */

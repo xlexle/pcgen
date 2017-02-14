@@ -51,6 +51,7 @@ class FansController < ApplicationController
         :max_rpm,
         :starting_voltage,
         :max_amps,
+        :cable_length_cm,
         :mtbf_hours,
         :has_pwm,
         :high_pressure,

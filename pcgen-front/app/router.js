@@ -7,15 +7,15 @@ const Router = Ember.Router.extend({
 });
 
 Router.map(function() {
-  this.route('property-lists');
+  this.route('parts', { path: '/komponentit' }, function() {
+    this.route('power-supplies', { path: '/virtalahteet' });
+    this.route('fans', { path: '/tuulettimet' });
+  });
+  this.route('peripherals', {path: '/oheislaitteet'}, function() {
+    this.route('monitors', { path: '/naytot' });
+  })
   this.route('sources');
-  this.route('services');
   this.route('shops');
-  this.route('power-supplies');
-  this.route('fans');
-  this.route('product-conflicts');
-  this.route('conflicts');
-  this.route('products', { path: '/tuotteet' });
 });
 
 export default Router;

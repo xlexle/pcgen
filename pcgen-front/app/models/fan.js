@@ -7,6 +7,7 @@ export default Product.extend({
   maxRpm: DS.attr('number'),
   startingVoltage: DS.attr('number'),
   maxAmps: DS.attr('number'),
+  cableLengthCm: DS.attr('number'),
   mtbfHours: DS.attr('number'),
   hasPwm: DS.attr('boolean'),
   highPressure: DS.attr('boolean'),

@@ -16,6 +16,7 @@ fan1 = Fan.create(
   max_rpm: 1300,
   starting_voltage: 5,
   max_amps: "0.32",
+  cable_length_cm: 30,
   mtbf_hours: 50000,
   has_pwm: false,
   high_pressure: false,
@@ -28,6 +29,7 @@ fan2 = Fan.create(
   max_rpm: 1300,
   starting_voltage: 7,
   max_amps: "0.20",
+  cable_length_cm: 30,
   mtbf_hours: 70000,
   has_pwm: true,
   high_pressure: false,
@@ -40,6 +42,7 @@ fan3 = Fan.create(
   max_rpm: 2000,
   starting_voltage: 5,
   max_amps: "0.54",
+  cable_length_cm: 30,
   mtbf_hours: 20000,
   has_pwm: false,
   high_pressure: true,
@@ -117,8 +120,7 @@ property_list1 = PropertyList.create(
   length_mm: 165,
   width_mm: 150,
   height_mm: 90,
-  primary_colors: "Black",
-  secondary_colors: "Black, White",
+  colors: "musta, valkoinen",
   product: psu1
 )
 property_list2 = PropertyList.create(
@@ -134,8 +136,7 @@ property_list2 = PropertyList.create(
   length_mm: 165,
   width_mm: 150,
   height_mm: 90,
-  primary_colors: "Black",
-  secondary_colors: "Black, White",
+  colors: "musta, valkoinen",
   product: psu2
 )
 property_list3 = PropertyList.create(
@@ -151,8 +152,7 @@ property_list3 = PropertyList.create(
   length_mm: 180,
   width_mm: 150,
   height_mm: 90,
-  primary_colors: "Black",
-  secondary_colors: "Black, White",
+  colors: "musta, valkoinen",
   product: psu3
 )
 property_list4 = PropertyList.create(
@@ -167,8 +167,7 @@ property_list4 = PropertyList.create(
   warranty: 3,
   width_mm: 120,
   height_mm: 120,
-  primary_colors: "White",
-  secondary_colors: "Black, White",
+  colors: "valkoinen",
   product: fan1
 )
 property_list5 = PropertyList.create(
@@ -183,8 +182,7 @@ property_list5 = PropertyList.create(
   warranty: 3,
   width_mm: 120,
   height_mm: 120,
-  primary_colors: "White",
-  secondary_colors: "Black, White",
+  colors: "musta, valkoinen",
   product: fan2
 )
 property_list6 = PropertyList.create(
@@ -199,9 +197,8 @@ property_list6 = PropertyList.create(
   warranty: 1,
   width_mm: 120,
   height_mm: 120,
-  primary_colors: "White",
-  secondary_colors: "White",
-  led_color: "Blue",
+  colors: "musta, valkoinen",
+  led_color: "sininen",
   product: fan3
 )
 
