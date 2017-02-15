@@ -13,7 +13,7 @@ Router.map(function() {
   });
   this.route('peripherals', {path: '/oheislaitteet'}, function() {
     this.route('monitors', { path: '/naytot' });
-  })
+  });
   this.route('sources');
   this.route('shops');
 });

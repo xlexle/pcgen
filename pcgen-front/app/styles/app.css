@@ -1,5 +1,5 @@
 /* Non-main fonts */
-table {
+/*table {
   font-family: 'Noto Sans', sans-serif;
   font-size: 12px;
 }
@@ -10,10 +10,10 @@ tr.header-group {
   letter-spacing: 1px;
 }
 
-/*.navbar-header {
+button.btn-block {
   font-family: 'Raleway', sans-serif;
+  font-size: 16px;
   font-weight: 600;
-  letter-spacing: 1px;
 }*/
 
 /* Custom styles */
@@ -22,7 +22,25 @@ tr.header-group {
 }
 
 .filter-button {
-  margin: 2px 0px 1px 0px;
+  margin: 2px 0px 2px 0px;
+}
+
+.filter-header {
+  margin: 4px 0px 2px 0px;
+  font-family: 'Raleway', sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.filter-area {
+  width: calc(100% - 30px);
+  float: none;
+  display: block;
+  margin: 0 auto;
+}
+
+.filter-item {
+  padding: 8px;
 }
 
 /* Column borders */
@@ -153,21 +171,4 @@ body {
 }
 .main .page-header {
   margin-top: 0;
-}
-
-/* Placeholder dashboard ideas */
-
-.placeholders {
-  margin-bottom: 30px;
-  text-align: center;
-}
-.placeholders h4 {
-  margin-bottom: 0;
-}
-.placeholder {
-  margin-bottom: 20px;
-}
-.placeholder img {
-  display: inline-block;
-  border-radius: 50%;
 }
