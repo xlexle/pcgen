@@ -1,12 +1,15 @@
 <div id="no-lg-width" class="container no-sm-width">
-  <div class="row row-offcanvas row-offcanvas-left main">
-    <!--Nav Bar -->
-    <nav class="sidebar offcanvas col-xs-3 col-sm-2">
+
+  <div class="row main">
+
+    <!--Sidebar, not visible on mobile -->
+    <nav class="sidebar side-position col-sm-2 hidden-xs" role="navigation">
       <ul id="inviscroll" class="nav nav-stacked fixed">
-        <li><a href="#komponentit">Komponentit</a></li>
-        <li><a href="#kokoonpanot">Kokoonpanot</a>
+        <li><a href="#intro">Ohjesivut</a></li>
+        <li><a href="#osat">Osien valitseminen</a>
           <ul class="nav nav-stacked">
-            <li><a href="#kokoonpanot-generointi">Generointi</a></li>
+            <li><a href="#osat-listatut">Listatut osat</a></li>
+            <li><a href="#osat-generointi">Tietokoneen generointi</a></li>
           </ul>
         </li>
         <li><a href="#prosessorit">Prosessorit</a>
@@ -72,914 +75,451 @@
       </ul>
     </nav>
 
-    <!-- Toggle for sidebar -->
-    <nav class="sidebar-toggle col-xs-1">
-      <button type="button" class="btn btn-lg btn-primary fixed">
-        <i class="fa fa-long-arrow-right fa-lg" aria-hidden="true"></i>
-      </button>
-    </nav>
-
-    <!--Main Content -->
-    <div class="col-xs-11 col-sm-10 col-sm-offset-2">
-      <button type="button" class="navbar-toggle" data-toggle="offcanvas" data-target=".sidebar-nav">
-       <span class="icon-bar"></span>
-       <span class="icon-bar"></span>
-       <span class="icon-bar"></span>
-     </button>
-      <div class="row">
-        <div class="col-sm-10">
+    <!--Content -->
+    <div class="col-sm-10 col-sm-offset-2">
+      <div class="row main-content">
+        <div class="col-sm-11">
           <div class="row">
             <div class="col-sm-11 col-sm-offset-1">
-              <section id="komponentit" class="anchor">
-                <h3>Komponentit</h3>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis rhoncus,
-                  lacus nec eleifend porttitor, sapien lacus ultrices ipsum, vel convallis
-                  tortor lorem eu ligula. Sed tortor est, dictum eu ligula quis, aliquam
-                  congue quam. Maecenas at purus viverra, porttitor lorem et, convallis
-                  tortor. Fusce luctus justo purus, in tincidunt nisl tempor ut. Donec
-                  viverra lorem at massa varius venenatis. Nam tortor nulla, cursus eu
-                  purus sollicitudin, fermentum egestas leo. Fusce porttitor diam vitae
-                  eugiat egestas. Donec urna lorem, ornare eu cursus ac, vestibulum quis
-                  velit.
-                </p>
-                <p>
-                  Fusce consequat urna sed malesuada consectetur. Donec dictum quam ac
-                  arcu lacinia commodo. Donec auctor felis vitae lorem ornare, ac laoreet
-                  tortor elementum. Donec ipsum ante, pulvinar vitae condimentum ac,
-                  bibendum quis nisi. Aliquam lobortis consequat egestas. Phasellus quam
-                  odio, posuere porttitor tincidunt id, efficitur ut felis. Vivamus libero
-                  odio, tempor sit amet urna id, egestas luctus arcu. Praesent dapibus arcu
-                  vitae lorem commodo pellentesque. Fusce sed consequat arcu. Quisque cursus
-                  placerat massa eget molestie. Etiam ut ultricies neque, eu pulvinar elit.
-                </p>
-                <p>
-                  Fusce non nulla non nisi fermentum laoreet et id quam. Pellentesque
-                  pulvinar blandit leo et lobortis. Aenean tristique odio id purus lobortis
-                  molestie. Aliquam mi tortor, vulputate a velit sed, vehicula fermentum
-                  odio. Quisque sagittis nisl sit amet lectus tempus tempus. Maecenas eu
-                  elit non diam aliquet dignissim eu at lorem. Aliquam erat volutpat.
-                </p>
-              </section>
-              <section id="kokoonpanot" class="anchor">
-                <h3>Kokoonpanot</h3>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis rhoncus,
-                  lacus nec eleifend porttitor, sapien lacus ultrices ipsum, vel convallis
-                  tortor lorem eu ligula. Sed tortor est, dictum eu ligula quis, aliquam
-                  congue quam. Maecenas at purus viverra, porttitor lorem et, convallis
-                  tortor. Fusce luctus justo purus, in tincidunt nisl tempor ut. Donec
-                  viverra lorem at massa varius venenatis. Nam tortor nulla, cursus eu
-                  purus sollicitudin, fermentum egestas leo. Fusce porttitor diam vitae
-                  eugiat egestas. Donec urna lorem, ornare eu cursus ac, vestibulum quis
-                  velit.
-                </p>
-                <div id="kokoonpanot-generointi" class="anchor">
-                  <h4>Kokoonpanojen generointi</h4>
+              <article>
+                <header id="intro" class="anchor">
+                  <h1>Ohjesivut</h1>
                   <p>
-                    Fusce consequat urna sed malesuada consectetur. Donec dictum quam ac
-                    arcu lacinia commodo. Donec auctor felis vitae lorem ornare, ac laoreet
-                    tortor elementum. Donec ipsum ante, pulvinar vitae condimentum ac,
-                    bibendum quis nisi. Aliquam lobortis consequat egestas. Phasellus quam
-                    odio, posuere porttitor tincidunt id, efficitur ut felis. Vivamus libero
-                    odio, tempor sit amet urna id, egestas luctus arcu. Praesent dapibus arcu
-                    vitae lorem commodo pellentesque. Fusce sed consequat arcu. Quisque cursus
-                    placerat massa eget molestie. Etiam ut ultricies neque, eu pulvinar elit.
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis rhoncus,
+                    lacus nec eleifend porttitor, sapien lacus ultrices ipsum, vel convallis
+                    tortor lorem eu ligula.
                   </p>
+                </header>
+                <section id="osat" class="anchor">
+                  <h2>Osien valitseminen</h2>
                   <p>
-                    Fusce non nulla non nisi fermentum laoreet et id quam. Pellentesque
-                    pulvinar blandit leo et lobortis. Aenean tristique odio id purus lobortis
-                    molestie. Aliquam mi tortor, vulputate a velit sed, vehicula fermentum
-                    odio. Quisque sagittis nisl sit amet lectus tempus tempus. Maecenas eu
-                    elit non diam aliquet dignissim eu at lorem. Aliquam erat volutpat.
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis rhoncus,
+                    lacus nec eleifend porttitor, sapien lacus ultrices ipsum, vel convallis
+                    tortor lorem eu ligula. Sed tortor est, dictum eu ligula quis, aliquam
+                    congue quam. Maecenas at purus viverra, porttitor lorem et, convallis
+                    tortor. Fusce luctus justo purus, in tincidunt nisl tempor ut. Donec
+                    viverra lorem at massa varius venenatis. Nam tortor nulla, cursus eu
+                    purus sollicitudin, fermentum egestas leo. Fusce porttitor diam vitae
+                    eugiat egestas. Donec urna lorem, ornare eu cursus ac, vestibulum quis
+                    velit.
                   </p>
-                </div>
-              </section>
-              <section id="prosessorit" class="anchor">
-                <h3>Prosessorit</h3>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis rhoncus,
-                  lacus nec eleifend porttitor, sapien lacus ultrices ipsum, vel convallis
-                  tortor lorem eu ligula. Sed tortor est, dictum eu ligula quis, aliquam
-                  congue quam. Maecenas at purus viverra, porttitor lorem et, convallis
-                  tortor. Fusce luctus justo purus, in tincidunt nisl tempor ut. Donec
-                  viverra lorem at massa varius venenatis. Nam tortor nulla, cursus eu
-                  purus sollicitudin, fermentum egestas leo. Fusce porttitor diam vitae
-                  eugiat egestas. Donec urna lorem, ornare eu cursus ac, vestibulum quis
-                  velit.
-                </p>
-                <div id="prosessorit-lga1151" class="anchor">
-                  <h4>LGA1151</h4>
+                  <div id="osat-listatut" class="anchor">
+                    <h3>Listatut osat</h3>
+                    <p>
+                      Fusce consequat urna sed malesuada consectetur. Donec dictum quam ac
+                      arcu lacinia commodo. Donec auctor felis vitae lorem ornare, ac laoreet
+                      tortor elementum. Donec ipsum ante, pulvinar vitae condimentum ac,
+                      bibendum quis nisi. Aliquam lobortis consequat egestas. Phasellus quam
+                      odio, posuere porttitor tincidunt id, efficitur ut felis. Vivamus libero
+                      odio, tempor sit amet urna id, egestas luctus arcu. Praesent dapibus arcu
+                      vitae lorem commodo pellentesque. Fusce sed consequat arcu. Quisque cursus
+                      placerat massa eget molestie. Etiam ut ultricies neque, eu pulvinar elit.
+                    </p>
+                  </div>
+                  <div id="osat-generointi" class="anchor">
+                    <h3>Tietokoneen generointi</h3>
+                    <p>
+                      Fusce non nulla non nisi fermentum laoreet et id quam. Pellentesque
+                      pulvinar blandit leo et lobortis. Aenean tristique odio id purus lobortis
+                      molestie. Aliquam mi tortor, vulputate a velit sed, vehicula fermentum
+                      odio. Quisque sagittis nisl sit amet lectus tempus tempus. Maecenas eu
+                      elit non diam aliquet dignissim eu at lorem. Aliquam erat volutpat.
+                    </p>
+                  </div>
+                </section>
+                <section id="prosessorit" class="anchor">
+                  <h2>Prosessorit</h2>
                   <p>
-                    Fusce consequat urna sed malesuada consectetur. Donec dictum quam ac
-                    arcu lacinia commodo. Donec auctor felis vitae lorem ornare, ac laoreet
-                    tortor elementum. Donec ipsum ante, pulvinar vitae condimentum ac,
-                    bibendum quis nisi. Aliquam lobortis consequat egestas. Phasellus quam
-                    odio, posuere porttitor tincidunt id, efficitur ut felis. Vivamus libero
-                    odio, tempor sit amet urna id, egestas luctus arcu. Praesent dapibus arcu
-                    vitae lorem commodo pellentesque. Fusce sed consequat arcu. Quisque cursus
-                    placerat massa eget molestie. Etiam ut ultricies neque, eu pulvinar elit.
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis rhoncus,
+                    lacus nec eleifend porttitor, sapien lacus ultrices ipsum, vel convallis
+                    tortor lorem eu ligula. Sed tortor est, dictum eu ligula quis, aliquam
+                    congue quam. Maecenas at purus viverra, porttitor lorem et, convallis
+                    tortor. Fusce luctus justo purus, in tincidunt nisl tempor ut. Donec
+                    viverra lorem at massa varius venenatis. Nam tortor nulla, cursus eu
+                    purus sollicitudin, fermentum egestas leo. Fusce porttitor diam vitae
+                    eugiat egestas. Donec urna lorem, ornare eu cursus ac, vestibulum quis
+                    velit.
                   </p>
-                </div>
-                <div id="prosessorit-amd1331" class="anchor">
-                  <h4>AMD Socket 1331</h4>
+                  <div id="prosessorit-lga1151" class="anchor">
+                    <h3>LGA1151</h3>
+                    <p>
+                      Fusce consequat urna sed malesuada consectetur. Donec dictum quam ac
+                      arcu lacinia commodo. Donec auctor felis vitae lorem ornare, ac laoreet
+                      tortor elementum. Donec ipsum ante, pulvinar vitae condimentum ac,
+                      bibendum quis nisi. Aliquam lobortis consequat egestas. Phasellus quam
+                      odio, posuere porttitor tincidunt id, efficitur ut felis. Vivamus libero
+                      odio, tempor sit amet urna id, egestas luctus arcu. Praesent dapibus arcu
+                      vitae lorem commodo pellentesque. Fusce sed consequat arcu. Quisque cursus
+                      placerat massa eget molestie. Etiam ut ultricies neque, eu pulvinar elit.
+                    </p>
+                  </div>
+                  <div id="prosessorit-amd1331" class="anchor">
+                    <h3>AMD Socket 1331</h3>
+                    <p>
+                      Fusce non nulla non nisi fermentum laoreet et id quam. Pellentesque
+                      pulvinar blandit leo et lobortis. Aenean tristique odio id purus lobortis
+                      molestie. Aliquam mi tortor, vulputate a velit sed, vehicula fermentum
+                      odio. Quisque sagittis nisl sit amet lectus tempus tempus. Maecenas eu
+                      elit non diam aliquet dignissim eu at lorem. Aliquam erat volutpat.
+                    </p>
+                  </div>
+                </section>
+                <section id="jaahdyttimet" class="anchor">
+                  <h2>Jäähdyttimet</h2>
                   <p>
-                    Fusce non nulla non nisi fermentum laoreet et id quam. Pellentesque
-                    pulvinar blandit leo et lobortis. Aenean tristique odio id purus lobortis
-                    molestie. Aliquam mi tortor, vulputate a velit sed, vehicula fermentum
-                    odio. Quisque sagittis nisl sit amet lectus tempus tempus. Maecenas eu
-                    elit non diam aliquet dignissim eu at lorem. Aliquam erat volutpat.
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis rhoncus,
+                    lacus nec eleifend porttitor, sapien lacus ultrices ipsum, vel convallis
+                    tortor lorem eu ligula. Sed tortor est, dictum eu ligula quis, aliquam
+                    congue quam. Maecenas at purus viverra, porttitor lorem et, convallis
+                    tortor. Fusce luctus justo purus, in tincidunt nisl tempor ut. Donec
+                    viverra lorem at massa varius venenatis. Nam tortor nulla, cursus eu
+                    purus sollicitudin, fermentum egestas leo. Fusce porttitor diam vitae
+                    eugiat egestas. Donec urna lorem, ornare eu cursus ac, vestibulum quis
+                    velit.
                   </p>
-                </div>
-              </section>
-              <section id="jaahdyttimet" class="anchor">
-                <h3>Jäähdyttimet</h3>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis rhoncus,
-                  lacus nec eleifend porttitor, sapien lacus ultrices ipsum, vel convallis
-                  tortor lorem eu ligula. Sed tortor est, dictum eu ligula quis, aliquam
-                  congue quam. Maecenas at purus viverra, porttitor lorem et, convallis
-                  tortor. Fusce luctus justo purus, in tincidunt nisl tempor ut. Donec
-                  viverra lorem at massa varius venenatis. Nam tortor nulla, cursus eu
-                  purus sollicitudin, fermentum egestas leo. Fusce porttitor diam vitae
-                  eugiat egestas. Donec urna lorem, ornare eu cursus ac, vestibulum quis
-                  velit.
-                </p>
-                <div id="groupbsub1" class="anchor">
-                  <h4>Group B Sub 1</h4>
+                  <div id="groupbsub1" class="anchor">
+                    <h3>Group B Sub 1</h3>
+                    <p>
+                      Fusce consequat urna sed malesuada consectetur. Donec dictum quam ac
+                      arcu lacinia commodo. Donec auctor felis vitae lorem ornare, ac laoreet
+                      tortor elementum. Donec ipsum ante, pulvinar vitae condimentum ac,
+                      bibendum quis nisi. Aliquam lobortis consequat egestas. Phasellus quam
+                      odio, posuere porttitor tincidunt id, efficitur ut felis. Vivamus libero
+                      odio, tempor sit amet urna id, egestas luctus arcu. Praesent dapibus arcu
+                      vitae lorem commodo pellentesque. Fusce sed consequat arcu. Quisque cursus
+                      placerat massa eget molestie. Etiam ut ultricies neque, eu pulvinar elit.
+                    </p>
+                  </div>
+                  <div id="groupbsub2" class="anchor">
+                    <h3>Group B Sub 2</h3>
+                    <p>
+                      Fusce non nulla non nisi fermentum laoreet et id quam. Pellentesque
+                      pulvinar blandit leo et lobortis. Aenean tristique odio id purus lobortis
+                      molestie. Aliquam mi tortor, vulputate a velit sed, vehicula fermentum
+                      odio. Quisque sagittis nisl sit amet lectus tempus tempus. Maecenas eu
+                      elit non diam aliquet dignissim eu at lorem. Aliquam erat volutpat.
+                    </p>
+                  </div>
+                </section>
+                <section id="emolevyt" class="anchor">
+                  <h2>Emolevyt</h2>
                   <p>
-                    Fusce consequat urna sed malesuada consectetur. Donec dictum quam ac
-                    arcu lacinia commodo. Donec auctor felis vitae lorem ornare, ac laoreet
-                    tortor elementum. Donec ipsum ante, pulvinar vitae condimentum ac,
-                    bibendum quis nisi. Aliquam lobortis consequat egestas. Phasellus quam
-                    odio, posuere porttitor tincidunt id, efficitur ut felis. Vivamus libero
-                    odio, tempor sit amet urna id, egestas luctus arcu. Praesent dapibus arcu
-                    vitae lorem commodo pellentesque. Fusce sed consequat arcu. Quisque cursus
-                    placerat massa eget molestie. Etiam ut ultricies neque, eu pulvinar elit.
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis rhoncus,
+                    lacus nec eleifend porttitor, sapien lacus ultrices ipsum, vel convallis
+                    tortor lorem eu ligula. Sed tortor est, dictum eu ligula quis, aliquam
+                    congue quam. Maecenas at purus viverra, porttitor lorem et, convallis
+                    tortor. Fusce luctus justo purus, in tincidunt nisl tempor ut. Donec
+                    viverra lorem at massa varius venenatis. Nam tortor nulla, cursus eu
+                    purus sollicitudin, fermentum egestas leo. Fusce porttitor diam vitae
+                    eugiat egestas. Donec urna lorem, ornare eu cursus ac, vestibulum quis
+                    velit.
                   </p>
-                </div>
-                <div id="groupbsub2" class="anchor">
-                  <h4>Group B Sub 2</h4>
+                  <div id="groupcsub1" class="anchor">
+                    <h3>Group C Sub 1</h3>
+                    <p>
+                      Fusce consequat urna sed malesuada consectetur. Donec dictum quam ac
+                      arcu lacinia commodo. Donec auctor felis vitae lorem ornare, ac laoreet
+                      tortor elementum. Donec ipsum ante, pulvinar vitae condimentum ac,
+                      bibendum quis nisi. Aliquam lobortis consequat egestas. Phasellus quam
+                      odio, posuere porttitor tincidunt id, efficitur ut felis. Vivamus libero
+                      odio, tempor sit amet urna id, egestas luctus arcu. Praesent dapibus arcu
+                      vitae lorem commodo pellentesque. Fusce sed consequat arcu. Quisque cursus
+                      placerat massa eget molestie. Etiam ut ultricies neque, eu pulvinar elit.
+                    </p>
+                  </div>
+                  <div id="groupcsub2" class="anchor">
+                    <h3>Group C Sub 2</h3>
+                    <p>
+                      Fusce non nulla non nisi fermentum laoreet et id quam. Pellentesque
+                      pulvinar blandit leo et lobortis. Aenean tristique odio id purus lobortis
+                      molestie. Aliquam mi tortor, vulputate a velit sed, vehicula fermentum
+                      odio. Quisque sagittis nisl sit amet lectus tempus tempus. Maecenas eu
+                      elit non diam aliquet dignissim eu at lorem. Aliquam erat volutpat.
+                    </p>
+                  </div>
+                </section>
+                <section id="muistit" class="anchor">
+                  <h2>Keskusmuistit</h2>
                   <p>
-                    Fusce non nulla non nisi fermentum laoreet et id quam. Pellentesque
-                    pulvinar blandit leo et lobortis. Aenean tristique odio id purus lobortis
-                    molestie. Aliquam mi tortor, vulputate a velit sed, vehicula fermentum
-                    odio. Quisque sagittis nisl sit amet lectus tempus tempus. Maecenas eu
-                    elit non diam aliquet dignissim eu at lorem. Aliquam erat volutpat.
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis rhoncus,
+                    lacus nec eleifend porttitor, sapien lacus ultrices ipsum, vel convallis
+                    tortor lorem eu ligula. Sed tortor est, dictum eu ligula quis, aliquam
+                    congue quam. Maecenas at purus viverra, porttitor lorem et, convallis
+                    tortor. Fusce luctus justo purus, in tincidunt nisl tempor ut. Donec
+                    viverra lorem at massa varius venenatis. Nam tortor nulla, cursus eu
+                    purus sollicitudin, fermentum egestas leo. Fusce porttitor diam vitae
+                    eugiat egestas. Donec urna lorem, ornare eu cursus ac, vestibulum quis
+                    velit.
                   </p>
-                </div>
-              </section>
-              <section id="emolevyt" class="anchor">
-                <h3>Emolevyt</h3>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis rhoncus,
-                  lacus nec eleifend porttitor, sapien lacus ultrices ipsum, vel convallis
-                  tortor lorem eu ligula. Sed tortor est, dictum eu ligula quis, aliquam
-                  congue quam. Maecenas at purus viverra, porttitor lorem et, convallis
-                  tortor. Fusce luctus justo purus, in tincidunt nisl tempor ut. Donec
-                  viverra lorem at massa varius venenatis. Nam tortor nulla, cursus eu
-                  purus sollicitudin, fermentum egestas leo. Fusce porttitor diam vitae
-                  eugiat egestas. Donec urna lorem, ornare eu cursus ac, vestibulum quis
-                  velit.
-                </p>
-                <div id="groupcsub1" class="anchor">
-                  <h4>Group C Sub 1</h4>
+                  <div id="groupdsub1" class="anchor">
+                    <h3>Group D Sub 1</h3>
+                    <p>
+                      Fusce consequat urna sed malesuada consectetur. Donec dictum quam ac
+                      arcu lacinia commodo. Donec auctor felis vitae lorem ornare, ac laoreet
+                      tortor elementum. Donec ipsum ante, pulvinar vitae condimentum ac,
+                      bibendum quis nisi. Aliquam lobortis consequat egestas. Phasellus quam
+                      odio, posuere porttitor tincidunt id, efficitur ut felis. Vivamus libero
+                      odio, tempor sit amet urna id, egestas luctus arcu. Praesent dapibus arcu
+                      vitae lorem commodo pellentesque. Fusce sed consequat arcu. Quisque cursus
+                      placerat massa eget molestie. Etiam ut ultricies neque, eu pulvinar elit.
+                    </p>
+                  </div>
+                  <div id="groupdsub2" class="anchor">
+                    <h3>Group D Sub 2</h3>
+                    <p>
+                      Fusce non nulla non nisi fermentum laoreet et id quam. Pellentesque
+                      pulvinar blandit leo et lobortis. Aenean tristique odio id purus lobortis
+                      molestie. Aliquam mi tortor, vulputate a velit sed, vehicula fermentum
+                      odio. Quisque sagittis nisl sit amet lectus tempus tempus. Maecenas eu
+                      elit non diam aliquet dignissim eu at lorem. Aliquam erat volutpat.
+                    </p>
+                  </div>
+                </section>
+                <section id="naytonohjaimet" class="anchor">
+                  <h2>Näytönohjaimet</h2>
                   <p>
-                    Fusce consequat urna sed malesuada consectetur. Donec dictum quam ac
-                    arcu lacinia commodo. Donec auctor felis vitae lorem ornare, ac laoreet
-                    tortor elementum. Donec ipsum ante, pulvinar vitae condimentum ac,
-                    bibendum quis nisi. Aliquam lobortis consequat egestas. Phasellus quam
-                    odio, posuere porttitor tincidunt id, efficitur ut felis. Vivamus libero
-                    odio, tempor sit amet urna id, egestas luctus arcu. Praesent dapibus arcu
-                    vitae lorem commodo pellentesque. Fusce sed consequat arcu. Quisque cursus
-                    placerat massa eget molestie. Etiam ut ultricies neque, eu pulvinar elit.
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis rhoncus,
+                    lacus nec eleifend porttitor, sapien lacus ultrices ipsum, vel convallis
+                    tortor lorem eu ligula. Sed tortor est, dictum eu ligula quis, aliquam
+                    congue quam. Maecenas at purus viverra, porttitor lorem et, convallis
+                    tortor. Fusce luctus justo purus, in tincidunt nisl tempor ut. Donec
+                    viverra lorem at massa varius venenatis. Nam tortor nulla, cursus eu
+                    purus sollicitudin, fermentum egestas leo. Fusce porttitor diam vitae
+                    eugiat egestas. Donec urna lorem, ornare eu cursus ac, vestibulum quis
+                    velit.
                   </p>
-                </div>
-                <div id="groupcsub2" class="anchor">
-                  <h4>Group C Sub 2</h4>
+                  <div id="groupesub1" class="anchor">
+                    <h3>Group E Sub 1</h3>
+                    <p>
+                      Fusce consequat urna sed malesuada consectetur. Donec dictum quam ac
+                      arcu lacinia commodo. Donec auctor felis vitae lorem ornare, ac laoreet
+                      tortor elementum. Donec ipsum ante, pulvinar vitae condimentum ac,
+                      bibendum quis nisi. Aliquam lobortis consequat egestas. Phasellus quam
+                      odio, posuere porttitor tincidunt id, efficitur ut felis. Vivamus libero
+                      odio, tempor sit amet urna id, egestas luctus arcu. Praesent dapibus arcu
+                      vitae lorem commodo pellentesque. Fusce sed consequat arcu. Quisque cursus
+                      placerat massa eget molestie. Etiam ut ultricies neque, eu pulvinar elit.
+                    </p>
+                  </div>
+                  <div id="groupesub2" class="anchor">
+                    <h3>Group E Sub 2</h3>
+                    <p>
+                      Fusce non nulla non nisi fermentum laoreet et id quam. Pellentesque
+                      pulvinar blandit leo et lobortis. Aenean tristique odio id purus lobortis
+                      molestie. Aliquam mi tortor, vulputate a velit sed, vehicula fermentum
+                      odio. Quisque sagittis nisl sit amet lectus tempus tempus. Maecenas eu
+                      elit non diam aliquet dignissim eu at lorem. Aliquam erat volutpat.
+                    </p>
+                  </div>
+                </section>
+                <section id="tallennus" class="anchor">
+                  <h2>Tallennustila</h2>
                   <p>
-                    Fusce non nulla non nisi fermentum laoreet et id quam. Pellentesque
-                    pulvinar blandit leo et lobortis. Aenean tristique odio id purus lobortis
-                    molestie. Aliquam mi tortor, vulputate a velit sed, vehicula fermentum
-                    odio. Quisque sagittis nisl sit amet lectus tempus tempus. Maecenas eu
-                    elit non diam aliquet dignissim eu at lorem. Aliquam erat volutpat.
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis rhoncus,
+                    lacus nec eleifend porttitor, sapien lacus ultrices ipsum, vel convallis
+                    tortor lorem eu ligula. Sed tortor est, dictum eu ligula quis, aliquam
+                    congue quam. Maecenas at purus viverra, porttitor lorem et, convallis
+                    tortor. Fusce luctus justo purus, in tincidunt nisl tempor ut. Donec
+                    viverra lorem at massa varius venenatis. Nam tortor nulla, cursus eu
+                    purus sollicitudin, fermentum egestas leo. Fusce porttitor diam vitae
+                    eugiat egestas. Donec urna lorem, ornare eu cursus ac, vestibulum quis
+                    velit.
                   </p>
-                </div>
-              </section>
-              <section id="muistit" class="anchor">
-                <h3>Keskusmuistit</h3>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis rhoncus,
-                  lacus nec eleifend porttitor, sapien lacus ultrices ipsum, vel convallis
-                  tortor lorem eu ligula. Sed tortor est, dictum eu ligula quis, aliquam
-                  congue quam. Maecenas at purus viverra, porttitor lorem et, convallis
-                  tortor. Fusce luctus justo purus, in tincidunt nisl tempor ut. Donec
-                  viverra lorem at massa varius venenatis. Nam tortor nulla, cursus eu
-                  purus sollicitudin, fermentum egestas leo. Fusce porttitor diam vitae
-                  eugiat egestas. Donec urna lorem, ornare eu cursus ac, vestibulum quis
-                  velit.
-                </p>
-                <div id="groupdsub1" class="anchor">
-                  <h4>Group D Sub 1</h4>
+                  <div id="tallennus-ssd" class="anchor">
+                    <h3>SSD-levyt</h3>
+                    <p>
+                      Fusce consequat urna sed malesuada consectetur. Donec dictum quam ac
+                      arcu lacinia commodo. Donec auctor felis vitae lorem ornare, ac laoreet
+                      tortor elementum. Donec ipsum ante, pulvinar vitae condimentum ac,
+                      bibendum quis nisi. Aliquam lobortis consequat egestas. Phasellus quam
+                      odio, posuere porttitor tincidunt id, efficitur ut felis. Vivamus libero
+                      odio, tempor sit amet urna id, egestas luctus arcu. Praesent dapibus arcu
+                      vitae lorem commodo pellentesque. Fusce sed consequat arcu. Quisque cursus
+                      placerat massa eget molestie. Etiam ut ultricies neque, eu pulvinar elit.
+                    </p>
+                  </div>
+                  <div id="tallennus-hdd" class="anchor">
+                    <h3>Kiintolevyt</h3>
+                    <p>
+                      Fusce non nulla non nisi fermentum laoreet et id quam. Pellentesque
+                      pulvinar blandit leo et lobortis. Aenean tristique odio id purus lobortis
+                      molestie. Aliquam mi tortor, vulputate a velit sed, vehicula fermentum
+                      odio. Quisque sagittis nisl sit amet lectus tempus tempus. Maecenas eu
+                      elit non diam aliquet dignissim eu at lorem. Aliquam erat volutpat.
+                    </p>
+                  </div>
+                </section>
+                <section id="virtalahteet" class="anchor">
+                  <h2>Virtalähteet</h2>
                   <p>
-                    Fusce consequat urna sed malesuada consectetur. Donec dictum quam ac
-                    arcu lacinia commodo. Donec auctor felis vitae lorem ornare, ac laoreet
-                    tortor elementum. Donec ipsum ante, pulvinar vitae condimentum ac,
-                    bibendum quis nisi. Aliquam lobortis consequat egestas. Phasellus quam
-                    odio, posuere porttitor tincidunt id, efficitur ut felis. Vivamus libero
-                    odio, tempor sit amet urna id, egestas luctus arcu. Praesent dapibus arcu
-                    vitae lorem commodo pellentesque. Fusce sed consequat arcu. Quisque cursus
-                    placerat massa eget molestie. Etiam ut ultricies neque, eu pulvinar elit.
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis rhoncus,
+                    lacus nec eleifend porttitor, sapien lacus ultrices ipsum, vel convallis
+                    tortor lorem eu ligula. Sed tortor est, dictum eu ligula quis, aliquam
+                    congue quam. Maecenas at purus viverra, porttitor lorem et, convallis
+                    tortor. Fusce luctus justo purus, in tincidunt nisl tempor ut. Donec
+                    viverra lorem at massa varius venenatis. Nam tortor nulla, cursus eu
+                    purus sollicitudin, fermentum egestas leo. Fusce porttitor diam vitae
+                    eugiat egestas. Donec urna lorem, ornare eu cursus ac, vestibulum quis
+                    velit.
                   </p>
-                </div>
-                <div id="groupdsub2" class="anchor">
-                  <h4>Group D Sub 2</h4>
+                  <div id="groupgsub1" class="anchor">
+                    <h3>Group G Sub 1</h3>
+                    <p>
+                      Fusce consequat urna sed malesuada consectetur. Donec dictum quam ac
+                      arcu lacinia commodo. Donec auctor felis vitae lorem ornare, ac laoreet
+                      tortor elementum. Donec ipsum ante, pulvinar vitae condimentum ac,
+                      bibendum quis nisi. Aliquam lobortis consequat egestas. Phasellus quam
+                      odio, posuere porttitor tincidunt id, efficitur ut felis. Vivamus libero
+                      odio, tempor sit amet urna id, egestas luctus arcu. Praesent dapibus arcu
+                      vitae lorem commodo pellentesque. Fusce sed consequat arcu. Quisque cursus
+                      placerat massa eget molestie. Etiam ut ultricies neque, eu pulvinar elit.
+                    </p>
+                  </div>
+                  <div id="groupgsub2" class="anchor">
+                    <h3>Group G Sub 2</h3>
+                    <p>
+                      Fusce non nulla non nisi fermentum laoreet et id quam. Pellentesque
+                      pulvinar blandit leo et lobortis. Aenean tristique odio id purus lobortis
+                      molestie. Aliquam mi tortor, vulputate a velit sed, vehicula fermentum
+                      odio. Quisque sagittis nisl sit amet lectus tempus tempus. Maecenas eu
+                      elit non diam aliquet dignissim eu at lorem. Aliquam erat volutpat.
+                    </p>
+                  </div>
+                </section>
+                <section id="kotelot" class="anchor">
+                  <h2>Kotelot</h2>
                   <p>
-                    Fusce non nulla non nisi fermentum laoreet et id quam. Pellentesque
-                    pulvinar blandit leo et lobortis. Aenean tristique odio id purus lobortis
-                    molestie. Aliquam mi tortor, vulputate a velit sed, vehicula fermentum
-                    odio. Quisque sagittis nisl sit amet lectus tempus tempus. Maecenas eu
-                    elit non diam aliquet dignissim eu at lorem. Aliquam erat volutpat.
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis rhoncus,
+                    lacus nec eleifend porttitor, sapien lacus ultrices ipsum, vel convallis
+                    tortor lorem eu ligula. Sed tortor est, dictum eu ligula quis, aliquam
+                    congue quam. Maecenas at purus viverra, porttitor lorem et, convallis
+                    tortor. Fusce luctus justo purus, in tincidunt nisl tempor ut. Donec
+                    viverra lorem at massa varius venenatis. Nam tortor nulla, cursus eu
+                    purus sollicitudin, fermentum egestas leo. Fusce porttitor diam vitae
+                    eugiat egestas. Donec urna lorem, ornare eu cursus ac, vestibulum quis
+                    velit.
                   </p>
-                </div>
-              </section>
-              <section id="naytonohjaimet" class="anchor">
-                <h3>Näytönohjaimet</h3>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis rhoncus,
-                  lacus nec eleifend porttitor, sapien lacus ultrices ipsum, vel convallis
-                  tortor lorem eu ligula. Sed tortor est, dictum eu ligula quis, aliquam
-                  congue quam. Maecenas at purus viverra, porttitor lorem et, convallis
-                  tortor. Fusce luctus justo purus, in tincidunt nisl tempor ut. Donec
-                  viverra lorem at massa varius venenatis. Nam tortor nulla, cursus eu
-                  purus sollicitudin, fermentum egestas leo. Fusce porttitor diam vitae
-                  eugiat egestas. Donec urna lorem, ornare eu cursus ac, vestibulum quis
-                  velit.
-                </p>
-                <div id="groupesub1" class="anchor">
-                  <h4>Group E Sub 1</h4>
+                  <div id="grouphsub1" class="anchor">
+                    <h3>Group H Sub 1</h3>
+                    <p>
+                      Fusce consequat urna sed malesuada consectetur. Donec dictum quam ac
+                      arcu lacinia commodo. Donec auctor felis vitae lorem ornare, ac laoreet
+                      tortor elementum. Donec ipsum ante, pulvinar vitae condimentum ac,
+                      bibendum quis nisi. Aliquam lobortis consequat egestas. Phasellus quam
+                      odio, posuere porttitor tincidunt id, efficitur ut felis. Vivamus libero
+                      odio, tempor sit amet urna id, egestas luctus arcu. Praesent dapibus arcu
+                      vitae lorem commodo pellentesque. Fusce sed consequat arcu. Quisque cursus
+                      placerat massa eget molestie. Etiam ut ultricies neque, eu pulvinar elit.
+                    </p>
+                  </div>
+                  <div id="grouphsub2" class="anchor">
+                    <h3>Group H Sub 2</h3>
+                    <p>
+                      Fusce non nulla non nisi fermentum laoreet et id quam. Pellentesque
+                      pulvinar blandit leo et lobortis. Aenean tristique odio id purus lobortis
+                      molestie. Aliquam mi tortor, vulputate a velit sed, vehicula fermentum
+                      odio. Quisque sagittis nisl sit amet lectus tempus tempus. Maecenas eu
+                      elit non diam aliquet dignissim eu at lorem. Aliquam erat volutpat.
+                    </p>
+                  </div>
+                </section>
+                <section id="tuulettimet" class="anchor">
+                  <h2>Tuulettimet</h2>
                   <p>
-                    Fusce consequat urna sed malesuada consectetur. Donec dictum quam ac
-                    arcu lacinia commodo. Donec auctor felis vitae lorem ornare, ac laoreet
-                    tortor elementum. Donec ipsum ante, pulvinar vitae condimentum ac,
-                    bibendum quis nisi. Aliquam lobortis consequat egestas. Phasellus quam
-                    odio, posuere porttitor tincidunt id, efficitur ut felis. Vivamus libero
-                    odio, tempor sit amet urna id, egestas luctus arcu. Praesent dapibus arcu
-                    vitae lorem commodo pellentesque. Fusce sed consequat arcu. Quisque cursus
-                    placerat massa eget molestie. Etiam ut ultricies neque, eu pulvinar elit.
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis rhoncus,
+                    lacus nec eleifend porttitor, sapien lacus ultrices ipsum, vel convallis
+                    tortor lorem eu ligula. Sed tortor est, dictum eu ligula quis, aliquam
+                    congue quam. Maecenas at purus viverra, porttitor lorem et, convallis
+                    tortor. Fusce luctus justo purus, in tincidunt nisl tempor ut. Donec
+                    viverra lorem at massa varius venenatis. Nam tortor nulla, cursus eu
+                    purus sollicitudin, fermentum egestas leo. Fusce porttitor diam vitae
+                    eugiat egestas. Donec urna lorem, ornare eu cursus ac, vestibulum quis
+                    velit.
                   </p>
-                </div>
-                <div id="groupesub2" class="anchor">
-                  <h4>Group E Sub 2</h4>
+                  <div id="groupisub1" class="anchor">
+                    <h3>Group I Sub 1</h3>
+                    <p>
+                      Fusce consequat urna sed malesuada consectetur. Donec dictum quam ac
+                      arcu lacinia commodo. Donec auctor felis vitae lorem ornare, ac laoreet
+                      tortor elementum. Donec ipsum ante, pulvinar vitae condimentum ac,
+                      bibendum quis nisi. Aliquam lobortis consequat egestas. Phasellus quam
+                      odio, posuere porttitor tincidunt id, efficitur ut felis. Vivamus libero
+                      odio, tempor sit amet urna id, egestas luctus arcu. Praesent dapibus arcu
+                      vitae lorem commodo pellentesque. Fusce sed consequat arcu. Quisque cursus
+                      placerat massa eget molestie. Etiam ut ultricies neque, eu pulvinar elit.
+                    </p>
+                  </div>
+                  <div id="groupisub2" class="anchor">
+                    <h3>Group I Sub 2</h3>
+                    <p>
+                      Fusce non nulla non nisi fermentum laoreet et id quam. Pellentesque
+                      pulvinar blandit leo et lobortis. Aenean tristique odio id purus lobortis
+                      molestie. Aliquam mi tortor, vulputate a velit sed, vehicula fermentum
+                      odio. Quisque sagittis nisl sit amet lectus tempus tempus. Maecenas eu
+                      elit non diam aliquet dignissim eu at lorem. Aliquam erat volutpat.
+                    </p>
+                  </div>
+                </section>
+                <section id="tarvikkeet" class="anchor">
+                  <h2>Lisätarvikkeet</h2>
                   <p>
-                    Fusce non nulla non nisi fermentum laoreet et id quam. Pellentesque
-                    pulvinar blandit leo et lobortis. Aenean tristique odio id purus lobortis
-                    molestie. Aliquam mi tortor, vulputate a velit sed, vehicula fermentum
-                    odio. Quisque sagittis nisl sit amet lectus tempus tempus. Maecenas eu
-                    elit non diam aliquet dignissim eu at lorem. Aliquam erat volutpat.
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis rhoncus,
+                    lacus nec eleifend porttitor, sapien lacus ultrices ipsum, vel convallis
+                    tortor lorem eu ligula. Sed tortor est, dictum eu ligula quis, aliquam
+                    congue quam. Maecenas at purus viverra, porttitor lorem et, convallis
+                    tortor. Fusce luctus justo purus, in tincidunt nisl tempor ut. Donec
+                    viverra lorem at massa varius venenatis. Nam tortor nulla, cursus eu
+                    purus sollicitudin, fermentum egestas leo. Fusce porttitor diam vitae
+                    eugiat egestas. Donec urna lorem, ornare eu cursus ac, vestibulum quis
+                    velit.
                   </p>
-                </div>
-              </section>
-              <section id="tallennus" class="anchor">
-                <h3>Tallennustila</h3>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis rhoncus,
-                  lacus nec eleifend porttitor, sapien lacus ultrices ipsum, vel convallis
-                  tortor lorem eu ligula. Sed tortor est, dictum eu ligula quis, aliquam
-                  congue quam. Maecenas at purus viverra, porttitor lorem et, convallis
-                  tortor. Fusce luctus justo purus, in tincidunt nisl tempor ut. Donec
-                  viverra lorem at massa varius venenatis. Nam tortor nulla, cursus eu
-                  purus sollicitudin, fermentum egestas leo. Fusce porttitor diam vitae
-                  eugiat egestas. Donec urna lorem, ornare eu cursus ac, vestibulum quis
-                  velit.
-                </p>
-                <div id="tallennus-ssd" class="anchor">
-                  <h4>SSD-levyt</h4>
-                  <p>
-                    Fusce consequat urna sed malesuada consectetur. Donec dictum quam ac
-                    arcu lacinia commodo. Donec auctor felis vitae lorem ornare, ac laoreet
-                    tortor elementum. Donec ipsum ante, pulvinar vitae condimentum ac,
-                    bibendum quis nisi. Aliquam lobortis consequat egestas. Phasellus quam
-                    odio, posuere porttitor tincidunt id, efficitur ut felis. Vivamus libero
-                    odio, tempor sit amet urna id, egestas luctus arcu. Praesent dapibus arcu
-                    vitae lorem commodo pellentesque. Fusce sed consequat arcu. Quisque cursus
-                    placerat massa eget molestie. Etiam ut ultricies neque, eu pulvinar elit.
-                  </p>
-                </div>
-                <div id="tallennus-hdd" class="anchor">
-                  <h4>Kiintolevyt</h4>
-                  <p>
-                    Fusce non nulla non nisi fermentum laoreet et id quam. Pellentesque
-                    pulvinar blandit leo et lobortis. Aenean tristique odio id purus lobortis
-                    molestie. Aliquam mi tortor, vulputate a velit sed, vehicula fermentum
-                    odio. Quisque sagittis nisl sit amet lectus tempus tempus. Maecenas eu
-                    elit non diam aliquet dignissim eu at lorem. Aliquam erat volutpat.
-                  </p>
-                </div>
-              </section>
-              <section id="virtalahteet" class="anchor">
-                <h3>Virtalähteet</h3>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis rhoncus,
-                  lacus nec eleifend porttitor, sapien lacus ultrices ipsum, vel convallis
-                  tortor lorem eu ligula. Sed tortor est, dictum eu ligula quis, aliquam
-                  congue quam. Maecenas at purus viverra, porttitor lorem et, convallis
-                  tortor. Fusce luctus justo purus, in tincidunt nisl tempor ut. Donec
-                  viverra lorem at massa varius venenatis. Nam tortor nulla, cursus eu
-                  purus sollicitudin, fermentum egestas leo. Fusce porttitor diam vitae
-                  eugiat egestas. Donec urna lorem, ornare eu cursus ac, vestibulum quis
-                  velit.
-                </p>
-                <div id="groupgsub1" class="anchor">
-                  <h4>Group G Sub 1</h4>
-                  <p>
-                    Fusce consequat urna sed malesuada consectetur. Donec dictum quam ac
-                    arcu lacinia commodo. Donec auctor felis vitae lorem ornare, ac laoreet
-                    tortor elementum. Donec ipsum ante, pulvinar vitae condimentum ac,
-                    bibendum quis nisi. Aliquam lobortis consequat egestas. Phasellus quam
-                    odio, posuere porttitor tincidunt id, efficitur ut felis. Vivamus libero
-                    odio, tempor sit amet urna id, egestas luctus arcu. Praesent dapibus arcu
-                    vitae lorem commodo pellentesque. Fusce sed consequat arcu. Quisque cursus
-                    placerat massa eget molestie. Etiam ut ultricies neque, eu pulvinar elit.
-                  </p>
-                </div>
-                <div id="groupgsub2" class="anchor">
-                  <h4>Group G Sub 2</h4>
-                  <p>
-                    Fusce non nulla non nisi fermentum laoreet et id quam. Pellentesque
-                    pulvinar blandit leo et lobortis. Aenean tristique odio id purus lobortis
-                    molestie. Aliquam mi tortor, vulputate a velit sed, vehicula fermentum
-                    odio. Quisque sagittis nisl sit amet lectus tempus tempus. Maecenas eu
-                    elit non diam aliquet dignissim eu at lorem. Aliquam erat volutpat.
-                  </p>
-                </div>
-              </section>
-              <section id="kotelot" class="anchor">
-                <h3>Kotelot</h3>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis rhoncus,
-                  lacus nec eleifend porttitor, sapien lacus ultrices ipsum, vel convallis
-                  tortor lorem eu ligula. Sed tortor est, dictum eu ligula quis, aliquam
-                  congue quam. Maecenas at purus viverra, porttitor lorem et, convallis
-                  tortor. Fusce luctus justo purus, in tincidunt nisl tempor ut. Donec
-                  viverra lorem at massa varius venenatis. Nam tortor nulla, cursus eu
-                  purus sollicitudin, fermentum egestas leo. Fusce porttitor diam vitae
-                  eugiat egestas. Donec urna lorem, ornare eu cursus ac, vestibulum quis
-                  velit.
-                </p>
-                <div id="grouphsub1" class="anchor">
-                  <h4>Group H Sub 1</h4>
-                  <p>
-                    Fusce consequat urna sed malesuada consectetur. Donec dictum quam ac
-                    arcu lacinia commodo. Donec auctor felis vitae lorem ornare, ac laoreet
-                    tortor elementum. Donec ipsum ante, pulvinar vitae condimentum ac,
-                    bibendum quis nisi. Aliquam lobortis consequat egestas. Phasellus quam
-                    odio, posuere porttitor tincidunt id, efficitur ut felis. Vivamus libero
-                    odio, tempor sit amet urna id, egestas luctus arcu. Praesent dapibus arcu
-                    vitae lorem commodo pellentesque. Fusce sed consequat arcu. Quisque cursus
-                    placerat massa eget molestie. Etiam ut ultricies neque, eu pulvinar elit.
-                  </p>
-                </div>
-                <div id="grouphsub2" class="anchor">
-                  <h4>Group H Sub 2</h4>
-                  <p>
-                    Fusce non nulla non nisi fermentum laoreet et id quam. Pellentesque
-                    pulvinar blandit leo et lobortis. Aenean tristique odio id purus lobortis
-                    molestie. Aliquam mi tortor, vulputate a velit sed, vehicula fermentum
-                    odio. Quisque sagittis nisl sit amet lectus tempus tempus. Maecenas eu
-                    elit non diam aliquet dignissim eu at lorem. Aliquam erat volutpat.
-                  </p>
-                </div>
-              </section>
-              <section id="tuulettimet" class="anchor">
-                <h3>Tuulettimet</h3>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis rhoncus,
-                  lacus nec eleifend porttitor, sapien lacus ultrices ipsum, vel convallis
-                  tortor lorem eu ligula. Sed tortor est, dictum eu ligula quis, aliquam
-                  congue quam. Maecenas at purus viverra, porttitor lorem et, convallis
-                  tortor. Fusce luctus justo purus, in tincidunt nisl tempor ut. Donec
-                  viverra lorem at massa varius venenatis. Nam tortor nulla, cursus eu
-                  purus sollicitudin, fermentum egestas leo. Fusce porttitor diam vitae
-                  eugiat egestas. Donec urna lorem, ornare eu cursus ac, vestibulum quis
-                  velit.
-                </p>
-                <div id="groupisub1" class="anchor">
-                  <h4>Group I Sub 1</h4>
-                  <p>
-                    Fusce consequat urna sed malesuada consectetur. Donec dictum quam ac
-                    arcu lacinia commodo. Donec auctor felis vitae lorem ornare, ac laoreet
-                    tortor elementum. Donec ipsum ante, pulvinar vitae condimentum ac,
-                    bibendum quis nisi. Aliquam lobortis consequat egestas. Phasellus quam
-                    odio, posuere porttitor tincidunt id, efficitur ut felis. Vivamus libero
-                    odio, tempor sit amet urna id, egestas luctus arcu. Praesent dapibus arcu
-                    vitae lorem commodo pellentesque. Fusce sed consequat arcu. Quisque cursus
-                    placerat massa eget molestie. Etiam ut ultricies neque, eu pulvinar elit.
-                  </p>
-                </div>
-                <div id="groupisub2" class="anchor">
-                  <h4>Group I Sub 2</h4>
-                  <p>
-                    Fusce non nulla non nisi fermentum laoreet et id quam. Pellentesque
-                    pulvinar blandit leo et lobortis. Aenean tristique odio id purus lobortis
-                    molestie. Aliquam mi tortor, vulputate a velit sed, vehicula fermentum
-                    odio. Quisque sagittis nisl sit amet lectus tempus tempus. Maecenas eu
-                    elit non diam aliquet dignissim eu at lorem. Aliquam erat volutpat.
-                  </p>
-                </div>
-              </section>
-              <section id="tarvikkeet" class="anchor">
-                <h3>Lisätarvikkeet</h3>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis rhoncus,
-                  lacus nec eleifend porttitor, sapien lacus ultrices ipsum, vel convallis
-                  tortor lorem eu ligula. Sed tortor est, dictum eu ligula quis, aliquam
-                  congue quam. Maecenas at purus viverra, porttitor lorem et, convallis
-                  tortor. Fusce luctus justo purus, in tincidunt nisl tempor ut. Donec
-                  viverra lorem at massa varius venenatis. Nam tortor nulla, cursus eu
-                  purus sollicitudin, fermentum egestas leo. Fusce porttitor diam vitae
-                  eugiat egestas. Donec urna lorem, ornare eu cursus ac, vestibulum quis
-                  velit.
-                </p>
-                <div id="groupjsub1" class="anchor">
-                  <h4>Group J Sub 1</h4>
-                  <p>
-                    Fusce consequat urna sed malesuada consectetur. Donec dictum quam ac
-                    arcu lacinia commodo. Donec auctor felis vitae lorem ornare, ac laoreet
-                    tortor elementum. Donec ipsum ante, pulvinar vitae condimentum ac,
-                    bibendum quis nisi. Aliquam lobortis consequat egestas. Phasellus quam
-                    odio, posuere porttitor tincidunt id, efficitur ut felis. Vivamus libero
-                    odio, tempor sit amet urna id, egestas luctus arcu. Praesent dapibus arcu
-                    vitae lorem commodo pellentesque. Fusce sed consequat arcu. Quisque cursus
-                    placerat massa eget molestie. Etiam ut ultricies neque, eu pulvinar elit.
-                  </p>
-                </div>
-                <div id="groupjsub2" class="anchor">
-                  <h4>Group J Sub 2</h4>
-                  <p>
-                    Fusce non nulla non nisi fermentum laoreet et id quam. Pellentesque
-                    pulvinar blandit leo et lobortis. Aenean tristique odio id purus lobortis
-                    molestie. Aliquam mi tortor, vulputate a velit sed, vehicula fermentum
-                    odio. Quisque sagittis nisl sit amet lectus tempus tempus. Maecenas eu
-                    elit non diam aliquet dignissim eu at lorem. Aliquam erat volutpat.
-                  </p>
-                </div>
-              </section>
+                  <div id="groupjsub1" class="anchor">
+                    <h3>Group J Sub 1</h3>
+                    <p>
+                      Fusce consequat urna sed malesuada consectetur. Donec dictum quam ac
+                      arcu lacinia commodo. Donec auctor felis vitae lorem ornare, ac laoreet
+                      tortor elementum. Donec ipsum ante, pulvinar vitae condimentum ac,
+                      bibendum quis nisi. Aliquam lobortis consequat egestas. Phasellus quam
+                      odio, posuere porttitor tincidunt id, efficitur ut felis. Vivamus libero
+                      odio, tempor sit amet urna id, egestas luctus arcu. Praesent dapibus arcu
+                      vitae lorem commodo pellentesque. Fusce sed consequat arcu. Quisque cursus
+                      placerat massa eget molestie. Etiam ut ultricies neque, eu pulvinar elit.
+                    </p>
+                  </div>
+                  <div id="groupjsub2" class="anchor">
+                    <h3>Group J Sub 2</h3>
+                    <p>
+                      Fusce non nulla non nisi fermentum laoreet et id quam. Pellentesque
+                      pulvinar blandit leo et lobortis. Aenean tristique odio id purus lobortis
+                      molestie. Aliquam mi tortor, vulputate a velit sed, vehicula fermentum
+                      odio. Quisque sagittis nisl sit amet lectus tempus tempus. Maecenas eu
+                      elit non diam aliquet dignissim eu at lorem. Aliquam erat volutpat.
+                    </p>
+                  </div>
+                </section>
+              </article>
             </div>
           </div>
         </div>
-        <div class="col-sm-2 col-sm-offset-12"></div>
-      </div>
-    </div>
-  </div>
-
-  <div class="row bottom-content">
-  </div>
-</div>
-
-<!--
-    <div class="row">
-      <div class="col-lg-3 col-md-4">
-        <div class="panel panel-default">
-          <div class="panel-heading">Prosessorit</div>
-          <div class="panel-body">
-            <p>Tietoa prosessorin roolista tietokoneessa, ja kuinka valita itselle sopiva.</p>
-          </div>
-
-          <div class="row">
-            <div class="col-md-12 filter-item">
-              <div class="filter-header">Koodinimi</div>
-              <button class="btn btn-xs btn-default filter-button" type="button" aria-controls="...">
-                <i class="fa fa-arrow-circle-right" aria-hidden="true"></i> Intel Skylake
-              </button>
-              <button class="btn btn-xs btn-default filter-button" type="button" aria-controls="...">
-                <i class="fa fa-arrow-circle-right" aria-hidden="true"></i> Intel Kaby Lake
-              </button>
-              <button class="btn btn-xs btn-default filter-button" type="button" aria-controls="...">
-                <i class="fa fa-arrow-circle-right" aria-hidden="true"></i> AMD Ryzen
-              </button>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-md-12 filter-item">
-              <div class="filter-header">Prosessorikanta</div>
-              <button class="btn btn-xs btn-default filter-button" type="button" aria-controls="...">
-                <i class="fa fa-arrow-circle-right" aria-hidden="true"></i> Intel LGA1150
-              </button>
-              <button class="btn btn-xs btn-default filter-button" type="button" aria-controls="...">
-                <i class="fa fa-arrow-circle-right" aria-hidden="true"></i> Intel LGA1151
-              </button>
-              <button class="btn btn-xs btn-default filter-button" type="button" aria-controls="...">
-                <i class="fa fa-arrow-circle-right" aria-hidden="true"></i> AMD Socket 1331
-              </button>
-            </div>
-          </div>
-        </div>
+        <div class="col-sm-1 col-sm-offset-11"></div>
       </div>
 
-      <div class="col-lg-3 col-md-4">
-        <div class="panel panel-default">
-          <div class="panel-heading">Prosessorijäähdyttimet</div>
-          <div class="panel-body">
-            <p>Tietoa prosessorijäähdyttimen roolista tietokoneessa, ja kuinka valita itselle sopiva.</p>
-          </div>
-
-          <div class="row">
-            <div class="col-md-12 filter-item">
-              <div class="filter-header">Tyyppi</div>
-              <button class="btn btn-xs btn-default filter-button" type="button" aria-controls="...">
-                <i class="fa fa-arrow-circle-right" aria-hidden="true"></i> Matalaprofiiliset
-              </button>
-              <button class="btn btn-xs btn-default filter-button" type="button" aria-controls="...">
-                <i class="fa fa-arrow-circle-right" aria-hidden="true"></i> Tornijäähdyttimet
-              </button>
-              <button class="btn btn-xs btn-default filter-button" type="button" aria-controls="...">
-                <i class="fa fa-arrow-circle-right" aria-hidden="true"></i> Nestejäähdyttimet
-              </button>
+      <div class="row bottom-content">
+          <div class="col-sm-11">
+            <div class="row">
+              <div class="col-sm-11 col-sm-offset-1">
+                <section>
+                  <p>
+                    Bottom content.
+                  </p>
+                </section>
+              </div>
             </div>
           </div>
-          <div class="row">
-            <div class="col-md-12 filter-item">
-              <div class="filter-header">Jäähdytysteho</div>
-              <button class="btn btn-xs btn-default filter-button" type="button" aria-controls="...">
-                <i class="fa fa-arrow-circle-right" aria-hidden="true"></i> Peruskäyttö
-              </button>
-              <button class="btn btn-xs btn-default filter-button" type="button" aria-controls="...">
-                <i class="fa fa-arrow-circle-right" aria-hidden="true"></i> Kellotus
-              </button>
-            </div>
-          </div>
-        </div>
+          <div class="col-sm-1 col-sm-offset-11"></div>
       </div>
+    </div> <!-- col, content -->
 
-      <div class="col-lg-3 col-md-4">
-        <div class="panel panel-default">
-          <div class="panel-heading">Emolevyt</div>
-          <div class="panel-body">
-            <p>Tietoa emolevyn roolista tietokoneessa, ja kuinka valita itselle sopiva.</p>
-          </div>
+  </div> <!-- row main -->
 
-          <div class="row">
-            <div class="col-md-12 filter-item">
-              <div class="filter-header">Prosessorikannat</div>
-              <button class="btn btn-xs btn-default filter-button" type="button" aria-controls="...">
-                <i class="fa fa-arrow-circle-right" aria-hidden="true"></i> Intel LGA1150
-              </button>
-              <button class="btn btn-xs btn-default filter-button" type="button" aria-controls="...">
-                <i class="fa fa-arrow-circle-right" aria-hidden="true"></i> Intel LGA1151
-              </button>
-              <button class="btn btn-xs btn-default filter-button" type="button" aria-controls="...">
-                <i class="fa fa-arrow-circle-right" aria-hidden="true"></i> AMD Socket 1331
-              </button>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-md-12 filter-item">
-              <div class="filter-header">Kokoluokat</div>
-              <button class="btn btn-xs btn-default filter-button" type="button" aria-controls="...">
-                <i class="fa fa-arrow-circle-right" aria-hidden="true"></i> ATX
-              </button>
-              <button class="btn btn-xs btn-default filter-button" type="button" aria-controls="...">
-                <i class="fa fa-arrow-circle-right" aria-hidden="true"></i> MicroATX
-              </button>
-              <button class="btn btn-xs btn-default filter-button" type="button" aria-controls="...">
-                <i class="fa fa-arrow-circle-right" aria-hidden="true"></i> Mini-ITX
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-lg-3 col-md-4">
-        <div class="panel panel-default">
-          <div class="panel-heading">Keskusmuistit</div>
-          <div class="panel-body">
-            <p>Tietoa keskusmuistien roolista tietokoneessa, ja kuinka valita itselle sopiva.</p>
-          </div>
-
-          <div class="row">
-            <div class="col-md-12 filter-item">
-              <div class="filter-header">Koodinimi</div>
-              <button class="btn btn-xs btn-default filter-button" type="button" aria-controls="...">
-                <i class="fa fa-arrow-circle-right" aria-hidden="true"></i> Intel Skylake
-              </button>
-              <button class="btn btn-xs btn-default filter-button" type="button" aria-controls="...">
-                <i class="fa fa-arrow-circle-right" aria-hidden="true"></i> Intel Kaby Lake
-              </button>
-              <button class="btn btn-xs btn-default filter-button" type="button" aria-controls="...">
-                <i class="fa fa-arrow-circle-right" aria-hidden="true"></i> AMD Ryzen
-              </button>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-md-12 filter-item">
-              <div class="filter-header">Prosessorikanta</div>
-              <button class="btn btn-xs btn-default filter-button" type="button" aria-controls="...">
-                <i class="fa fa-arrow-circle-right" aria-hidden="true"></i> Intel LGA1150
-              </button>
-              <button class="btn btn-xs btn-default filter-button" type="button" aria-controls="...">
-                <i class="fa fa-arrow-circle-right" aria-hidden="true"></i> Intel LGA1151
-              </button>
-              <button class="btn btn-xs btn-default filter-button" type="button" aria-controls="...">
-                <i class="fa fa-arrow-circle-right" aria-hidden="true"></i> AMD Socket 1331
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-lg-3 col-md-4">
-        <div class="panel panel-default">
-          <div class="panel-heading">Näytönohjainkortit</div>
-          <div class="panel-body">
-            <p>Tietoa näytönohjaimen roolista tietokoneessa, ja kuinka valita itselle sopiva.</p>
-          </div>
-
-          <div class="row">
-            <div class="col-md-12 filter-item">
-              <div class="filter-header">Tyyppi</div>
-              <button class="btn btn-xs btn-default filter-button" type="button" aria-controls="...">
-                <i class="fa fa-arrow-circle-right" aria-hidden="true"></i> Matalaprofiiliset
-              </button>
-              <button class="btn btn-xs btn-default filter-button" type="button" aria-controls="...">
-                <i class="fa fa-arrow-circle-right" aria-hidden="true"></i> Tornijäähdyttimet
-              </button>
-              <button class="btn btn-xs btn-default filter-button" type="button" aria-controls="...">
-                <i class="fa fa-arrow-circle-right" aria-hidden="true"></i> Nestejäähdyttimet
-              </button>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-md-12 filter-item">
-              <div class="filter-header">Jäähdytysteho</div>
-              <button class="btn btn-xs btn-default filter-button" type="button" aria-controls="...">
-                <i class="fa fa-arrow-circle-right" aria-hidden="true"></i> Peruskäyttö
-              </button>
-              <button class="btn btn-xs btn-default filter-button" type="button" aria-controls="...">
-                <i class="fa fa-arrow-circle-right" aria-hidden="true"></i> Kellotus
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-lg-3 col-md-4">
-        <div class="panel panel-default">
-          <div class="panel-heading">SSD-levyt</div>
-          <div class="panel-body">
-            <p>Tietoa SSD-levyn roolista tietokoneessa, ja kuinka valita itselle sopiva.</p>
-          </div>
-
-          <div class="row">
-            <div class="col-md-12 filter-item">
-              <div class="filter-header">Prosessorikannat</div>
-              <button class="btn btn-xs btn-default filter-button" type="button" aria-controls="...">
-                <i class="fa fa-arrow-circle-right" aria-hidden="true"></i> Intel LGA1150
-              </button>
-              <button class="btn btn-xs btn-default filter-button" type="button" aria-controls="...">
-                <i class="fa fa-arrow-circle-right" aria-hidden="true"></i> Intel LGA1151
-              </button>
-              <button class="btn btn-xs btn-default filter-button" type="button" aria-controls="...">
-                <i class="fa fa-arrow-circle-right" aria-hidden="true"></i> AMD Socket 1331
-              </button>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-md-12 filter-item">
-              <div class="filter-header">Kokoluokat</div>
-              <button class="btn btn-xs btn-default filter-button" type="button" aria-controls="...">
-                <i class="fa fa-arrow-circle-right" aria-hidden="true"></i> ATX
-              </button>
-              <button class="btn btn-xs btn-default filter-button" type="button" aria-controls="...">
-                <i class="fa fa-arrow-circle-right" aria-hidden="true"></i> MicroATX
-              </button>
-              <button class="btn btn-xs btn-default filter-button" type="button" aria-controls="...">
-                <i class="fa fa-arrow-circle-right" aria-hidden="true"></i> Mini-ITX
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-lg-3 col-md-4">
-        <div class="panel panel-default">
-          <div class="panel-heading">Kiintolevyt</div>
-          <div class="panel-body">
-            <p>Tietoa kiintolevyjen roolista tietokoneessa, ja kuinka valita itselle sopiva.</p>
-          </div>
-
-          <div class="row">
-            <div class="col-md-12 filter-item">
-              <div class="filter-header">Koodinimi</div>
-              <button class="btn btn-xs btn-default filter-button" type="button" aria-controls="...">
-                <i class="fa fa-arrow-circle-right" aria-hidden="true"></i> Intel Skylake
-              </button>
-              <button class="btn btn-xs btn-default filter-button" type="button" aria-controls="...">
-                <i class="fa fa-arrow-circle-right" aria-hidden="true"></i> Intel Kaby Lake
-              </button>
-              <button class="btn btn-xs btn-default filter-button" type="button" aria-controls="...">
-                <i class="fa fa-arrow-circle-right" aria-hidden="true"></i> AMD Ryzen
-              </button>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-md-12 filter-item">
-              <div class="filter-header">Prosessorikanta</div>
-              <button class="btn btn-xs btn-default filter-button" type="button" aria-controls="...">
-                <i class="fa fa-arrow-circle-right" aria-hidden="true"></i> Intel LGA1150
-              </button>
-              <button class="btn btn-xs btn-default filter-button" type="button" aria-controls="...">
-                <i class="fa fa-arrow-circle-right" aria-hidden="true"></i> Intel LGA1151
-              </button>
-              <button class="btn btn-xs btn-default filter-button" type="button" aria-controls="...">
-                <i class="fa fa-arrow-circle-right" aria-hidden="true"></i> AMD Socket 1331
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-lg-3 col-md-4">
-        <div class="panel panel-default">
-          <div class="panel-heading">Virtalähteet</div>
-          <div class="panel-body">
-            <p>Tietoa virtalähteen roolista tietokoneessa, ja kuinka valita itselle sopiva.</p>
-          </div>
-
-          <div class="row">
-            <div class="col-md-12 filter-item">
-              <div class="filter-header">Tyyppi</div>
-              <button class="btn btn-xs btn-default filter-button" type="button" aria-controls="...">
-                <i class="fa fa-arrow-circle-right" aria-hidden="true"></i> Matalaprofiiliset
-              </button>
-              <button class="btn btn-xs btn-default filter-button" type="button" aria-controls="...">
-                <i class="fa fa-arrow-circle-right" aria-hidden="true"></i> Tornijäähdyttimet
-              </button>
-              <button class="btn btn-xs btn-default filter-button" type="button" aria-controls="...">
-                <i class="fa fa-arrow-circle-right" aria-hidden="true"></i> Nestejäähdyttimet
-              </button>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-md-12 filter-item">
-              <div class="filter-header">Jäähdytysteho</div>
-              <button class="btn btn-xs btn-default filter-button" type="button" aria-controls="...">
-                <i class="fa fa-arrow-circle-right" aria-hidden="true"></i> Peruskäyttö
-              </button>
-              <button class="btn btn-xs btn-default filter-button" type="button" aria-controls="...">
-                <i class="fa fa-arrow-circle-right" aria-hidden="true"></i> Kellotus
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-lg-3 col-md-4">
-        <div class="panel panel-default">
-          <div class="panel-heading">Kotelot</div>
-          <div class="panel-body">
-            <p>Tietoa kotelon roolista tietokoneessa, ja kuinka valita itselle sopiva.</p>
-          </div>
-
-          <div class="row">
-            <div class="col-md-12 filter-item">
-              <div class="filter-header">Prosessorikannat</div>
-              <button class="btn btn-xs btn-default filter-button" type="button" aria-controls="...">
-                <i class="fa fa-arrow-circle-right" aria-hidden="true"></i> Intel LGA1150
-              </button>
-              <button class="btn btn-xs btn-default filter-button" type="button" aria-controls="...">
-                <i class="fa fa-arrow-circle-right" aria-hidden="true"></i> Intel LGA1151
-              </button>
-              <button class="btn btn-xs btn-default filter-button" type="button" aria-controls="...">
-                <i class="fa fa-arrow-circle-right" aria-hidden="true"></i> AMD Socket 1331
-              </button>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-md-12 filter-item">
-              <div class="filter-header">Kokoluokat</div>
-              <button class="btn btn-xs btn-default filter-button" type="button" aria-controls="...">
-                <i class="fa fa-arrow-circle-right" aria-hidden="true"></i> ATX
-              </button>
-              <button class="btn btn-xs btn-default filter-button" type="button" aria-controls="...">
-                <i class="fa fa-arrow-circle-right" aria-hidden="true"></i> MicroATX
-              </button>
-              <button class="btn btn-xs btn-default filter-button" type="button" aria-controls="...">
-                <i class="fa fa-arrow-circle-right" aria-hidden="true"></i> Mini-ITX
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-lg-3 col-md-4">
-        <div class="panel panel-default">
-          <div class="panel-heading">Tuulettimet</div>
-          <div class="panel-body">
-            <p>Tietoa tuuletinten roolista tietokoneessa, ja kuinka valita itselle sopivat.</p>
-          </div>
-
-          <div class="row">
-            <div class="col-md-12 filter-item">
-              <div class="filter-header">Koodinimi</div>
-              <button class="btn btn-xs btn-default filter-button" type="button" aria-controls="...">
-                <i class="fa fa-arrow-circle-right" aria-hidden="true"></i> Intel Skylake
-              </button>
-              <button class="btn btn-xs btn-default filter-button" type="button" aria-controls="...">
-                <i class="fa fa-arrow-circle-right" aria-hidden="true"></i> Intel Kaby Lake
-              </button>
-              <button class="btn btn-xs btn-default filter-button" type="button" aria-controls="...">
-                <i class="fa fa-arrow-circle-right" aria-hidden="true"></i> AMD Ryzen
-              </button>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-md-12 filter-item">
-              <div class="filter-header">Prosessorikanta</div>
-              <button class="btn btn-xs btn-default filter-button" type="button" aria-controls="...">
-                <i class="fa fa-arrow-circle-right" aria-hidden="true"></i> Intel LGA1150
-              </button>
-              <button class="btn btn-xs btn-default filter-button" type="button" aria-controls="...">
-                <i class="fa fa-arrow-circle-right" aria-hidden="true"></i> Intel LGA1151
-              </button>
-              <button class="btn btn-xs btn-default filter-button" type="button" aria-controls="...">
-                <i class="fa fa-arrow-circle-right" aria-hidden="true"></i> AMD Socket 1331
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-lg-3 col-md-4">
-        <div class="panel panel-default">
-          <div class="panel-heading">WLAN-sovittimet</div>
-          <div class="panel-body">
-            <p>Tietoa langattoman verkkosovittimen roolista tietokoneessa, ja kuinka valita itselle sopiva.</p>
-          </div>
-
-          <div class="row">
-            <div class="col-md-12 filter-item">
-              <div class="filter-header">Tyyppi</div>
-              <button class="btn btn-xs btn-default filter-button" type="button" aria-controls="...">
-                <i class="fa fa-arrow-circle-right" aria-hidden="true"></i> Matalaprofiiliset
-              </button>
-              <button class="btn btn-xs btn-default filter-button" type="button" aria-controls="...">
-                <i class="fa fa-arrow-circle-right" aria-hidden="true"></i> Tornijäähdyttimet
-              </button>
-              <button class="btn btn-xs btn-default filter-button" type="button" aria-controls="...">
-                <i class="fa fa-arrow-circle-right" aria-hidden="true"></i> Nestejäähdyttimet
-              </button>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-md-12 filter-item">
-              <div class="filter-header">Jäähdytysteho</div>
-              <button class="btn btn-xs btn-default filter-button" type="button" aria-controls="...">
-                <i class="fa fa-arrow-circle-right" aria-hidden="true"></i> Peruskäyttö
-              </button>
-              <button class="btn btn-xs btn-default filter-button" type="button" aria-controls="...">
-                <i class="fa fa-arrow-circle-right" aria-hidden="true"></i> Kellotus
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-lg-3 col-md-4">
-        <div class="panel panel-default">
-          <div class="panel-heading">Lisätarvikkeet</div>
-          <div class="panel-body">
-            <p>Tietoa lisätarvikkeiden roolista tietokoneessa, ja kuinka valita itselle sopiva.</p>
-          </div>
-
-          <div class="row">
-            <div class="col-md-12 filter-item">
-              <div class="filter-header">Prosessorikannat</div>
-              <button class="btn btn-xs btn-default filter-button" type="button" aria-controls="...">
-                <i class="fa fa-arrow-circle-right" aria-hidden="true"></i> Intel LGA1150
-              </button>
-              <button class="btn btn-xs btn-default filter-button" type="button" aria-controls="...">
-                <i class="fa fa-arrow-circle-right" aria-hidden="true"></i> Intel LGA1151
-              </button>
-              <button class="btn btn-xs btn-default filter-button" type="button" aria-controls="...">
-                <i class="fa fa-arrow-circle-right" aria-hidden="true"></i> AMD Socket 1331
-              </button>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-md-12 filter-item">
-              <div class="filter-header">Kokoluokat</div>
-              <button class="btn btn-xs btn-default filter-button" type="button" aria-controls="...">
-                <i class="fa fa-arrow-circle-right" aria-hidden="true"></i> ATX
-              </button>
-              <button class="btn btn-xs btn-default filter-button" type="button" aria-controls="...">
-                <i class="fa fa-arrow-circle-right" aria-hidden="true"></i> MicroATX
-              </button>
-              <button class="btn btn-xs btn-default filter-button" type="button" aria-controls="...">
-                <i class="fa fa-arrow-circle-right" aria-hidden="true"></i> Mini-ITX
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
--->
+</div> <!-- container -->

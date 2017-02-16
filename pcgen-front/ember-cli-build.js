@@ -22,11 +22,15 @@ module.exports = function(defaults) {
   // along with the exports of each module as its value.
 
   var bootstrap = new Funnel('bower_components/bootstrap/dist', {
-    files: ['css/bootstrap.css', 'js/bootstrap.min.js']
+    files: ['css/bootstrap.min.css', 'js/bootstrap.min.js']
   });
 
   var bootstrapFonts = new Funnel('bower_components/bootstrap/dist', {
     include: ['fonts/*']
+  });
+
+  var jasnyBootstrap = new Funnel('bower_components/jasny-bootstrap/dist', {
+    files: ['css/jasny-bootstrap.min.css', 'js/jasny-bootstrap.min.js']
   });
 
   var fontAwesome = new Funnel('bower_components/components-font-awesome', {
@@ -46,6 +50,7 @@ module.exports = function(defaults) {
     new Merge([
       bootstrap,
       bootstrapFonts,
+      jasnyBootstrap,
       fontAwesome,
       fontAwesomeFonts,
       jQuery
