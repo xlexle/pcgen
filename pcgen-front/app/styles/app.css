@@ -158,7 +158,7 @@ button.btn-block {
 .sidebar .nav ul.nav {
   display: none;
 }
-/* show active nested lists */
+/* show active and hovered nested lists */
 .sidebar .nav > .active > ul.nav {
   display: block;
 }
@@ -167,45 +167,27 @@ button.btn-block {
 /* - - - SIDEBAR LINKS - - - */
 /* - - - - - - - - - - - - - */
 
-/* main links */
+/* links */
 .sidebar .nav > li > a {
   color: #777;
   border-left: 2px solid transparent;
-  padding: 3px 12px 3px 10px;
+  padding: 4px 12px 3px 10px;
   font-size: 14px;
   font-weight: 600;
 }
 
 /* nested links */
 .sidebar .nav .nav > li > a {
-  color: #666;
-  padding: 1px 20px 1px 20px;
-  font-size: 12px;
+  padding: 2px 20px 2px 20px;
+  font-size: 13px;
   font-weight: 400;
 }
 
-/* active & hover links */
-.sidebar .nav > .active > a,
-.sidebar .nav > li > a:hover,
-.sidebar .nav > li > a:focus {
+/* active links */
+.sidebar .nav .active > a,
+.sidebar .nav .nav .active > a {
   color: #563d7c;
-  text-decoration: none;
-  background-color: transparent;
   border-left: 2px solid #563d7c;
-}
-
-/* all active links */
-.sidebar .nav > .active > a,
-.sidebar .nav > .active:hover > a,
-.sidebar .nav > .active:focus > a {
-  font-weight: 600;
-}
-
-/* nested active links */
-.sidebar .nav .nav > .active > a,
-.sidebar .nav .nav > .active:hover > a,
-.sidebar .nav .nav > .active:focus > a {
-  font-weight: 400;
 }
 
 /* adjust anchor target position */
