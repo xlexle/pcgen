@@ -22,7 +22,7 @@ module.exports = function(defaults) {
   // along with the exports of each module as its value.
 
   var bootstrap = new Funnel('bower_components/bootstrap/dist', {
-    files: ['css/bootstrap.min.css', 'js/bootstrap.min.js']
+    files: ['css/bootstrap.css', 'js/bootstrap.min.js']
   });
 
   var bootstrapFonts = new Funnel('bower_components/bootstrap/dist', {
