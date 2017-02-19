@@ -1,8 +1,23 @@
-/* - - - - - - - - - - */
-/* - - - GLOBALS - - - */
-/* - - - - - - - - - - */
+/* - - - - - - - - - - - - */
+/* TABLE OF CONTENTS - - - */
+/* ================= - - - */
+/* 1. Globals  - - - - - - */
+/* 2. Navbar - - - - - - - */
+/* 3. Main content - - - - */
+/* 4. Parts layout - - - - */
+/* 5. Filters  - - - - - - */
+/* 6. Listings - - - - - - */
+/* 7. Sidebar  - - - - - - */
+/* 8. Sidebar links  - - - */
+/* 9. Tables - - - - - - - */
+/* 10. Sign-in - - - - - - */
+/* - - - - - - - - - - - - */
 
-/* Non-main fonts */
+/* ====================== */
+/*       1. Globals       */
+/* ====================== */
+
+/* non-main fonts */
 /*table {
   font-family: 'Noto Sans', sans-serif;
   font-size: 12px;
@@ -20,7 +35,7 @@ button.btn-block {
   font-weight: 600;
 }*/
 
-/* restrict continaer width changes */
+/* restrict container width changes */
 @media (min-width: 992px) {
   #no-lg-width {
     width: 970px;
@@ -33,9 +48,45 @@ button.btn-block {
   }
 }
 
-/* Hide default top nav border to remove 1px line. */
-.navbar-fixed-top {
-  border: 0;
+/* ===================== */
+/*       2. Navbar       */
+/* ===================== */
+
+.navbar-wrapper {
+  position: absolute;
+  right: 0;
+  left: 0;
+  z-index: 20;
+}
+
+.navbar-wrapper .navbar {
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+/* keeps links more centered for medium screens */
+@media (min-width: 767px) {
+  .navbar-wrapper .navbar {
+    padding-right: calc(50% - 384px + 28px);
+    padding-left: calc(50% - 384px + 28px);
+  }
+}
+
+/* positioning for detached navbar */
+@media (min-width: 991px) {
+  .navbar-wrapper {
+    margin: 20px auto 0px;
+    max-width: 768px;
+  }
+
+  .navbar-wrapper .navbar {
+    padding: 0px;
+  }
+
+  /* round corners */
+  .navbar-wrapper .navbar {
+    border-radius: 3px;
+  }
 }
 
 /* Decreased navbar height */
@@ -66,46 +117,13 @@ button.btn-block {
   height: 20px;
 }
 
-/* - - - - - - - - - - */
-/* - - - FILTERS - - - */
-/* - - - - - - - - - - */
+/* =========================== */
+/*       3. Main content       */
+/* =========================== */
 
-.current-filters {
-  padding: 6px 30px 6px 20px;
-}
-
-.filter-button {
-  margin: 2px 0px 2px 0px;
-}
-
-.filter-header {
-  margin: 4px 0px 2px 0px;
-  font-family: 'Raleway', sans-serif;
-  font-size: 12px;
-  font-weight: 600;
-}
-
-.filter-area {
-  width: calc(100% - 30px);
-  float: none;
-  display: block;
-  margin: 0 auto;
-}
-
-.filter-item {
-  padding: 8px;
-}
-
-/* - - - - - - - - - */
-/* - - - MAIN  - - - */
-/* - - - - - - - - - */
-
+/* main content-wrapping */
 .main {
-  padding: 20px 30px 20px 20px;
-}
-
-.main .page-header {
-  margin-top: 0;
+  padding: 30px 20px 20px 20px;
 }
 
 .main-content {
@@ -117,35 +135,146 @@ button.btn-block {
   margin: 200px 0px 200px 0px;
 }
 
+@media (max-width: 991px) {
+  .main-content {
+    /*margin-left: -20px;*/
+  }
+}
+
 @media (max-width: 767px) {
   .main {
     padding-right: 8px;
     padding-left: 10px;
   }
+}
 
-  .main-content {
-    margin-top: 10px;
+/* =========================== */
+/*       4. Parts layout       */
+/* =========================== */
+
+.parts-wrapper,
+.controls-area > .panel {
+  /*temp*/
+  background-color: #d5d5d5;
+}
+
+/* placeholder for actual content area */
+.top-content {
+  padding-top: 50px;
+}
+
+.controls-area,
+.listings-area {
+  margin: 0px auto;
+  padding: 15px 0px 15px 0px;
+  max-width: 1200px;
+}
+
+@media (max-width: 991px) {
+  .top-content {
+    padding-top: 30px;
+  }
+
+  .controls-area {
+    margin: 0px auto 0px;
+    max-width: 730px;
   }
 }
 
-/* - - - - - - - - - - - - - */
-/* - - - SIDEBAR MAIN  - - - */
-/* - - - - - - - - - - - - - */
+.current-filters {
+  margin: 0px auto;
+  max-width: 1200px;
 
-.sidebar {
-  margin: 30px 0px 0px 0px;
-  padding: 10px 0px 0px 20px;
+  /*temp*/
+  background-color: #ffc4ee;
 }
+
+/* ====================== */
+/*       5. Filters       */
+/* ====================== */
+
+.controls .filter-area {
+  width: calc(100% - 30px);
+  float: none;
+  display: block;
+  margin: 0 auto;
+  /*temp*/
+  background-color: #f8f8cc;
+}
+
+.controls .filter-area > .area-header {
+  text-align: center;
+  margin-right: 30px;
+  font-size: 16px;
+  font-weight: 400;
+  /*temp*/
+  background-color: #d1ff8c;
+}
+
+.controls .filter-area .filter-item {
+  padding: 8px;
+  /*temp*/
+  background-color: #c78cff;
+}
+
+.controls .filter-area .filter-item > .item-header {
+  margin: 4px 0px 2px 0px;
+  font-size: 12px;
+  font-weight: 600;
+  /*temp*/
+  background-color: #8cffd8;
+}
+
+.controls .filter-area .filter-item > button.filter {
+  margin: 2px 0px 2px 0px;
+}
+
+/* expands collapsible divs on size M+ screens */
+@media (min-width: 992px) {
+  #categories, #shop-filters, #specs-filters {
+    display: block!important;
+  }
+}
+
+/* ======================= */
+/*       6. Listings       */
+/* ======================= */
+
+.listings-area .listing-item {
+  padding: 10px 25px 10px 50px;
+}
+
+.item-info {
+  list-style-type: none;
+}
+
+/* expands collapsible divs on size S+ screens */
+@media (min-width: 768px) {
+  #more-prices {
+    display: block!important;
+  }
+}
+
+/* temp background colors */
+.item-specs {
+  background-color: #c78cff;
+}
+
+.item-additional {
+  background-color: #8cffd8;
+}
+
+.item-shops {
+  background-color: #d1ff8c;
+}
+
+/* ====================== */
+/*       7. Sidebar       */
+/* ====================== */
 
 .sidebar > ul {
   overflow-y: auto;
   height: calc(100% - 80px);
-}
-
-@media (max-width: 991px) {
-  .sidebar {
-    margin-left: -20px;
-  }
 }
 
 /* fixed list position */
@@ -163,9 +292,9 @@ button.btn-block {
   display: block;
 }
 
-/* - - - - - - - - - - - - - */
-/* - - - SIDEBAR LINKS - - - */
-/* - - - - - - - - - - - - - */
+/* ============================ */
+/*       8. Sidebar links       */
+/* ============================ */
 
 /* links */
 .sidebar .nav > li > a {
@@ -210,7 +339,10 @@ button.btn-block {
 @-o-viewport      { width: device-width; }
 @viewport         { width: device-width; }
 
-/* DEPRECATED */
+/* ===================== */
+/*       9. Tables       */
+/* ===================== */
+
 /* Column borders */
 .first-column { border-left: 1px solid #ddd; }
 .last-column { border-right: 1px solid #ddd; }
@@ -219,3 +351,42 @@ button.btn-block {
 .bottom-row { border-bottom: 1px solid #ddd; }
 
 tr.header-group > th { text-align: center; }
+
+/* ====================== */
+/*       10. Signin       */
+/* ====================== */
+
+.form-signin {
+  max-width: 330px;
+  padding: 15px;
+  margin: 0 auto;
+}
+.form-signin .form-signin-heading,
+.form-signin .checkbox {
+  margin-bottom: 10px;
+}
+.form-signin .checkbox {
+  font-weight: normal;
+}
+.form-signin .form-control {
+  position: relative;
+  height: auto;
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 10px;
+  font-size: 14px;
+}
+.form-signin .form-control:focus {
+  z-index: 2;
+}
+.form-signin input[type="email"] {
+  margin-bottom: -1px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+.form-signin input[type="password"] {
+  margin-bottom: 10px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}

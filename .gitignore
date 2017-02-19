@@ -32,12 +32,26 @@
 
 # Custom adds, experimental/temporary
 README_final.md
-/vendor
-/public
 /lib
-/app/assets
-/app/jobs
 /app/mailers
 /app/views
-/app/helpers
 /test/mailers
+
+# =============== #
+# future versions #
+# =============== #
+
+# controllers
+/app/controllers/conflicts_controller.rb
+/app/controllers/product_conflicts_controller.rb
+/app/controllers/service_items_controller.rb
+
+# models
+/app/models/conflict.rb
+/app/models/product_conflict.rb
+/app/models/service_item.rb
+
+# serializers
+/app/serializers/conflict_serializer.rb
+/app/serializers/product_conflict_serializer.rb
+/app/serializers/service_item_serializer.rb

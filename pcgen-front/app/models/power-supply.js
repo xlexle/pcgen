@@ -4,7 +4,7 @@ import Product from './product';
 
 export default Product.extend({
   formFactor: DS.attr('string'),
-  // capacity: DS.attr('capacity'), 
+  // capacity: DS.attr('capacity'),
   amps12v: DS.attr('number'),
   fullModular: DS.attr('boolean'),
   semiModular: DS.attr('boolean'),
@@ -27,14 +27,14 @@ export default Product.extend({
     let connectors = "";
 
     if (eights !== 0) {
-      connectors += eights + " kpl 8-pin";
+      connectors += eights + " x 8-pin";
       if (sixes !== 0) {
         connectors += ", ";
       }
     }
 
     if (sixes !== 0) {
-      connectors += sixes + " kpl 6-pin";
+      connectors += sixes + " x 6-pin";
     }
 
     return connectors;

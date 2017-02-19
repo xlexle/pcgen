@@ -1,133 +1,56 @@
-<div class="row main">
-  <div class="col-sm-6">
-  </div>
-  <div class="col-sm-6">
-    <button class="btn btn-default btn-block" type="button" data-toggle="collapse" data-target="#filters" aria-expanded="true" aria-controls="...">
-      Näytä suodattimet
-    </button>
-    <div class="row collapse" id="filters">
-      <div class="col-xs-12 filter-area">
-        <div class="row">
-          <div class="col-xs-4 filter-item">
-            <div class="filter-header">Kapasiteetti</div>
-            <button class="btn btn-xs btn-default filter-button" type="button" aria-controls="...">
-              <i class="fa fa-plus-circle" aria-hidden="true"></i> 450W
-            </button>
-            <button class="btn btn-xs btn-default filter-button" type="button" aria-controls="...">
-              <i class="fa fa-plus-circle" aria-hidden="true"></i> 550W
-            </button>
-            <button class="btn btn-xs btn-default filter-button" type="button" aria-controls="...">
-              <i class="fa fa-plus-circle" aria-hidden="true"></i> 650W
-            </button>
-            <button class="btn btn-xs btn-default filter-button" type="button" aria-controls="...">
-              <i class="fa fa-plus-circle" aria-hidden="true"></i> 750W
-            </button>
-          </div>
-          <div class="col-xs-4 filter-item">
-            <div class="filter-header">Hyötysuhde</div>
-            <button class="btn btn-xs btn-default filter-button" type="button" aria-controls="...">
-              <i class="fa fa-plus-circle" aria-hidden="true"></i> 80+ Gold
-            </button>
-            <button class="btn btn-xs btn-default filter-button" type="button" aria-controls="...">
-              <i class="fa fa-plus-circle" aria-hidden="true"></i> 80+ Bronze
-            </button>
-            <button class="btn btn-xs btn-default filter-button" type="button" aria-controls="...">
-              <i class="fa fa-plus-circle" aria-hidden="true"></i> 80+ Platinum
-            </button>
-            <button class="btn btn-xs btn-default filter-button" type="button" aria-controls="...">
-              <i class="fa fa-plus-circle" aria-hidden="true"></i> 80+ Titanium
-            </button>
-          </div>
-          <div class="col-xs-4 filter-item">
-            <div class="filter-header">Merkki</div>
-            <button class="btn btn-xs btn-default filter-button" type="button" aria-controls="...">
-              <i class="fa fa-plus-circle" aria-hidden="true"></i> Brand1
-            </button>
-            <button class="btn btn-xs btn-default filter-button" type="button" aria-controls="...">
-              <i class="fa fa-plus-circle" aria-hidden="true"></i> Brand2
-            </button>
-            <button class="btn btn-xs btn-default filter-button" type="button" aria-controls="...">
-              <i class="fa fa-plus-circle" aria-hidden="true"></i> Brand3
-            </button>
-            <button class="btn btn-xs btn-default filter-button" type="button" aria-controls="...">
-              <i class="fa fa-plus-circle" aria-hidden="true"></i> Brand4
-            </button>
-          </div>
-        </div>
+<div class="container-fluid">
+
+  <div class="listings-area">
+
+    {{#each model as |psu|}}
+
+    <div class="row listing-item">
+      <div class="row">
+        <span>{{psu.propertyList.brand}} {{psu.propertyList.productName}} ({{psu.formFactor}}, {{psu.efficiency}})</span>
       </div>
-    </div>
-  </div>
-</div>
-<div class="row current-filters">
-  <div class="col-xs-12">
-    <div>Käytössä olevat filtterit tähän peräkkäin</div>
-  </div>
-</div>
-<div class="row main">
-  <div class="col-xs-12">
-    <div class="table-responsive text-nowrap">
-      <table class="table table-striped">
-        <thead class="top-row">
-          <tr class="header-group">
-            <th class="first-column mid-column" colspan=4>Yleistiedot</th>
-            <th class="mid-column" colspan=9>Speksit</th>
-            <th class="last-column" colspan=4>Tuuletin</th>
-          </tr>
-          <tr>
-            <th class="first-column">Merkki</th>
-            <th>Tuote</th>
-            <th>SKU</th>
-            <th class="mid-column">Takuu</th>
+      <div class="col-sm-7 item-specs">
 
-            <th>+12V kapasiteetti</th>
-            <th>Hyötysuhde</th>
-            <th>Valmistaja</th>
-            <th>Koko</th>
-            <th>Pituus</th>
-            <th>Kaapelit</th>
-            <th>PCIe-liittimiä</th>
-            <th>SATA-liittimiä</th>
-            <th class="mid-column">Jäähdytys</th>
+        <div class="row">
+          <div class="col-xs-5">
+            <div class="row">{{psu.watts12v}}W +12V</div>
+            <div class="row">OEM: {{psu.oem}}</div>
+            <div class="row">{{psu.propertyList.warranty}} vuoden takuu</div>
+          </div>
+          <div class="col-xs-5">
+            <div class="row">{{psu.pcieConnectors}} PCIe</div>
+            <div class="row">{{psu.sataQty}} x SATA</div>
+            <div class="row">
+              {{#if psu.fullModular}}
+                täysmodulaariset
+              {{else if psu.semiModular}}
+                semimodulaariset
+              {{else}}
+                kiinteät
+              {{/if}}
+                kaapelit
+            </div>
+          </div> <!-- col item-info -->
 
-            <th>Malli</th>
-            <th>Koko</th>
-            <th>Pyörimisnopeus</th>
-            <th class="last-column">Laakeri</th>
-    			</tr>
-    		</thead>
-        <tbody class="bottom-row">
-          {{#each model as |psu|}}
-          <tr>
-            <td class="first-column">{{psu.propertyList.brand}}</td>
-            <td><a href={{psu.propertyList.pricesUrl}}><div>{{psu.propertyList.productName}}</div></a></td>
-            <td><a href={{psu.propertyList.specsUrl}}><div>{{psu.propertyList.sku}}</div></a></td>
-            <td class="mid-column">{{psu.propertyList.warranty}} vuotta</td>
+          <div class="col-xs-2 item-additional">
+            <span class="sku">{{psu.propertyList.sku}}</span>
+          </div> <!-- col item-additional -->
 
-            <td>{{psu.watts12v}} W</td>
-            <td>{{psu.efficiency}}</td>
-            <td>{{psu.oem}}</td>
-            <td>{{psu.formFactor}}</td>
-            <td>{{psu.propertyList.lengthMm}} mm</td>
-            {{#if psu.fullModular}}
-              <td>täysmodulaariset</td>
-            {{else if psu.semiModular}}
-              <td>semimodulaariset</td>
-            {{else}}
-              <td>kiinteät</td>
-            {{/if}}
-            <td>{{psu.pcieConnectors}}</td>
-            <td>{{psu.sataQty}} kpl</td>
-            <td class="mid-column">{{if psu.semipassive "semipassiivinen" "aktiivinen"}}</td>
+        </div> <!-- row -->
 
-            <td><a href={{psu.fan.propertyList.specsUrl}}><div>{{psu.fan.propertyList.sku}}</div></a>
-            </td>
-            <td>{{psu.fan.propertyList.widthMm}} mm</td>
-            <td>{{psu.fan.minRpm}}-{{psu.fan.maxRpm}} RPM</td>
-            <td class="last-column">{{psu.fan.bearing}}</td>
-          </tr>
-          {{/each}}
-        </tbody>
-      </table>
-    </div>
-  </div>
-</div>
+      </div> <!-- col item-specs -->
+
+      <div class="col-sm-5 item-shops">
+        <div class="row">
+          <span>{{psu.sortedSources.firstObject.priceEur}} € @ {{psu.sortedSources.firstObject.shop.name}} ({{psu.sortedSources.firstObject.deliveryTimeMin}}-{{psu.sortedSources.firstObject.deliveryTimeMax}} pv)</span>
+          <a href={{src.shopUrl}}><i class="fa fa-link align-right" aria-hidden="true"></i></a>
+        </div>
+        <div class="row"><a href="{{psu.propertyList.pricesUrl}}">{{psu.propertyList.pricesUrl}}</a></div>
+      </div> <!-- col  -->
+
+    </div> <!-- row listing-item -->
+
+    {{/each}}
+
+  </div> <!-- listings-area -->
+
+</div> <!-- container-fluid -->

@@ -20,18 +20,6 @@ class SetupAll < ActiveRecord::Migration[5.0]
       t.timestamps
     end
 
-    create_table :conflicts do |t|
-      t.text :reason
-      t.boolean :strict
-
-      t.timestamps
-    end
-
-    create_table :product_conflicts do |t|
-      t.references :product, polymorphic: true, index: true
-      t.references :conflict, foreign_key: true, index: true
-    end
-
     create_table :shops do |t|
       t.string :name
       t.text :description
@@ -47,15 +35,6 @@ class SetupAll < ActiveRecord::Migration[5.0]
       t.decimal :delivery_cost_min, precision: 4, scale: 2
       t.string :shop_url
       t.references :product, polymorphic: true, index: true
-      t.references :shop, foreign_key: true, index: true
-
-      t.timestamps
-    end
-
-    create_table :service_items do |t|
-      t.string :service_name
-      t.text :description
-      t.decimal :price_eur, precision: 5, scale: 2
       t.references :shop, foreign_key: true, index: true
 
       t.timestamps

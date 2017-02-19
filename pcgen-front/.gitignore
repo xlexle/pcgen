@@ -16,6 +16,43 @@
 npm-debug.log*
 testem.log
 
-# custom adds, experimental/temporary
+# =============== #
+# future versions #
+# =============== #
 
-/vendor
+# components
+/app/components/parts/shop-filter.js
+/app/components/parts/specs-filter.js
+
+# models
+/app/models/doc.js
+/app/models/conflict.js
+/app/models/product-conflict.js
+/app/models/service.js
+
+# routes
+/app/routes/docs
+/app/routes/peripherals
+
+# styles
+
+# templates
+/app/templates/components/parts/shop-filter.js
+/app/templates/components/parts/specs-filters.js
+/app/templates/docs
+/app/templates/docs.hbs
+/app/templates/peripherals
+/app/templates/peripherals.hbs
+
+# tests
+/tests/integration/components/parts/shop-filter-test.js
+/tests/integration/components/parts/specs-filter-test.js
+/tests/unit/models/doc-test.js
+/tests/unit/models/product-conflict-test.js
+/tests/unit/models/conflict-test.js
+/tests/unit/models/service-test.js
+/tests/unit/routes/docs
+/tests/unit/routes/peripherals
+/tests/unit/routes/product-conflicts-test.js
+/tests/unit/routes/conflicts-test.js
+/tests/unit/routes/services-test.js

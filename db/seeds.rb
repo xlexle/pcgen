@@ -8,7 +8,6 @@
 
 # has one property list
 # has many power supplies
-# has many product conflicts
 # has many sources
 fan1 = Fan.create(
   bearing: "FDB",
@@ -52,7 +51,6 @@ fan3 = Fan.create(
 
 # has one property list
 # belongs to fan
-# has many product conflicts
 # has many sources
 psu1 = PowerSupply.create(
   form_factor: "ATX",
@@ -202,29 +200,6 @@ property_list6 = PropertyList.create(
   product: fan3
 )
 
-# has many product conflicts (exactly 2)
-conflict1 = Conflict.create(
-  reason: "Wrong size.",
-  strict: true
-)
-
-conflict2 = Conflict.create(
-  reason: "It fits, but still.",
-  strict: false
-)
-
-# belongs to conflict
-# belongs to product
-product_conflict1 = ProductConflict.create(
-  conflict: conflict1,
-  product: psu3
-)
-product_conflict2 = ProductConflict.create(
-  conflict: conflict1,
-  product: fan1
-)
-
-# has many service_items
 # has many sources
 shop1 = Shop.create(
   name: "Best PC store",
@@ -242,18 +217,10 @@ shop3 = Shop.create(
   url: "https://www.componentshoppe.com/"
 )
 
-# belongs to shop
-service_item1 = ServiceItem.create(
-  service_name: "Kasaus",
-  description: "Kokoonpanon kasaus ja testaus",
-  price_eur: "79.90",
-  shop: shop1
-)
-
 # belongs to product
 # belongs to shop
 source1 = Source.create(
-  price_eur: "49.90",
+  price_eur: "10.90",
   delivery_time_min: 1,
   delivery_time_max: 4,
   delivery_cost_min: "0",
@@ -261,12 +228,129 @@ source1 = Source.create(
   product: psu1,
   shop: shop1
 )
-source1 = Source.create(
+source2 = Source.create(
   price_eur: "59.90",
   delivery_time_min: 10,
   delivery_time_max: 20,
   delivery_cost_min: "4.90",
   shop_url: "https://prices.com/tostore?=1product?=2",
+  product: psu1,
+  shop: shop2
+)
+source3 = Source.create(
+  price_eur: "49.90",
+  delivery_time_min: 1,
+  delivery_time_max: 4,
+  delivery_cost_min: "0",
+  shop_url: "https://prices.com/tostore?=1product?=1",
+  product: psu1,
+  shop: shop3
+)
+source4 = Source.create(
+  price_eur: "59.90",
+  delivery_time_min: 10,
+  delivery_time_max: 20,
+  delivery_cost_min: "4.90",
+  shop_url: "https://prices.com/tostore?=1product?=2",
+  product: psu1,
+  shop: shop1
+)
+source5 = Source.create(
+  price_eur: "49.90",
+  delivery_time_min: 1,
+  delivery_time_max: 4,
+  delivery_cost_min: "0",
+  shop_url: "https://prices.com/tostore?=1product?=1",
+  product: psu1,
+  shop: shop2
+)
+source6 = Source.create(
+  price_eur: "59.90",
+  delivery_time_min: 10,
+  delivery_time_max: 20,
+  delivery_cost_min: "4.90",
+  shop_url: "https://prices.com/tostore?=1product?=2",
+  product: psu1,
+  shop: shop3
+)
+source7 = Source.create(
+  price_eur: "15.90",
+  delivery_time_min: 1,
+  delivery_time_max: 4,
+  delivery_cost_min: "0",
+  shop_url: "https://prices.com/tostore?=1product?=1",
+  product: psu2,
+  shop: shop1
+)
+source8 = Source.create(
+  price_eur: "59.90",
+  delivery_time_min: 10,
+  delivery_time_max: 20,
+  delivery_cost_min: "4.90",
+  shop_url: "https://prices.com/tostore?=1product?=2",
+  product: psu2,
+  shop: shop2
+)
+source9 = Source.create(
+  price_eur: "49.90",
+  delivery_time_min: 1,
+  delivery_time_max: 4,
+  delivery_cost_min: "0",
+  shop_url: "https://prices.com/tostore?=1product?=1",
+  product: psu2,
+  shop: shop1
+)
+source10 = Source.create(
+  price_eur: "59.90",
+  delivery_time_min: 10,
+  delivery_time_max: 20,
+  delivery_cost_min: "4.90",
+  shop_url: "https://prices.com/tostore?=1product?=2",
+  product: psu3,
+  shop: shop2
+)
+source11 = Source.create(
+  price_eur: "49.90",
+  delivery_time_min: 1,
+  delivery_time_max: 4,
+  delivery_cost_min: "0",
+  shop_url: "https://prices.com/tostore?=1product?=1",
+  product: psu3,
+  shop: shop1
+)
+source12 = Source.create(
+  price_eur: "59.90",
+  delivery_time_min: 10,
+  delivery_time_max: 20,
+  delivery_cost_min: "4.90",
+  shop_url: "https://prices.com/tostore?=1product?=2",
+  product: psu1,
+  shop: shop2
+)
+source13 = Source.create(
+  price_eur: "49.90",
+  delivery_time_min: 1,
+  delivery_time_max: 4,
+  delivery_cost_min: "0",
+  shop_url: "https://prices.com/tostore?=1product?=1",
+  product: psu1,
+  shop: shop3
+)
+source14 = Source.create(
+  price_eur: "59.90",
+  delivery_time_min: 10,
+  delivery_time_max: 20,
+  delivery_cost_min: "4.90",
+  shop_url: "https://prices.com/tostore?=1product?=2",
+  product: psu1,
+  shop: shop3
+)
+source15 = Source.create(
+  price_eur: "49.90",
+  delivery_time_min: 1,
+  delivery_time_max: 4,
+  delivery_cost_min: "0",
+  shop_url: "https://prices.com/tostore?=1product?=1",
   product: psu1,
   shop: shop2
 )

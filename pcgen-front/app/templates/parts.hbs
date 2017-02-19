@@ -1,2 +1,117 @@
+<div class="parts-wrapper">
+
+  <div class="container-fluid">
+
+    <div class="row top-content">
+    </div>
+
+  </div> <!-- container-fluid -->
+
+  <div class="container-fluid">
+
+    <div class="row controls-area" id="controls-area">
+
+      <!-- CATEGORIES -->
+      <div class="panel col-md-12 controls">
+
+        <button class="btn btn-default btn-block visible-xs visible-sm" type="button" data-toggle="collapse" data-target="#categories" data-parent="#controls-area" aria-expanded="true" aria-controls="...">
+          Tuotekategoriat
+        </button>
+
+        <div class="row collapse" id="categories">
+          <div class="col-xs-12 filter-area">
+            <div class="area-header hidden-xs hidden-sm">
+              <i class="fa fa-filter" aria-hidden="true"></i> Tuotekategoriat
+            </div>
+
+            <div class="row">
+              <div class="col-xs-4 filter-item">
+                <div class="item-header">Kapasiteetti</div>
+                <button class="btn btn-xs btn-default filter" type="button" aria-controls="...">
+                  <i class="fa fa-plus" aria-hidden="true"></i> 450W
+                </button>
+                <button class="btn btn-xs btn-default filter" type="button" aria-controls="...">
+                  <i class="fa fa-plus" aria-hidden="true"></i> 550W
+                </button>
+                <button class="btn btn-xs btn-default filter" type="button" aria-controls="...">
+                  <i class="fa fa-plus" aria-hidden="true"></i> 650W
+                </button>
+                <button class="btn btn-xs btn-default filter" type="button" aria-controls="...">
+                  <i class="fa fa-plus" aria-hidden="true"></i> 750W
+                </button>
+              </div>
+
+              <div class="col-xs-4 filter-item">
+                <div class="item-header">Hyötysuhde</div>
+                <button class="btn btn-xs btn-default filter" type="button" aria-controls="...">
+                  <i class="fa fa-plus" aria-hidden="true"></i> 80+ Gold
+                </button>
+                <button class="btn btn-xs btn-default filter" type="button" aria-controls="...">
+                  <i class="fa fa-plus" aria-hidden="true"></i> 80+ Bronze
+                </button>
+                <button class="btn btn-xs btn-default filter" type="button" aria-controls="...">
+                  <i class="fa fa-plus" aria-hidden="true"></i> 80+ Platinum
+                </button>
+                <button class="btn btn-xs btn-default filter" type="button" aria-controls="...">
+                  <i class="fa fa-plus" aria-hidden="true"></i> 80+ Titanium
+                </button>
+              </div>
+
+              <div class="col-xs-4 filter-item">
+                <div class="item-header">Merkki</div>
+                <button class="btn btn-xs btn-default filter" type="button" aria-controls="...">
+                  <i class="fa fa-plus" aria-hidden="true"></i> Brand1
+                </button>
+                <button class="btn btn-xs btn-default filter" type="button" aria-controls="...">
+                  <i class="fa fa-plus" aria-hidden="true"></i> Brand2
+                </button>
+                <button class="btn btn-xs btn-default filter" type="button" aria-controls="...">
+                  <i class="fa fa-plus" aria-hidden="true"></i> Brand3
+                </button>
+                <button class="btn btn-xs btn-default filter" type="button" aria-controls="...">
+                  <i class="fa fa-plus" aria-hidden="true"></i> Brand4
+                </button>
+              </div>
+            </div> <!-- row -->
+
+          </div>  <!-- col filter-area -->
+        </div>  <!-- row collapse -->
+
+      </div>  <!-- CATEGORIES -->
+
+    </div>  <!-- row controls-area -->
+
+  </div> <!-- container-fluid -->
+
+  <div class="container-fluid">
+
+    <div class="row current-filters">
+
+      <div class="col-xs-12">
+        <button class="btn btn-xs btn-default filter" type="button" aria-controls="...">
+          <i class="fa fa-minus" aria-hidden="true"></i> 450W
+        </button>
+        <button class="btn btn-xs btn-default filter" type="button" aria-controls="...">
+          <i class="fa fa-minus" aria-hidden="true"></i> 80+ Titanium
+        </button>
+        <button class="btn btn-xs btn-default filter" type="button" aria-controls="...">
+          <i class="fa fa-minus" aria-hidden="true"></i> Brand1
+        </button>
+        <button class="btn btn-xs btn-default filter" type="button" aria-controls="...">
+          <i class="fa fa-minus" aria-hidden="true"></i> Brand2
+        </button>
+        <button class="btn btn-xs btn-default filter" type="button" aria-controls="...">
+          <i class="fa fa-minus" aria-hidden="true"></i> Brand3
+        </button>
+        <button class="btn btn-xs btn-default filter" type="button" aria-controls="...">
+          <i class="fa fa-minus" aria-hidden="true"></i> Brand4
+        </button>
+      </div>
+
+    </div> <!-- row current-filters -->
+
+  </div> <!-- container-fluid -->
 
   {{outlet}}
+
+</div> <!-- parts-wrapper -->
