@@ -1,39 +1,17 @@
-/* - - - - - - - - - - - - */
-/* TABLE OF CONTENTS - - - */
-/* ================= - - - */
-/* 1. Globals  - - - - - - */
-/* 2. Navbar - - - - - - - */
-/* 3. Main content - - - - */
-/* 4. Parts layout - - - - */
-/* 5. Filters  - - - - - - */
-/* 6. Listings - - - - - - */
-/* 7. Sidebar  - - - - - - */
-/* 8. Sidebar links  - - - */
-/* 9. Tables - - - - - - - */
-/* 10. Sign-in - - - - - - */
-/* - - - - - - - - - - - - */
+/*@import url("docs.css");*/
+@import url("list-item.css");
+@import url("list-page.css");
+@import url("sign-in.css");
 
-/* ====================== */
-/*       1. Globals       */
-/* ====================== */
-
-/* non-main fonts */
-/*table {
-  font-family: 'Noto Sans', sans-serif;
-  font-size: 12px;
-}
-
-tr.header-group {
-  font-family: 'Raleway', sans-serif;
-  font-size: 16px;
-  letter-spacing: 1px;
-}
-
-button.btn-block {
-  font-family: 'Raleway', sans-serif;
-  font-size: 16px;
-  font-weight: 600;
-}*/
+/* - - - - - - - - - - - - - */
+/* - - CONTENTS  - - - - - - */
+/* - - ========  - - - - - - */
+/* - - 1. Navbar - - - - - - */
+/* - - 2. Main - - - - - - - */
+/* - - 3. Custom columns - - */
+/* - - 4. Tables - - - - - - */
+/* - - 5. IE10 - - - - - - - */
+/* - - - - - - - - - - - - - */
 
 /* restrict container width changes */
 @media (min-width: 992px) {
@@ -48,9 +26,12 @@ button.btn-block {
   }
 }
 
-/* ===================== */
-/*       2. Navbar       */
-/* ===================== */
+/* fixed position */
+.fixed { position: fixed; }
+
+/* ================== */
+/* . . . Navbar . . . */
+/* ================== */
 
 .navbar-wrapper {
   position: absolute;
@@ -117,11 +98,10 @@ button.btn-block {
   height: 20px;
 }
 
-/* =========================== */
-/*       3. Main content       */
-/* =========================== */
+/* ================ */
+/* . . . Main . . . */
+/* ================ */
 
-/* main content-wrapping */
 .main {
   padding: 30px 20px 20px 20px;
 }
@@ -130,15 +110,13 @@ button.btn-block {
   margin-top: -20px;
 }
 
-/* testing only */
-.bottom-content {
-  margin: 200px 0px 200px 0px;
+/* placeholders for actual content areas */
+.top-content {
+  padding-top: 50px;
 }
 
-@media (max-width: 991px) {
-  .main-content {
-    /*margin-left: -20px;*/
-  }
+.bottom-content {
+  padding-bottom: 200px;
 }
 
 @media (max-width: 767px) {
@@ -148,200 +126,42 @@ button.btn-block {
   }
 }
 
-/* =========================== */
-/*       4. Parts layout       */
-/* =========================== */
+/* ========================== */
+/* . . . Custom columns . . . */
+/* ========================== */
 
-.parts-wrapper,
-.controls-area > .panel {
-  /*temp*/
-  background-color: #d5d5d5;
+.col-xs-1of5 {
+  width: 20%;
+  float: left;
 }
 
-/* placeholder for actual content area */
-.top-content {
-  padding-top: 50px;
-}
-
-.controls-area,
-.listings-area {
-  margin: 0px auto;
-  padding: 15px 0px 15px 0px;
-  max-width: 1200px;
-}
-
-@media (max-width: 991px) {
-  .top-content {
-    padding-top: 30px;
-  }
-
-  .controls-area {
-    margin: 0px auto 0px;
-    max-width: 730px;
-  }
-}
-
-.current-filters {
-  margin: 0px auto;
-  max-width: 1200px;
-
-  /*temp*/
-  background-color: #ffc4ee;
-}
-
-/* ====================== */
-/*       5. Filters       */
-/* ====================== */
-
-.controls .filter-area {
-  width: calc(100% - 30px);
-  float: none;
-  display: block;
-  margin: 0 auto;
-  /*temp*/
-  background-color: #f8f8cc;
-}
-
-.controls .filter-area > .area-header {
-  text-align: center;
-  margin-right: 30px;
-  font-size: 16px;
-  font-weight: 400;
-  /*temp*/
-  background-color: #d1ff8c;
-}
-
-.controls .filter-area .filter-item {
-  padding: 8px;
-  /*temp*/
-  background-color: #c78cff;
-}
-
-.controls .filter-area .filter-item > .item-header {
-  margin: 4px 0px 2px 0px;
-  font-size: 12px;
-  font-weight: 600;
-  /*temp*/
-  background-color: #8cffd8;
-}
-
-.controls .filter-area .filter-item > button.filter {
-  margin: 2px 0px 2px 0px;
-}
-
-/* expands collapsible divs on size M+ screens */
-@media (min-width: 992px) {
-  #categories, #shop-filters, #specs-filters {
-    display: block!important;
-  }
-}
-
-/* ======================= */
-/*       6. Listings       */
-/* ======================= */
-
-.listings-area .listing-item {
-  padding: 10px 25px 10px 50px;
-}
-
-.item-info {
-  list-style-type: none;
-}
-
-/* expands collapsible divs on size S+ screens */
 @media (min-width: 768px) {
-  #more-prices {
-    display: block!important;
+  .col-sm-1of5 {
+    width: 20%;
+    float: left;
   }
 }
 
-/* temp background colors */
-.item-specs {
-  background-color: #c78cff;
+@media (min-width: 992px) {
+  .col-md-1of5 {
+    width: 20%;
+    float: left;
+  }
 }
 
-.item-additional {
-  background-color: #8cffd8;
+@media (min-width: 1200px) {
+  .col-lg-1of5 {
+    width: 20%;
+    float: left;
+  }
 }
 
-.item-shops {
-  background-color: #d1ff8c;
-}
+/* ================== */
+/* . . . Tables . . . */
+/* ================== */
+/* UNNECESSARY?       */
 
-/* ====================== */
-/*       7. Sidebar       */
-/* ====================== */
-
-.sidebar > ul {
-  overflow-y: auto;
-  height: calc(100% - 80px);
-}
-
-/* fixed list position */
-.fixed { position: fixed; }
-
-/* invisible scroll bar */
-#inviscroll::-webkit-scrollbar { display: none; }
-
-/* hide inactive nested lists */
-.sidebar .nav ul.nav {
-  display: none;
-}
-/* show active and hovered nested lists */
-.sidebar .nav > .active > ul.nav {
-  display: block;
-}
-
-/* ============================ */
-/*       8. Sidebar links       */
-/* ============================ */
-
-/* links */
-.sidebar .nav > li > a {
-  color: #777;
-  border-left: 2px solid transparent;
-  padding: 4px 12px 3px 10px;
-  font-size: 14px;
-  font-weight: 600;
-}
-
-/* nested links */
-.sidebar .nav .nav > li > a {
-  padding: 2px 20px 2px 20px;
-  font-size: 13px;
-  font-weight: 400;
-}
-
-/* active links */
-.sidebar .nav .active > a,
-.sidebar .nav .nav .active > a {
-  color: #563d7c;
-  border-left: 2px solid #563d7c;
-}
-
-/* adjust anchor target position */
-.anchor:target {
-  padding-top: 30px;
-  margin-top: -40px;
-}
-
-/*!
- * IE10 viewport hack for Surface/desktop Windows 8 bug
- * Copyright 2014-2015 Twitter, Inc.
- * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
- */
-
-/*
- * See the Getting Started docs for more information:
- * http://getbootstrap.com/getting-started/#support-ie10-width
- */
-@-ms-viewport     { width: device-width; }
-@-o-viewport      { width: device-width; }
-@viewport         { width: device-width; }
-
-/* ===================== */
-/*       9. Tables       */
-/* ===================== */
+tr.header-group > th { text-align: center; }
 
 /* Column borders */
 .first-column { border-left: 1px solid #ddd; }
@@ -350,43 +170,18 @@ button.btn-block {
 .top-row { border-top: 1px solid #ddd; }
 .bottom-row { border-bottom: 1px solid #ddd; }
 
-tr.header-group > th { text-align: center; }
+/* ================ */
+/* . . . IE10 . . . */
+/* ================ */
 
-/* ====================== */
-/*       10. Signin       */
-/* ====================== */
+/* IE10 viewport hack for Surface/desktop Windows 8 bug
+ * Copyright 2014-2015 Twitter, Inc.
+ * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+ */
 
-.form-signin {
-  max-width: 330px;
-  padding: 15px;
-  margin: 0 auto;
-}
-.form-signin .form-signin-heading,
-.form-signin .checkbox {
-  margin-bottom: 10px;
-}
-.form-signin .checkbox {
-  font-weight: normal;
-}
-.form-signin .form-control {
-  position: relative;
-  height: auto;
-  -webkit-box-sizing: border-box;
-     -moz-box-sizing: border-box;
-          box-sizing: border-box;
-  padding: 10px;
-  font-size: 14px;
-}
-.form-signin .form-control:focus {
-  z-index: 2;
-}
-.form-signin input[type="email"] {
-  margin-bottom: -1px;
-  border-bottom-right-radius: 0;
-  border-bottom-left-radius: 0;
-}
-.form-signin input[type="password"] {
-  margin-bottom: 10px;
-  border-top-left-radius: 0;
-  border-top-right-radius: 0;
-}
+/* See the Getting Started docs for more information:
+ * http://getbootstrap.com/getting-started/#support-ie10-width
+ */
+@-ms-viewport     { width: device-width; }
+@-o-viewport      { width: device-width; }
+@viewport         { width: device-width; }

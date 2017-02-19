@@ -1,0 +1,140 @@
+/* - - - - - - - - - - - - - */
+/* - - CONTENTS  - - - - - - */
+/* - - ========  - - - - - - */
+/* - - 1. Layout - - - - - - */
+/* - - 2. Sidebar  - - - - - */
+/* - - 3. Filters  - - - - - */
+/* - - - - - - - - - - - - - */
+
+/* ================== */
+/* . . . Layout . . . */
+/* ================== */
+
+.parts-wrapper {
+  background-color: #d5d5d5;
+}
+
+.listings-area {
+  margin: 0px auto;
+  padding: 15px 0px 15px 0px;
+  max-width: 1200px;
+}
+
+@media (max-width: 991px) {
+  .top-content {
+    padding-top: 30px;
+  }
+}
+
+/* ====================== */
+/* . . . Categories . . . */
+/* ====================== */
+
+.category-area {
+  margin: 0px auto;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  max-width: 941px;
+}
+
+@media (min-width: 992px) {
+  .category-area {
+    padding-left: 20px;
+  }
+}
+
+@media (max-width: 991px) {
+  .category-area {
+
+  }
+}
+
+@media (max-width: 767px) {
+  .category-area {
+
+  }
+}
+
+.category.col-xs-4 {
+  padding: 0px;
+}
+
+/* links */
+.category .nav > li > a {
+  color: #777;
+  border-left: 2px solid transparent;
+  padding: 4px 12px 3px 10px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+/* nested links */
+.category .nav .nav > li > a {
+  padding: 2px 0px 2px 20px;
+  font-size: 13px;
+  font-weight: 400;
+}
+
+/* active links */
+.category .nav > .active > a,
+.category .nav > li > a:hover,
+.category .nav > li > a:focus {
+  color: #563d7c;
+  border-left: 2px solid #563d7c;
+  background-color: transparent;
+}
+
+@media (max-width: 991px) {
+  /* hide subcategories */
+  .category .nav ul.nav {
+    display: none;
+  }
+}
+
+/* =================== */
+/* . . . Filters . . . */
+/* =================== */
+/* NOT IN USE          */
+
+.controls .filter-area {
+  width: calc(100% - 30px);
+  float: none;
+  display: block;
+  margin: 0 auto;
+  /*temp*/
+  background-color: #f8f8cc;
+}
+
+.controls .filter-area > .area-header {
+  text-align: center;
+  margin-right: 30px;
+  font-size: 16px;
+  font-weight: 400;
+  /*temp*/
+  background-color: #d1ff8c;
+}
+
+.controls .filter-area .filter-item {
+  padding: 8px;
+  /*temp*/
+  background-color: #c78cff;
+}
+
+.controls .filter-area .filter-item > .item-header {
+  margin: 4px 0px 2px 0px;
+  font-size: 12px;
+  font-weight: 600;
+  /*temp*/
+  background-color: #8cffd8;
+}
+
+.controls .filter-area .filter-item > button.filter {
+  margin: 2px 0px 2px 0px;
+}
+
+/* expands collapsible divs on size M+ screens */
+@media (min-width: 992px) {
+  #categories, #shop-filters, #specs-filters {
+    display: block!important;
+  }
+}

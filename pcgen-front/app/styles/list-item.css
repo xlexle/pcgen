@@ -1,0 +1,27 @@
+.listings-area .listing-item {
+  padding: 10px 25px 10px 50px;
+}
+
+.item-info {
+  list-style-type: none;
+}
+
+/* expands collapsible divs on size S+ screens */
+@media (min-width: 768px) {
+  #more-prices {
+    display: block!important;
+  }
+}
+
+/* temp background colors */
+.item-specs {
+  background-color: #c78cff;
+}
+
+.item-additional {
+  background-color: #8cffd8;
+}
+
+.item-shops {
+  background-color: #d1ff8c;
+}

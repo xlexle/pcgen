@@ -9,109 +9,118 @@
 
   <div class="container-fluid">
 
-    <div class="row controls-area" id="controls-area">
+    <!-- CATEGORIES -->
 
-      <!-- CATEGORIES -->
-      <div class="panel col-md-12 controls">
-
-        <button class="btn btn-default btn-block visible-xs visible-sm" type="button" data-toggle="collapse" data-target="#categories" data-parent="#controls-area" aria-expanded="true" aria-controls="...">
-          Tuotekategoriat
-        </button>
-
-        <div class="row collapse" id="categories">
-          <div class="col-xs-12 filter-area">
-            <div class="area-header hidden-xs hidden-sm">
-              <i class="fa fa-filter" aria-hidden="true"></i> Tuotekategoriat
-            </div>
-
-            <div class="row">
-              <div class="col-xs-4 filter-item">
-                <div class="item-header">Kapasiteetti</div>
-                <button class="btn btn-xs btn-default filter" type="button" aria-controls="...">
-                  <i class="fa fa-plus" aria-hidden="true"></i> 450W
-                </button>
-                <button class="btn btn-xs btn-default filter" type="button" aria-controls="...">
-                  <i class="fa fa-plus" aria-hidden="true"></i> 550W
-                </button>
-                <button class="btn btn-xs btn-default filter" type="button" aria-controls="...">
-                  <i class="fa fa-plus" aria-hidden="true"></i> 650W
-                </button>
-                <button class="btn btn-xs btn-default filter" type="button" aria-controls="...">
-                  <i class="fa fa-plus" aria-hidden="true"></i> 750W
-                </button>
-              </div>
-
-              <div class="col-xs-4 filter-item">
-                <div class="item-header">Hyötysuhde</div>
-                <button class="btn btn-xs btn-default filter" type="button" aria-controls="...">
-                  <i class="fa fa-plus" aria-hidden="true"></i> 80+ Gold
-                </button>
-                <button class="btn btn-xs btn-default filter" type="button" aria-controls="...">
-                  <i class="fa fa-plus" aria-hidden="true"></i> 80+ Bronze
-                </button>
-                <button class="btn btn-xs btn-default filter" type="button" aria-controls="...">
-                  <i class="fa fa-plus" aria-hidden="true"></i> 80+ Platinum
-                </button>
-                <button class="btn btn-xs btn-default filter" type="button" aria-controls="...">
-                  <i class="fa fa-plus" aria-hidden="true"></i> 80+ Titanium
-                </button>
-              </div>
-
-              <div class="col-xs-4 filter-item">
-                <div class="item-header">Merkki</div>
-                <button class="btn btn-xs btn-default filter" type="button" aria-controls="...">
-                  <i class="fa fa-plus" aria-hidden="true"></i> Brand1
-                </button>
-                <button class="btn btn-xs btn-default filter" type="button" aria-controls="...">
-                  <i class="fa fa-plus" aria-hidden="true"></i> Brand2
-                </button>
-                <button class="btn btn-xs btn-default filter" type="button" aria-controls="...">
-                  <i class="fa fa-plus" aria-hidden="true"></i> Brand3
-                </button>
-                <button class="btn btn-xs btn-default filter" type="button" aria-controls="...">
-                  <i class="fa fa-plus" aria-hidden="true"></i> Brand4
-                </button>
-              </div>
-            </div> <!-- row -->
-
-          </div>  <!-- col filter-area -->
-        </div>  <!-- row collapse -->
-
-      </div>  <!-- CATEGORIES -->
-
-    </div>  <!-- row controls-area -->
-
-  </div> <!-- container-fluid -->
-
-  <div class="container-fluid">
-
-    <div class="row current-filters">
-
-      <div class="col-xs-12">
-        <button class="btn btn-xs btn-default filter" type="button" aria-controls="...">
-          <i class="fa fa-minus" aria-hidden="true"></i> 450W
-        </button>
-        <button class="btn btn-xs btn-default filter" type="button" aria-controls="...">
-          <i class="fa fa-minus" aria-hidden="true"></i> 80+ Titanium
-        </button>
-        <button class="btn btn-xs btn-default filter" type="button" aria-controls="...">
-          <i class="fa fa-minus" aria-hidden="true"></i> Brand1
-        </button>
-        <button class="btn btn-xs btn-default filter" type="button" aria-controls="...">
-          <i class="fa fa-minus" aria-hidden="true"></i> Brand2
-        </button>
-        <button class="btn btn-xs btn-default filter" type="button" aria-controls="...">
-          <i class="fa fa-minus" aria-hidden="true"></i> Brand3
-        </button>
-        <button class="btn btn-xs btn-default filter" type="button" aria-controls="...">
-          <i class="fa fa-minus" aria-hidden="true"></i> Brand4
-        </button>
+    <div class="row category-area">
+      <div class="col-xs-6 col-sm-4 col-md-1of5 category">
+        <ul class="nav nav-stacked">
+          <li><a href="#">Prosessorit</a>
+            <ul class="nav nav-stacked">
+              <li><a href="#">LGA1151</a></li>
+              <li><a href="#">AMD Socket 1331</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+      <div class="col-xs-6 col-sm-4 col-md-1of5 category">
+        <ul class="nav nav-stacked">
+          <li><a href="#">Jäähdyttimet</a>
+            <ul class="nav nav-stacked">
+              <li><a href="#">GroupBSub1</a></li>
+              <li><a href="#">GroupBSub2</a></li>
+            </ul>
+          </li>
+        </ul>
       </div>
 
-    </div> <!-- row current-filters -->
+      <div class="col-xs-6 col-sm-4 col-md-1of5 category">
+        <ul class="nav nav-stacked">
+          <li><a href="#">Emolevyt</a>
+            <ul class="nav nav-stacked">
+              <li><a href="#">GroupCSub1</a></li>
+              <li><a href="#">GroupCSub2</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+      <div class="col-xs-6 col-sm-4 col-md-1of5 category">
+        <ul class="nav nav-stacked">
+          <li><a href="#">Keskusmuistit</a>
+            <ul class="nav nav-stacked">
+              <li><a href="#">GroupDSub1</a></li>
+              <li><a href="#">GroupDSub2</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
 
-  </div> <!-- container-fluid -->
+      <div class="col-xs-6 col-sm-4 col-md-1of5 category">
+        <ul class="nav nav-stacked">
+          <li><a href="#">Näytönohjaimet</a>
+            <ul class="nav nav-stacked">
+              <li><a href="#">GroupESub1</a></li>
+              <li><a href="#">GroupESub2</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+      <div class="col-xs-6 col-sm-4 col-md-1of5 category">
+        <ul class="nav nav-stacked">
+          <li><a href="#">Tallennustila</a>
+            <ul class="nav nav-stacked">
+              <li><a href="#">SSD-levyt</a></li>
+              <li><a href="#">Kiintolevyt</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+
+      <div class="col-xs-6 col-sm-4 col-md-1of5 category">
+        <ul class="nav nav-stacked">
+          <li><a href="#">Virtalähteet</a>
+            <ul class="nav nav-stacked">
+              <li><a href="#">GroupGSub1</a></li>
+              <li><a href="#">GroupGSub2</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+      <div class="col-xs-6 col-sm-4 col-md-1of5 category">
+        <ul class="nav nav-stacked">
+          <li><a href="#">Kotelot</a>
+            <ul class="nav nav-stacked">
+              <li><a href="#">GroupHSub1</a></li>
+              <li><a href="#">GroupHSub2</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+
+      <div class="col-xs-6 col-sm-4 col-md-1of5 category">
+        <ul class="nav nav-stacked">
+          <li><a href="#">Tuulettimet</a>
+            <ul class="nav nav-stacked">
+              <li><a href="#">GroupISub1</a></li>
+              <li><a href="#">GroupISub2</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+      <div class="col-xs-6 col-sm-4 col-md-1of5 category">
+        <ul class="nav nav-stacked">
+          <li><a href="#">Lisätarvikkeet</a>
+            <ul class="nav nav-stacked">
+              <li><a href="#">WLAN-adapterit</a></li>
+              <li><a href="#">Optiset asemat</a></li>
+              <li><a href="#">Tuuletinkaapelit</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>  <!-- /row -->
+
+  </div> <!-- /container-fluid -->
 
   {{outlet}}
 
-</div> <!-- parts-wrapper -->
+</div> <!-- /parts-wrapper -->

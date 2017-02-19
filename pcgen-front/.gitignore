@@ -35,6 +35,7 @@ testem.log
 /app/routes/peripherals
 
 # styles
+/app/styles/docs.css
 
 # templates
 /app/templates/components/parts/shop-filter.js
