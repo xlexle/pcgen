@@ -38,8 +38,8 @@ testem.log
 /app/styles/docs.css
 
 # templates
-/app/templates/components/parts/shop-filter.js
-/app/templates/components/parts/specs-filters.js
+/app/templates/components/parts/shop-filter.hbs
+/app/templates/components/parts/specs-filter.hbs
 /app/templates/docs
 /app/templates/docs.hbs
 /app/templates/peripherals

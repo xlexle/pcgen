@@ -3,6 +3,8 @@
 @import url("list-page.css");
 @import url("sign-in.css");
 
+/* <li> linking addon: https://github.com/alexspeller/ember-cli-active-link-wrapper */
+
 /* - - - - - - - - - - - - - */
 /* - - CONTENTS  - - - - - - */
 /* - - ========  - - - - - - */
@@ -12,6 +14,53 @@
 /* - - 4. Tables - - - - - - */
 /* - - 5. IE10 - - - - - - - */
 /* - - - - - - - - - - - - - */
+
+/* testing */
+
+.padding {
+  padding: 20px 10px 20px 10px;
+}
+
+.test {
+  border: 1px solid rgba(0, 0, 255, .3);
+  background: #ccc;
+}
+
+.test-heading {
+  height: 30px;
+}
+
+.test-content {
+  height: 220px;
+}
+
+.test-prices {
+  height: 80px;
+}
+
+.row-copy {
+  margin-right: -15px;
+  margin-left: -15px;
+}
+
+.row:before,
+.row:after {
+  display: table;
+  content: " ";
+}
+
+.row:after {
+  clear: both;
+}
+
+.column-copy {
+  position: relative;
+  min-height: 1px;
+  padding-right: 15px;
+  padding-left: 15px;
+  float: left;
+  width: 25%; /* col-sm-3 */
+}
 
 /* restrict container width changes */
 @media (min-width: 992px) {
@@ -63,11 +112,6 @@
   .navbar-wrapper .navbar {
     padding: 0px;
   }
-
-  /* round corners */
-  .navbar-wrapper .navbar {
-    border-radius: 3px;
-  }
 }
 
 /* Decreased navbar height */
@@ -111,12 +155,18 @@
 }
 
 /* placeholders for actual content areas */
-.top-content {
-  padding-top: 50px;
+.top-padding {
+  padding-top: 51px;
 }
 
 .bottom-content {
   padding-bottom: 200px;
+}
+
+@media (max-width: 991px) {
+  .top-padding {
+      padding-top: 31px;
+  }
 }
 
 @media (max-width: 767px) {

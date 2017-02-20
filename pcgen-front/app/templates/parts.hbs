@@ -2,7 +2,7 @@
 
   <div class="container-fluid">
 
-    <div class="row top-content">
+    <div class="row top-padding">
     </div>
 
   </div> <!-- container-fluid -->
@@ -12,109 +12,59 @@
     <!-- CATEGORIES -->
 
     <div class="row category-area">
-      <div class="col-xs-6 col-sm-4 col-md-1of5 category">
+      <div class="col-xs-6 col-sm-3 col-md-1of5 category">
         <ul class="nav nav-stacked">
-          <li><a href="#">Prosessorit</a>
-            <ul class="nav nav-stacked">
-              <li><a href="#">LGA1151</a></li>
-              <li><a href="#">AMD Socket 1331</a></li>
-            </ul>
-          </li>
+          {{#active-link}}{{link-to "Prosessorit" 'parts.fans'}}{{/active-link}}
         </ul>
       </div>
-      <div class="col-xs-6 col-sm-4 col-md-1of5 category">
+      <div class="col-xs-6 col-sm-3 col-md-1of5 category">
         <ul class="nav nav-stacked">
-          <li><a href="#">Jäähdyttimet</a>
-            <ul class="nav nav-stacked">
-              <li><a href="#">GroupBSub1</a></li>
-              <li><a href="#">GroupBSub2</a></li>
-            </ul>
-          </li>
+          {{#active-link}}{{link-to "Jäähdyttimet" 'parts.fans'}}{{/active-link}}
         </ul>
       </div>
 
-      <div class="col-xs-6 col-sm-4 col-md-1of5 category">
+      <div class="col-xs-6 col-sm-3 col-md-1of5 category">
         <ul class="nav nav-stacked">
-          <li><a href="#">Emolevyt</a>
-            <ul class="nav nav-stacked">
-              <li><a href="#">GroupCSub1</a></li>
-              <li><a href="#">GroupCSub2</a></li>
-            </ul>
-          </li>
+          {{#active-link}}{{link-to "Emolevyt" 'parts.fans'}}{{/active-link}}
         </ul>
       </div>
-      <div class="col-xs-6 col-sm-4 col-md-1of5 category">
+      <div class="col-xs-6 col-sm-3 col-md-1of5 category">
         <ul class="nav nav-stacked">
-          <li><a href="#">Keskusmuistit</a>
-            <ul class="nav nav-stacked">
-              <li><a href="#">GroupDSub1</a></li>
-              <li><a href="#">GroupDSub2</a></li>
-            </ul>
-          </li>
+          {{#active-link}}{{link-to "Keskusmuistit" 'parts.fans'}}{{/active-link}}
         </ul>
       </div>
 
-      <div class="col-xs-6 col-sm-4 col-md-1of5 category">
+      <div class="col-xs-6 col-sm-3 col-md-1of5 category">
         <ul class="nav nav-stacked">
-          <li><a href="#">Näytönohjaimet</a>
-            <ul class="nav nav-stacked">
-              <li><a href="#">GroupESub1</a></li>
-              <li><a href="#">GroupESub2</a></li>
-            </ul>
-          </li>
+          {{#active-link}}{{link-to "Näytönohjaimet" 'parts.fans'}}{{/active-link}}
         </ul>
       </div>
-      <div class="col-xs-6 col-sm-4 col-md-1of5 category">
+      <div class="col-xs-6 col-sm-3 col-md-1of5 category">
         <ul class="nav nav-stacked">
-          <li><a href="#">Tallennustila</a>
-            <ul class="nav nav-stacked">
-              <li><a href="#">SSD-levyt</a></li>
-              <li><a href="#">Kiintolevyt</a></li>
-            </ul>
-          </li>
+          {{#active-link}}{{link-to "Tallennustila" 'parts.fans'}}{{/active-link}}
         </ul>
       </div>
 
-      <div class="col-xs-6 col-sm-4 col-md-1of5 category">
+      <div class="col-xs-6 col-sm-3 col-md-1of5 category">
         <ul class="nav nav-stacked">
-          <li><a href="#">Virtalähteet</a>
-            <ul class="nav nav-stacked">
-              <li><a href="#">GroupGSub1</a></li>
-              <li><a href="#">GroupGSub2</a></li>
-            </ul>
-          </li>
+          {{#active-link}}{{link-to "Virtalähteet" 'parts.power-supplies'}}{{/active-link}}
         </ul>
       </div>
-      <div class="col-xs-6 col-sm-4 col-md-1of5 category">
+      <div class="col-xs-6 col-sm-3 col-md-1of5 category">
         <ul class="nav nav-stacked">
-          <li><a href="#">Kotelot</a>
-            <ul class="nav nav-stacked">
-              <li><a href="#">GroupHSub1</a></li>
-              <li><a href="#">GroupHSub2</a></li>
-            </ul>
-          </li>
+          {{#active-link}}{{link-to "Kotelot" 'parts.fans'}}{{/active-link}}
         </ul>
       </div>
 
-      <div class="col-xs-6 col-sm-4 col-md-1of5 category">
+      <div class="col-sm-3 visible-sm"></div>
+      <div class="col-xs-6 col-sm-3 col-md-1of5 category">
         <ul class="nav nav-stacked">
-          <li><a href="#">Tuulettimet</a>
-            <ul class="nav nav-stacked">
-              <li><a href="#">GroupISub1</a></li>
-              <li><a href="#">GroupISub2</a></li>
-            </ul>
-          </li>
+          {{#active-link}}{{link-to "Tuulettimet" 'parts.fans'}}{{/active-link}}
         </ul>
       </div>
-      <div class="col-xs-6 col-sm-4 col-md-1of5 category">
+      <div class="col-xs-6 col-sm-3 col-md-1of5 category">
         <ul class="nav nav-stacked">
-          <li><a href="#">Lisätarvikkeet</a>
-            <ul class="nav nav-stacked">
-              <li><a href="#">WLAN-adapterit</a></li>
-              <li><a href="#">Optiset asemat</a></li>
-              <li><a href="#">Tuuletinkaapelit</a></li>
-            </ul>
-          </li>
+          {{#active-link}}{{link-to "Lisätarvikkeet" 'parts.fans'}}{{/active-link}}
         </ul>
       </div>
     </div>  <!-- /row -->

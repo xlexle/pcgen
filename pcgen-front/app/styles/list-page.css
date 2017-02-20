@@ -2,8 +2,9 @@
 /* - - CONTENTS  - - - - - - */
 /* - - ========  - - - - - - */
 /* - - 1. Layout - - - - - - */
-/* - - 2. Sidebar  - - - - - */
-/* - - 3. Filters  - - - - - */
+/* - - 2. Category area- - - */
+/* - - 3. Categories - - - - */
+/* - - 4. Filters  - - - - - */
 /* - - - - - - - - - - - - - */
 
 /* ================== */
@@ -11,7 +12,7 @@
 /* ================== */
 
 .parts-wrapper {
-  background-color: #d5d5d5;
+  /*background-color: #d5d5d5;*/
 }
 
 .listings-area {
@@ -20,59 +21,57 @@
   max-width: 1200px;
 }
 
-@media (max-width: 991px) {
-  .top-content {
-    padding-top: 30px;
+/* ========================= */
+/* . . . Category area . . . */
+/* ========================= */
+
+.category-area {
+  margin: 0px auto;
+  padding-top: 22px;
+  padding-bottom: 15px;
+  max-width: 792px;
+}
+
+@media (min-width: 992px) {
+  .category-area {
+    padding-right: 5px;
   }
 }
 
 /* ====================== */
 /* . . . Categories . . . */
 /* ====================== */
+/* div.category > ul.nav > li > a / ul.nav > li > a */
 
-.category-area {
-  margin: 0px auto;
-  padding-top: 15px;
-  padding-bottom: 15px;
-  max-width: 941px;
+.category .nav {
+  width: 100%;
 }
 
-@media (min-width: 992px) {
-  .category-area {
-    padding-left: 20px;
+.category .nav > li {
+  float: none;
+}
+
+.category .nav > li > a {
+  margin-bottom: 5px;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  ..category .nav > li {
+    display: table-cell;
+    width: 1%;
   }
-}
-
-@media (max-width: 991px) {
-  .category-area {
-
+  .category .nav > li > a {
+    margin-bottom: 0;
   }
-}
-
-@media (max-width: 767px) {
-  .category-area {
-
-  }
-}
-
-.category.col-xs-4 {
-  padding: 0px;
 }
 
 /* links */
 .category .nav > li > a {
   color: #777;
-  border-left: 2px solid transparent;
-  padding: 4px 12px 3px 10px;
+  padding: 6px 0px 6px 0px;
   font-size: 14px;
   font-weight: 600;
-}
-
-/* nested links */
-.category .nav .nav > li > a {
-  padding: 2px 0px 2px 20px;
-  font-size: 13px;
-  font-weight: 400;
 }
 
 /* active links */
@@ -80,15 +79,7 @@
 .category .nav > li > a:hover,
 .category .nav > li > a:focus {
   color: #563d7c;
-  border-left: 2px solid #563d7c;
-  background-color: transparent;
-}
-
-@media (max-width: 991px) {
-  /* hide subcategories */
-  .category .nav ul.nav {
-    display: none;
-  }
+  background-color: #f1eef7;
 }
 
 /* =================== */
