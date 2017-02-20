@@ -2,9 +2,8 @@
 /* - - CONTENTS  - - - - - - */
 /* - - ========  - - - - - - */
 /* - - 1. Layout - - - - - - */
-/* - - 2. Category area- - - */
-/* - - 3. Categories - - - - */
-/* - - 4. Filters  - - - - - */
+/* - - 2. Categories - - - - */
+/* - - 3. Filters  - - - - - */
 /* - - - - - - - - - - - - - */
 
 /* ================== */
@@ -18,12 +17,8 @@
 .listings-area {
   margin: 0px auto;
   padding: 15px 0px 15px 0px;
-  max-width: 1200px;
+  max-width: 2000px;
 }
-
-/* ========================= */
-/* . . . Category area . . . */
-/* ========================= */
 
 .category-area {
   margin: 0px auto;

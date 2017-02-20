@@ -18,33 +18,59 @@
 /* testing */
 
 .padding {
-  padding: 20px 10px 20px 10px;
+  padding: 20px 4px 0px 4px;
 }
 
 .test {
   border: 1px solid rgba(0, 0, 255, .3);
   background: #ccc;
+  vertical-align: middle;
 }
 
-.test-heading {
-  height: 30px;
+.price-row {
+  height: 33.33%;
+}
+
+.spec-info {
+  padding: 0px 2px 0px 0px;
+}
+
+.shop-name,
+.shop-price {
+  padding: 2px;
+}
+
+.spec-info,
+.shop-name {
+  font-size: 8px;
+}
+
+.shop-price {
+  font-size: 10px;
+}
+
+.heading-text {
+  font-size: 12px;
+}
+
+.sub-text,
+.sku-text {
+  font-size: 9px;
+  font-weight: 600;
 }
 
 .test-content {
-  height: 220px;
+  height: 100px;
 }
 
-.test-prices {
-  height: 80px;
-}
-
+/* bootstrap.css extracted */
 .row-copy {
   margin-right: -15px;
   margin-left: -15px;
 }
 
-.row:before,
-.row:after {
+.row-copy:before,
+.row-copy:after {
   display: table;
   content: " ";
 }
@@ -102,46 +128,6 @@
   }
 }
 
-/* positioning for detached navbar */
-@media (min-width: 991px) {
-  .navbar-wrapper {
-    margin: 20px auto 0px;
-    max-width: 768px;
-  }
-
-  .navbar-wrapper .navbar {
-    padding: 0px;
-  }
-}
-
-/* Decreased navbar height */
-.navbar-nav > li > a, .navbar-brand {
-  padding-top: 5px;
-  padding-bottom: 5px;
-  height: 30px;
-}
-
-.navbar-toggle {
-  padding: 4px 4px 4px 4px;
-  margin-top: 4px;
-  margin-bottom: 4px;
-}
-
-.navbar-form {
-  margin-top: 6px;
-  margin-bottom: 6px;
-}
-
-.navbar {
-  min-height:30px;
-  margin-bottom: 0px;
-}
-
-.form-control {
-  padding: 4px 8px 4px 8px;
-  height: 20px;
-}
-
 /* ================ */
 /* . . . Main . . . */
 /* ================ */
@@ -161,12 +147,6 @@
 
 .bottom-content {
   padding-bottom: 200px;
-}
-
-@media (max-width: 991px) {
-  .top-padding {
-      padding-top: 31px;
-  }
 }
 
 @media (max-width: 767px) {
