@@ -1,0 +1,150 @@
+/* - - - - - - - - - - - - - */
+/* - - CONTENTS  - - - - - - */
+/* - - ========  - - - - - - */
+/* - - 1. General  - - - - - */
+/* - - 2. Item infobar - - - */
+/* - - 3. Item heading - - - */
+/* - - 4. Item specs - - - - */
+/* - - 5. Item shops - - - - */
+/* - - 6. Old  - - - - - - - */
+/* - - - - - - - - - - - - - */
+
+/* =================== */
+/* . . . General . . . */
+/* =================== */
+
+.item-container {
+  padding: 20px 6px;
+  border-bottom: 1px solid #eee;
+}
+
+@media (min-width: 768px) {
+  .item-container {
+    padding: 20px;
+  }
+}
+
+.col-xs-12.item-infobar,
+.col-xs-6.item-specs,
+.col-xs-6.item-shops {
+  padding: 0px;
+}
+
+.col-xs-12.item-heading {
+  padding: 6px 0px;
+}
+
+.item-infobar > span,
+.item-heading > span {
+  padding: 0px 4px;
+}
+
+.item-specs,
+.item-shops {
+  height: 128px;
+}
+
+.item-specs .list-group-item,
+.item-shops .list-group-item {
+  padding: 0px 6px 0px 6px;
+  font-size: 12px;
+  border: none;
+}
+
+/* ======================== */
+/* . . . Item infobar . . . */
+/* ======================== */
+
+.item-infobar > span {
+  float: left;
+  font-size: 10px;
+}
+
+.item-infobar > i {
+  float: right;
+  padding-right: 24px;
+}
+
+/* ======================== */
+/* . . . Item heading . . . */
+/* ======================== */
+
+.item-heading > span.text {
+  display: block;
+  font-size: 16px;
+  line-height: 100%;
+}
+
+.item-heading > span.sub-text,
+.item-heading > span.sku-text {
+  font-size: 12px;
+  padding-right: 8px;
+  font-weight: 600;
+}
+
+.item-heading > span.sku-text {
+  color: rgba(50,50,50,0.4);
+}
+
+/* ====================== */
+/* . . . Item-specs . . . */
+/* ====================== */
+
+.item-specs > .list-group {
+  padding: 0px 6px;
+}
+
+.item-specs > .specs-link,
+.item-shops > .prices-link {
+  padding-bottom: 4px;
+  margin: auto 0px;
+  font-size: 12px;
+  text-align: center;
+}
+
+/* ====================== */
+/* . . . Item-shops . . . */
+/* ====================== */
+
+.item-shops > .list-group {
+  margin: 0px;
+  height: 100%;
+}
+
+.item-shops .list-group-item {
+  height: 28%;
+  border-radius: 0px;
+}
+
+.item-shops .list-group-item > span {
+  padding: 0px 6px 0px 0px;
+}
+
+.item-shops .list-group-item > span.price {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.item-shops .list-group-item > span.delivery {
+  font-size: 11px;
+  font-weight: 600;
+  padding-left: 6px;
+}
+
+.item-shops .list-group-item > span.shop-name {
+  font-size: 12px;
+  display: block;
+  line-height: 100%;
+  padding-bottom: 4px;
+}
+
+/* =============== */
+/* . . . Old . . . */
+/* =============== */
+
+/* expands collapsible divs on size S+ screens */
+@media (min-width: 768px) {
+  #more-prices {
+    display: block!important;
+  }
+}

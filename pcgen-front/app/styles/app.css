@@ -1,6 +1,6 @@
 /*@import url("docs.css");*/
-@import url("list-item.css");
-@import url("list-page.css");
+@import url("part-tile.css");
+@import url("parts-page.css");
 @import url("sign-in.css");
 
 /* <li> linking addon: https://github.com/alexspeller/ember-cli-active-link-wrapper */
@@ -14,54 +14,6 @@
 /* - - 4. Tables - - - - - - */
 /* - - 5. IE10 - - - - - - - */
 /* - - - - - - - - - - - - - */
-
-/* testing */
-
-.padding {
-  padding: 20px 4px 0px 4px;
-}
-
-.test {
-  border: 1px solid rgba(0, 0, 255, .3);
-  background: #ccc;
-  vertical-align: middle;
-}
-
-.price-row {
-  height: 33.33%;
-}
-
-.spec-info {
-  padding: 0px 2px 0px 0px;
-}
-
-.shop-name,
-.shop-price {
-  padding: 2px;
-}
-
-.spec-info,
-.shop-name {
-  font-size: 8px;
-}
-
-.shop-price {
-  font-size: 10px;
-}
-
-.heading-text {
-  font-size: 12px;
-}
-
-.sub-text,
-.sku-text {
-  font-size: 9px;
-  font-weight: 600;
-}
-
-.test-content {
-  height: 100px;
-}
 
 /* bootstrap.css extracted */
 .row-copy {
