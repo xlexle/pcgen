@@ -15,7 +15,7 @@
 
 .item-container {
   padding: 20px 6px;
-  border-bottom: 1px solid #eee;
+  border-bottom: 2px solid #eee;
 }
 
 @media (min-width: 768px) {
@@ -24,50 +24,70 @@
   }
 }
 
-.col-xs-12.item-infobar,
-.col-xs-6.item-specs,
-.col-xs-6.item-shops {
-  padding: 0px;
-}
-
-.col-xs-12.item-heading {
-  padding: 6px 0px;
-}
-
 .item-infobar > span,
 .item-heading > span {
   padding: 0px 4px;
 }
 
-.item-specs,
-.item-shops {
-  height: 128px;
+.col-xs-6.item-specs,
+.col-xs-6.item-prices {
+  padding: 0px;
+  margin-top: 8px;
+  height: 150px;
 }
 
-.item-specs .list-group-item,
-.item-shops .list-group-item {
+.item-specs .list-group-item {
   padding: 0px 6px 0px 6px;
   font-size: 12px;
-  border: none;
+  border: 1px solid transparent;
+}
+
+.item-specs > .specs-link,
+.item-prices > .prices-link {
+  padding-bottom: 4px;
+  margin: auto 0px;
+  font-size: 12px;
+  text-align: center;
 }
 
 /* ======================== */
 /* . . . Item infobar . . . */
 /* ======================== */
 
+.col-xs-12.item-infobar {
+  padding: 0px;
+}
+
 .item-infobar > span {
   float: left;
   font-size: 10px;
 }
 
-.item-infobar > i {
+.item-infobar > button {
   float: right;
-  padding-right: 24px;
+  padding: 0px 12px;
+  background-color: transparent;
+  border: none;
+  outline: none;
+}
+
+.item-infobar > button > .fa {
+  color: #555;
+}
+
+.item-infobar > button:hover > .fa {
+  color: #33e;
+  text-shadow: 2px 2px 2px #ccc;
 }
 
 /* ======================== */
 /* . . . Item heading . . . */
 /* ======================== */
+
+.col-xs-12.item-heading {
+  padding: 6px 0px;
+  border-bottom: 1px solid #eee;
+}
 
 .item-heading > span.text {
   display: block;
@@ -90,52 +110,68 @@
 /* . . . Item-specs . . . */
 /* ====================== */
 
+.col-xs-6.item-specs {
+  border-right: 1px solid #eee;
+}
+
 .item-specs > .list-group {
   padding: 0px 6px;
 }
 
-.item-specs > .specs-link,
-.item-shops > .prices-link {
-  padding-bottom: 4px;
-  margin: auto 0px;
-  font-size: 12px;
-  text-align: center;
-}
-
 /* ====================== */
-/* . . . Item-shops . . . */
+/* . . . item-prices . . . */
 /* ====================== */
 
-.item-shops > .list-group {
+.item-prices > .list-group {
   margin: 0px;
   height: 100%;
 }
 
-.item-shops .list-group-item {
-  height: 28%;
+.item-prices .list-group-item {
+  padding: 0px 0px 0px 6px;
+  margin: 0px -10px 0px 0px;
+  font-size: 12px;
+  border: 1px solid transparent;
   border-radius: 0px;
+  height: 28%;
 }
 
-.item-shops .list-group-item > span {
+.item-prices .list-group-item > span {
   padding: 0px 6px 0px 0px;
 }
 
-.item-shops .list-group-item > span.price {
+.item-prices .list-group-item > span.price {
   font-size: 14px;
   font-weight: 600;
 }
 
-.item-shops .list-group-item > span.delivery {
+.item-prices .list-group-item > span.delivery {
   font-size: 11px;
   font-weight: 600;
   padding-left: 6px;
 }
 
-.item-shops .list-group-item > span.shop-name {
+.item-prices .list-group-item > span.fa {
+  font-size: calc(16px + 0.5vw);
+  color: #eee;
+  float: right;
+}
+
+.item-prices .list-group-item > span.shop-name {
   font-size: 12px;
   display: block;
   line-height: 100%;
   padding-bottom: 4px;
+}
+
+.item-prices > .list-group > button:focus,
+.item-prices > .list-group > .active {
+  border-color: transparent;
+}
+
+.item-prices > .list-group > button:hover > span.fa {
+  color: #777;
+  text-shadow: 2px 2px 2px #ccc;
 }
 
 /* =============== */

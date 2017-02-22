@@ -4,7 +4,6 @@ import Product from './product';
 
 export default Product.extend({
   formFactor: DS.attr('string'),
-  // capacity: DS.attr('capacity'),
   amps12v: DS.attr('number'),
   fullModular: DS.attr('boolean'),
   semiModular: DS.attr('boolean'),
@@ -20,7 +19,7 @@ export default Product.extend({
   hasPrettyCables: DS.attr('boolean'),
   fan: DS.belongsTo('fan'),
 
-  // quantity of PCIe of connectors as a string for displaying
+  // quantity of PCIe of connectors as a string
   pcieConnectors: Ember.computed('pcie8pinQty', 'pcie6pinQty', function() {
     let eights = this.get('pcie8pinQty');
     let sixes = this.get('pcie6pinQty');
@@ -40,8 +39,10 @@ export default Product.extend({
     return connectors;
   }),
 
-  // W = V*A
-  watts12v: Ember.computed('amps12v', function() {
-    return 12 * this.get('amps12v');
+  // cables type
+  cables: Ember.computed('fullModular', 'semiModular', function() {
+    if (this.get('fullModular')) { return "täysmodulaariset"; }
+    if (this.get('semiModular')) { return "semimodulaariset"; }
+    return "kiinteät";
   })
 });

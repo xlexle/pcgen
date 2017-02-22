@@ -55,8 +55,22 @@
 }
 
 @media (min-width: 992px) {
+  .col-md-4 {
+    width: 50%;
+  }
+
   .category-area {
     max-width: 820px;
+  }
+
+  .listings-area {
+    max-width: 800px;
+  }
+}
+
+@media (min-width: 1080px) {
+  .col-md-4 {
+    width: 33%;
   }
 
   .listings-area {
