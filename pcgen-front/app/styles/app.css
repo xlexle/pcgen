@@ -1,7 +1,8 @@
-/*@import url("docs.css");*/
-@import url("tile.css");
+/*@import url("docs-page.css");*/
 @import url("parts-page.css");
-@import url("sign-in.css");
+@import url("tile.css");
+@import url("build-page.css");
+@import url("sign-in-page.css");
 
 /* <li> linking addon: https://github.com/alexspeller/ember-cli-active-link-wrapper */
 
@@ -70,6 +71,7 @@
 .navbar-wrapper .navbar {
   padding-right: 15px;
   padding-left: 15px;
+  min-width: 354px; /* min-width of page content has to match */
 }
 
 /* keeps links more centered for medium screens */

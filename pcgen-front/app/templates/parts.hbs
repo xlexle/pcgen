@@ -1,74 +1,60 @@
-<div class="parts-wrapper">
+<div class="container-fluid">
 
-  <div class="container-fluid">
-
-    <div class="row top-padding">
+  <!-- CATEGORIES -->
+  <div class="row category-area">
+    <div class="col-xs-6 col-sm-1of5 category">
+      <ul class="nav nav-stacked">
+        {{#active-link}}{{link-to "Prosessorit" 'parts.fans'}}{{/active-link}}
+      </ul>
     </div>
+    <div class="col-xs-6 col-sm-1of5 category">
+      <ul class="nav nav-stacked">
+        {{#active-link}}{{link-to "Jäähdyttimet" 'parts.fans'}}{{/active-link}}
+      </ul>
+    </div>
+    <div class="col-xs-6 col-sm-1of5 category">
+      <ul class="nav nav-stacked">
+        {{#active-link}}{{link-to "Emolevyt" 'parts.fans'}}{{/active-link}}
+      </ul>
+    </div>
+    <div class="col-xs-6 col-sm-1of5 category">
+      <ul class="nav nav-stacked">
+        {{#active-link}}{{link-to "Keskusmuistit" 'parts.fans'}}{{/active-link}}
+      </ul>
+    </div>
+    <div class="col-xs-6 col-sm-1of5 category">
+      <ul class="nav nav-stacked">
+        {{#active-link}}{{link-to "Näytönohjaimet" 'parts.fans'}}{{/active-link}}
+      </ul>
+    </div>
+    <div class="col-xs-6 col-sm-1of5 category">
+      <ul class="nav nav-stacked">
+        {{#active-link}}{{link-to "Tallennustila" 'parts.fans'}}{{/active-link}}
+      </ul>
+    </div>
+    <div class="col-xs-6 col-sm-1of5 category">
+      <ul class="nav nav-stacked">
+        {{#active-link}}{{link-to "Virtalähteet" 'parts.power-supplies'}}{{/active-link}}
+      </ul>
+    </div>
+    <div class="col-xs-6 col-sm-1of5 category">
+      <ul class="nav nav-stacked">
+        {{#active-link}}{{link-to "Kotelot" 'parts.fans'}}{{/active-link}}
+      </ul>
+    </div>
+    <div class="col-xs-6 col-sm-1of5 category">
+      <ul class="nav nav-stacked">
+        {{#active-link}}{{link-to "Tuulettimet" 'parts.fans'}}{{/active-link}}
+      </ul>
+    </div>
+    <div class="col-xs-6 col-sm-1of5 category">
+      <ul class="nav nav-stacked">
+        {{#active-link}}{{link-to "Lisätarvikkeet" 'parts.fans'}}{{/active-link}}
+      </ul>
+    </div>
+  </div>  <!-- /row -->
+  <!-- /CATEGORIES -->
 
-  </div> <!-- container-fluid -->
+</div> <!-- /container-fluid -->
 
-  <div class="container-fluid">
-
-    <!-- CATEGORIES -->
-
-    <div class="row category-area">
-      <div class="col-xs-6 col-sm-1of5 category">
-        <ul class="nav nav-stacked">
-          {{#active-link}}{{link-to "Prosessorit" 'parts.fans'}}{{/active-link}}
-        </ul>
-      </div>
-      <div class="col-xs-6 col-sm-1of5 category">
-        <ul class="nav nav-stacked">
-          {{#active-link}}{{link-to "Jäähdyttimet" 'parts.fans'}}{{/active-link}}
-        </ul>
-      </div>
-
-      <div class="col-xs-6 col-sm-1of5 category">
-        <ul class="nav nav-stacked">
-          {{#active-link}}{{link-to "Emolevyt" 'parts.fans'}}{{/active-link}}
-        </ul>
-      </div>
-      <div class="col-xs-6 col-sm-1of5 category">
-        <ul class="nav nav-stacked">
-          {{#active-link}}{{link-to "Keskusmuistit" 'parts.fans'}}{{/active-link}}
-        </ul>
-      </div>
-
-      <div class="col-xs-6 col-sm-1of5 category">
-        <ul class="nav nav-stacked">
-          {{#active-link}}{{link-to "Näytönohjaimet" 'parts.fans'}}{{/active-link}}
-        </ul>
-      </div>
-      <div class="col-xs-6 col-sm-1of5 category">
-        <ul class="nav nav-stacked">
-          {{#active-link}}{{link-to "Tallennustila" 'parts.fans'}}{{/active-link}}
-        </ul>
-      </div>
-
-      <div class="col-xs-6 col-sm-1of5 category">
-        <ul class="nav nav-stacked">
-          {{#active-link}}{{link-to "Virtalähteet" 'parts.power-supplies'}}{{/active-link}}
-        </ul>
-      </div>
-      <div class="col-xs-6 col-sm-1of5 category">
-        <ul class="nav nav-stacked">
-          {{#active-link}}{{link-to "Kotelot" 'parts.fans'}}{{/active-link}}
-        </ul>
-      </div>
-      <div class="col-xs-6 col-sm-1of5 category">
-        <ul class="nav nav-stacked">
-          {{#active-link}}{{link-to "Tuulettimet" 'parts.fans'}}{{/active-link}}
-        </ul>
-      </div>
-      <div class="col-xs-6 col-sm-1of5 category">
-        <ul class="nav nav-stacked">
-          {{#active-link}}{{link-to "Lisätarvikkeet" 'parts.fans'}}{{/active-link}}
-        </ul>
-      </div>
-    </div>  <!-- /row -->
-
-  </div> <!-- /container-fluid -->
-
-  {{outlet}}
-
-</div> <!-- /parts-wrapper -->
+{{outlet}}

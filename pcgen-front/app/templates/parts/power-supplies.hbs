@@ -1,34 +1,34 @@
 <div class="container-fluid">
   <div class="row listings-area">
 
-      {{#each model as |item index|}}
-        <div class="col-sm-6 col-md-4">
-          <div class="item-container">
-            <div class="row">
-              {{parts/tile-infobar index=index}}
-            </div>
-
-            <div class="row">
-              {{#parts/tile-heading brand=item.propertyList.brand name=item.propertyList.productName sku=item.propertyList.sku}}
-                <span class="sub-text">{{item.formFactor}}</span>
-                <span class="sub-text">{{item.efficiency}}</span>
-              {{/parts/tile-heading}}
-            </div>
-
-            <div class="row">
-              {{#parts/tile-specs specsUrl=item.propertyList.specsUrl}}
-                <li class="list-group-item">{{as-watts item.amps12v}} +12V</li>
-                <li class="list-group-item">{{item.pcieConnectors}} PCIe</li>
-                <li class="list-group-item">{{item.sataQty}} x SATA</li>
-                <li class="list-group-item">{{item.cables}} kaapelit</li>
-                <li class="list-group-item">{{item.propertyList.warranty}} vuoden takuu</li>
-              {{/parts/tile-specs}}
-
-              {{parts/tile-prices pricesUrl=item.propertyList.pricesUrl sources=item.cheapestThreeSources}}
-            </div>
-          </div>
+    {{#each model as |item index|}}
+    <div class="col-sm-6 col-md-4">
+      <div class="product-container">
+        <div class="row">
+          {{parts/tile-infobar index=index}}
         </div>
-      {{/each}}
+
+        <div class="row">
+          {{#parts/tile-heading brand=item.propertyList.brand name=item.propertyList.productName sku=item.propertyList.sku}}
+            <span class="sub-text">{{item.formFactor}}</span>
+            <span class="sub-text">{{item.efficiency}}</span>
+          {{/parts/tile-heading}}
+        </div>
+
+        <div class="row">
+          {{#parts/tile-specs specsUrl=item.propertyList.specsUrl}}
+            <li class="list-group-item">{{as-watts item.amps12v}} +12V</li>
+            <li class="list-group-item">{{item.pcieConnectors}} PCIe</li>
+            <li class="list-group-item">{{item.sataQty}} x SATA</li>
+            <li class="list-group-item">{{item.cables}} kaapelit</li>
+            <li class="list-group-item">{{item.propertyList.warranty}} vuoden takuu</li>
+          {{/parts/tile-specs}}
+
+          {{parts/tile-prices pricesUrl=item.propertyList.pricesUrl sources=item.cheapestThreeSources}}
+        </div>
+      </div>
+    </div>
+    {{/each}}
 
   </div> <!-- listings-area -->
 </div> <!-- container-fluid -->

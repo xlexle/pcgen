@@ -2,10 +2,10 @@
 /* - - CONTENTS  - - - - - - */
 /* - - ========  - - - - - - */
 /* - - 1. General  - - - - - */
-/* - - 2. Item infobar - - - */
-/* - - 3. Item heading - - - */
-/* - - 4. Item specs - - - - */
-/* - - 5. Item shops - - - - */
+/* - - 2. Product infobar  - */
+/* - - 3. Product heading  - */
+/* - - 4. Product specs  - - */
+/* - - 5. Product shops  - - */
 /* - - 6. Old  - - - - - - - */
 /* - - - - - - - - - - - - - */
 
@@ -13,57 +13,57 @@
 /* . . . General . . . */
 /* =================== */
 
-.item-container {
+.product-container {
   padding: 20px 6px;
   border-bottom: 2px solid #eee;
 }
 
 @media (min-width: 768px) {
-  .item-container {
+  .product-container {
     padding: 20px;
   }
 }
 
-.item-infobar > span,
-.item-heading > span {
+.product-infobar > span,
+.product-heading > span {
   padding: 0px 4px;
 }
 
-.col-xs-6.item-specs,
-.col-xs-6.item-prices {
+.col-xs-6.product-specs,
+.col-xs-6.product-prices {
   padding: 0px;
   margin-top: 8px;
   height: 150px;
 }
 
-.item-specs .list-group-item {
+.product-specs .list-group-item {
   padding: 0px 6px 0px 6px;
   font-size: 12px;
   border: 1px solid transparent;
 }
 
-.item-specs > .specs-link,
-.item-prices > .prices-link {
+.product-specs > .specs-link,
+.product-prices > .prices-link {
   padding-bottom: 4px;
   margin: auto 0px;
   font-size: 12px;
   text-align: center;
 }
 
-/* ======================== */
-/* . . . Item infobar . . . */
-/* ======================== */
+/* =========================== */
+/* . . . product infobar . . . */
+/* =========================== */
 
-.col-xs-12.item-infobar {
+.col-xs-12.product-infobar {
   padding: 0px;
 }
 
-.item-infobar > span {
+.product-infobar > span {
   float: left;
   font-size: 10px;
 }
 
-.item-infobar > button {
+.product-infobar > button {
   float: right;
   padding: 0px 12px;
   background-color: transparent;
@@ -71,63 +71,59 @@
   outline: none;
 }
 
-.item-infobar > button > .fa {
+.product-infobar > button > .fa {
   color: #555;
 }
 
-.item-infobar > button:hover > .fa {
+.product-infobar > button:hover > .fa {
   color: #33e;
   text-shadow: 2px 2px 2px #ccc;
 }
 
-/* ======================== */
-/* . . . Item heading . . . */
-/* ======================== */
+/* =========================== */
+/* . . . product heading . . . */
+/* =========================== */
 
-.col-xs-12.item-heading {
+.col-xs-12.product-heading {
   padding: 6px 0px;
   border-bottom: 1px solid #eee;
 }
 
-.item-heading > span.text {
+.product-heading > span.text {
   display: block;
   font-size: 16px;
   line-height: 100%;
 }
 
-.item-heading > span.sub-text,
-.item-heading > span.sku-text {
+.product-heading > span.sub-text,
+.product-heading > span.sku-text {
   font-size: 12px;
   padding-right: 8px;
   font-weight: 600;
 }
 
-.item-heading > span.sku-text {
+.product-heading > span.sku-text {
   color: rgba(50,50,50,0.4);
 }
 
-/* ====================== */
-/* . . . Item-specs . . . */
-/* ====================== */
+/* ========================= */
+/* . . . product-specs . . . */
+/* ========================= */
 
-.col-xs-6.item-specs {
-  border-right: 1px solid #eee;
-}
-
-.item-specs > .list-group {
+.product-specs > .list-group {
   padding: 0px 6px;
 }
 
-/* ====================== */
-/* . . . item-prices . . . */
-/* ====================== */
+/* ========================== */
+/* . . . product-prices . . . */
+/* ========================== */
 
-.item-prices > .list-group {
+.product-prices > .list-group {
   margin: 0px;
   height: 100%;
 }
 
-.item-prices .list-group-item {
+.product-prices .list-group-item {
   padding: 0px 0px 0px 6px;
   margin: 0px -10px 0px 0px;
   font-size: 12px;
@@ -136,40 +132,40 @@
   height: 28%;
 }
 
-.item-prices .list-group-item > span {
+.product-prices .list-group-item > span {
   padding: 0px 6px 0px 0px;
 }
 
-.item-prices .list-group-item > span.price {
+.product-prices .list-group-item > span.price {
   font-size: 14px;
   font-weight: 600;
 }
 
-.item-prices .list-group-item > span.delivery {
+.product-prices .list-group-item > span.delivery {
   font-size: 11px;
   font-weight: 600;
   padding-left: 6px;
 }
 
-.item-prices .list-group-item > span.fa {
+.product-prices .list-group-item > span.fa {
   font-size: calc(16px + 0.5vw);
   color: #eee;
   float: right;
 }
 
-.item-prices .list-group-item > span.shop-name {
+.product-prices .list-group-item > span.shop-name {
   font-size: 12px;
   display: block;
   line-height: 100%;
   padding-bottom: 4px;
 }
 
-.item-prices > .list-group > button:focus,
-.item-prices > .list-group > .active {
+.product-prices > .list-group > button:focus,
+.product-prices > .list-group > .active {
   border-color: transparent;
 }
 
-.item-prices > .list-group > button:hover > span.fa {
+.product-prices > .list-group > button:hover > span.fa {
   color: #777;
   text-shadow: 2px 2px 2px #ccc;
 }

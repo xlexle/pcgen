@@ -12,6 +12,7 @@ Router.map(function() {
     this.route('power-supplies', { path: '/virtalahteet' });
     this.route('fans', { path: '/tuulettimet' });
   });
+  this.route('build', {path: '/kokoonpano'});
   // this.route('peripherals', {path: '/oheislaitteet'}, function() {
   //   this.route('monitors', { path: '/naytot' });
   // });
