@@ -7,10 +7,13 @@ const Router = Ember.Router.extend({
 });
 
 Router.map(function() {
-  this.route('login', {path: '/kirjaudu'});
+  this.route('login', { path: '/kirjaudu' });
   this.route('parts', { path: '/komponentit' }, function() {
     this.route('power-supplies', { path: '/virtalahteet' });
     this.route('fans', { path: '/tuulettimet' });
+  });
+  this.route('admin', function() {
+    this.route('new-product', { path: '/uusi-tuote' });
   });
   this.route('build', {path: '/kokoonpano'});
   // this.route('peripherals', {path: '/oheislaitteet'}, function() {

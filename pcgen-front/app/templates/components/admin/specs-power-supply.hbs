@@ -1,0 +1,96 @@
+<div class="row">
+  <div class="col-xs-4">
+    <div class="form-group">
+      <label class="control-label">Koko</label>
+      {{input class="form-control input-sm" placeholder="ATX/SFX" value=model.formFactor}}
+    </div>
+  </div>
+  <div class="col-xs-4">
+    <div class="form-group">
+      <label class="control-label">Hyötysuhde</label>
+      {{input class="form-control input-sm" placeholder="80+ Bronze" value=model.efficiency}}
+    </div>
+  </div>
+  <div class="col-xs-4">
+    <div class="form-group">
+      <label class="control-label">+12V kapasiteetti (A)</label>
+      {{input class="form-control input-sm" placeholder="#" value=model.amps12v}}
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-xs-8">
+    <div class="form-group">
+      <label class="control-label">Alkuperäinen valmistaja</label>
+      {{input class="form-control input-sm" value=model.oem}}
+    </div>
+  </div>
+  <div class="col-xs-4">
+    <div class="form-group">
+      <label class="control-label">EPS-kaapeli (cm)</label>
+      {{input class="form-control input-sm" placeholder="#" value=model.epsLengthCm}}
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-xs-4">
+    <div class="form-group">
+      <label class="control-label">8-pin PCIe (kpl)</label>
+      {{input class="form-control input-sm" placeholder="#" value=model.pcie8pinQty}}
+    </div>
+  </div>
+  <div class="col-xs-4">
+    <div class="form-group">
+      <label class="control-label">6-pin PCIe (kpl)</label>
+      {{input class="form-control input-sm" placeholder="#" value=model.pcie6pinQty}}
+    </div>
+  </div>
+  <div class="col-xs-4">
+    <div class="form-group">
+      <label class="control-label">SATA (kpl)</label>
+      {{input class="form-control input-sm" placeholder="#" value=model.sataQty}}
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-xs-4">
+    <div class="checkbox label-small">
+      <label>
+        {{input type="checkbox" checked=model.fullModular}} täysmodulaarinen
+      </label>
+    </div>
+  </div>
+
+  <div class="col-xs-4">
+    <div class="checkbox label-small">
+      <label>
+        {{input type="checkbox" checked=model.semiModular}} semimodulaarinen
+      </label>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-xs-5">
+    <div class="checkbox label-small">
+      <label>
+        {{input type="checkbox" checked=model.semipassive}} semipassiivinen tuuletin
+      </label>
+    </div>
+  </div>
+
+  <div class="col-xs-7">
+    <div class="checkbox label-small">
+      <label>
+        {{input type="checkbox" checked=model.hasFanSwitch}} tuuletinmoodin kytkin
+      </label>
+    </div>
+  </div>
+</div>
+
+<!-- quiet: DS.attr('boolean'),
+hasPrettyCables: DS.attr('boolean'),
+fan: DS.belongsTo('fan'), -->

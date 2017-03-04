@@ -1,0 +1,189 @@
+<div class="container-fluid">
+  <div class="row form-area">
+    <div class="col-xs-12">
+
+      <h2>Uusi tuote</h2>
+
+      <div class="row">
+        <div class="col-xs-8">
+          <div class="form-group">
+            <select class="form-control" onchange={{action 'selectType' value="target.value"}}>
+              <option value="">valitse kategoria</option>
+              <option value="processor">prosessori</option>
+              <option value="cooler">jäähdytin</option>
+              <option value="motherboard">emolevy</option>
+              <option value="graphics-card">näytönohjain</option>
+              <option value="wlan">WLAN-adapteri</option>
+              <option value="storage">tallennustila</option>
+              <option value="power-supply">virtalähde</option>
+              <option value="case">kotelo</option>
+              <option value="fan">tuuletin</option>
+              <option value="accessory">lisätarvike</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <form>
+        <button class="btn btn-default btn-block" type="button" data-toggle="collapse" data-target="#generalInfo" aria-expanded="false" aria-controls="generalInfo">
+          yleiset tiedot
+        </button>
+
+        <div class="form-section collapse in" id="generalInfo">
+          <div class="row">
+            <div class="col-xs-4">
+              <div class="form-group">
+                <label class="control-label">merkki</label>
+                {{input class="form-control input-sm" value=model.brand}}
+              </div>
+            </div>
+            <div class="col-xs-8">
+              <div class="form-group">
+                <label class="control-label">tuotenimi</label>
+                {{input class="form-control input-sm" value=model.productName}}
+              </div>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="control-label">kuvaus</label>
+            {{textarea class="form-control" rows="2" value=model.description}}
+          </div>
+
+          <div class="row">
+            <div class="col-xs-8 col-sm-9">
+              <div class="form-group">
+                <label class="control-label">valmistajan tuotenumero</label>
+                {{input class="form-control input-sm" value=model.sku}}
+              </div>
+            </div>
+
+            <div class="col-xs-4 col-sm-3">
+              <div class="form-group">
+                <label class="control-label">takuu (v)</label>
+                {{input class="form-control input-sm" placeholder="#" value=model.warranty}}
+              </div>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="control-label">valmistajan tuotesivun URL</label>
+            {{input class="form-control input-sm" placeholder="http://" value=model.specsUrl}}
+          </div>
+
+          <div class="form-group">
+            <label class="control-label">hinta.fi tuotesivun URL</label>
+            {{input class="form-control input-sm" placeholder="http://" value=model.pricesUrl}}
+          </div>
+        </div>  <!-- /form-section -->
+
+        <button class="btn btn-default btn-block" type="button" data-toggle="collapse" data-target="#externalSpecs" aria-expanded="false" aria-controls="generalInfo">
+          ulkoiset ominaisuudet
+        </button>
+
+        <div class="form-section collapse" id="externalSpecs">
+          <div class="row">
+            <div class="col-xs-4">
+              <div class="form-group">
+                <label class="control-label">pituus (mm)</label>
+                {{input class="form-control input-sm" placeholder="#" value=model.lengthMm}}
+              </div>
+            </div>
+
+            <div class="col-xs-4">
+              <div class="form-group">
+                <label class="control-label">korkeus (mm)</label>
+                {{input class="form-control input-sm" placeholder="#" value=model.heightMm}}
+              </div>
+            </div>
+
+            <div class="col-xs-4">
+              <div class="form-group">
+                <label class="control-label">leveys (mm)</label>
+                {{input class="form-control input-sm" placeholder="#" value=model.widthMm}}
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-xs-6">
+              <div class="form-group">
+                <label class="control-label">värit</label>
+                {{input class="form-control input-sm" placeholder="musta, valkoinen, ..." value=model.colors}}
+              </div>
+            </div>
+
+            <div class="col-xs-6">
+              <div class="form-group">
+                <label class="control-label">LED</label>
+                {{input class="form-control input-sm" placeholder="sininen/punainen/..." value=model.ledColor}}
+              </div>
+            </div>
+          </div>
+        </div>  <!-- /form-section -->
+
+        <button class="btn btn-default btn-block" type="button" data-toggle="collapse" data-target="#technicalSpecs" aria-expanded="false" aria-controls="generalInfo">
+          tekniset tiedot
+        </button>
+
+        <div class="form-section collapse" id="technicalSpecs">
+          {{#if eq activeCategory "processor"}}
+            {{admin/specs-processor}}
+          {{/if}}
+          {{#if eq activeCategory "cooler"}}
+            {{admin/specs-cooler}}
+          {{/if}}
+          {{#if eq activeCategory "motherboard"}}
+            {{admin/specs-motherboard}}
+          {{/if}}
+          {{#if eq activeCategory "ram"}}
+            {{admin/specs-ram}}
+          {{/if}}
+          {{#if eq activeCategory "graphics-card"}}
+            {{admin/specs-graphics-card}}
+          {{/if}}
+          {{#if eq activeCategory "wlan"}}
+            {{admin/specs-wlan}}
+          {{/if}}
+          {{#if eq activeCategory "storage"}}
+            {{admin/specs-storage}}
+          {{/if}}
+          {{#if eq activeCategory "power-supply"}}
+            {{admin/specs-power-supply}}
+          {{/if}}
+          {{#if eq activeCategory "case"}}
+            {{admin/specs-case}}
+          {{/if}}
+          {{#if eq activeCategory "fan"}}
+            {{admin/specs-fan}}
+          {{/if}}
+          {{#if eq activeCategory "accessory"}}
+            {{admin/specs-accessory}}
+          {{/if}}
+        </div>  <!-- /form-section -->
+
+        <hr />
+
+        <div class="row">
+          <div class="col-xs-3">
+            <div class="form-group">
+              <label class="control-label">laatu (0-100)</label>
+              {{input class="form-control input-sm" placeholder="#" value=model.quality}}
+            </div>
+          </div>
+
+          <div class="col-xs-9">
+            <div class="checkbox label-small">
+              <label>
+                {{input type="checkbox" checked=model.listed}} listaa tuote
+              </label>
+            </div>
+          </div>
+        </div>
+
+        <button class="btn btn-default btn-block" type="submit">tallenna</button>
+      </form>
+
+    </div>
+  </div> <!-- /form-area -->
+</div> <!-- /container -->

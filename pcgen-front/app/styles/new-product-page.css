@@ -1,0 +1,63 @@
+/* - - - - - - - - - - - - - */
+/* - - CONTENTS  - - - - - - */
+/* - - ========  - - - - - - */
+/* - - 1. Layout - - - - - - */
+/* - - 2. Form - - - - - - - */
+/* - - 3.    - */
+/* - - - - - - - - - - - - - */
+
+/* ================== */
+/* . . . Layout . . . */
+/* ================== */
+
+.form-area {
+  margin: 0px auto 20px auto;
+  /*padding: 15px;*/
+  min-width: 324px;
+  max-width: 400px;
+}
+
+.form-area h2 {
+  margin-bottom: 25px;
+}
+
+.form-area .form-group {
+  margin-bottom: 10px;
+}
+
+.form-area > .col-xs-12 {
+  padding: 0px;
+}
+
+/* ================ */
+/* . . . Form . . . */
+/* ================ */
+
+form > .form-section {
+  margin-bottom: 10px;
+  padding: 8px 8px 0px 8px;
+  border-left: 1px solid #eee;
+  border-right: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+form > button {
+  margin: 5px 0px;
+}
+
+form > .row .checkbox {
+  margin-top: 20px;
+}
+
+
+.checkbox.label-small > label {
+  font-size: 10px;
+  font-weight: bold;
+  line-height: 200%;
+}
+
+.form-area .control-label {
+  font-size: 10px;
+}
