@@ -6,6 +6,6 @@ class Fan < ApplicationRecord
   has_many :power_supplies, inverse_of: :fan
   # has_many :cooler_fan_slots
   # has_many :case_fan_slots
-  has_many :product_conflicts, as: :product, inverse_of: :product, dependent: :destroy
+  # has_many :product_conflicts, as: :product, inverse_of: :product, dependent: :destroy
   has_many :sources, as: :product, inverse_of: :product, dependent: :destroy
 end

@@ -45,26 +45,27 @@ class PropertyListsController < ApplicationController
     # Only allow a trusted parameter "white list" through.
     def property_list_params
       # Use temporarily for running Controller tests:
-      params.require(:property_list).permit(
-        :listed,
-        :quality,
-        :product_name,
-        :sku,
-        :brand,
-        :prices_url,
-        :specs_url,
-        :description,
-        :warranty,
-        :length_mm,
-        :width_mm,
-        :height_mm,
-        :colors,
-        :led_color,
-        :product_id,
-        :product_type
-      )
+      # params.require(:property_list).permit(
+      #   :listed,
+      #   :quality,
+      #   :product_name,
+      #   :sku,
+      #   :brand,
+      #   :prices_url,
+      #   :specs_url,
+      #   :description,
+      #   :warranty,
+      #   :length_mm,
+      #   :width_mm,
+      #   :height_mm,
+      #   :colors,
+      #   :led_color,
+      #   :product_id,
+      #   :product_type
+      # )
 
       # Doesn't allow tests to run correctly, but needed for Ember:
+      ActiveModelSerializers::Deserialization.jsonapi_parse(params)
       # res = ActiveModelSerializers::Deserialization.jsonapi_parse(params, polymorphic: [:product])
       # res[:product_type] = res[:product_type].singularize.capitalize
       # res

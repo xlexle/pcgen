@@ -3,10 +3,9 @@ class PowerSupply < ApplicationRecord
   validates :full_modular, :semi_modular, inclusion: { in: [true, false] }, exclusion: { in: [nil] }
 
   belongs_to :fan
-  validates :fan, presence: true
+  # validates :fan, presence: true
 
   has_one :property_list, as: :product, inverse_of: :product, dependent: :destroy
-  # has_many :product_conflicts, as: :product, inverse_of: :product, dependent: :destroy
-  has_many :product_conflicts, as: :product, inverse_of: :product
+  # has_many :product_conflicts, as: :product, inverse_of: :product
   has_many :sources, as: :product, inverse_of: :product, dependent: :destroy
 end

@@ -47,10 +47,17 @@ form > button {
   margin: 5px 0px;
 }
 
-form > .row .checkbox {
-  margin-top: 20px;
+form > .form-section button {
+  margin-bottom: 10px;
 }
 
+form > .form-section label.dummy {
+  color: transparent;
+}
+
+form .row .checkbox.offset {
+  margin-top: 20px;
+}
 
 .checkbox.label-small > label {
   font-size: 10px;

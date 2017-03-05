@@ -2,19 +2,52 @@
   <div class="col-xs-4">
     <div class="form-group">
       <label class="control-label">Koko</label>
-      {{input class="form-control input-sm" placeholder="ATX/SFX" value=model.formFactor}}
+      <select class="form-control" onchange={{action 'setFormFactor' product}}>
+        <option value="">valitse</option>
+        <option value="ATX">ATX</option>
+        <option value="SFX">SFX</option>
+        <option value="SFX-L">SFX-L</option>
+        <option value="TFX">TFX</option>
+        <option value="Flex-ATX">Flex-ATX</option>
+      </select>
     </div>
   </div>
   <div class="col-xs-4">
     <div class="form-group">
       <label class="control-label">Hyötysuhde</label>
-      {{input class="form-control input-sm" placeholder="80+ Bronze" value=model.efficiency}}
+      <select class="form-control" onchange={{action 'setEfficiency' product}}>
+        <option value="">valitse</option>
+        <option value="80+">80+</option>
+        <option value="80+ Bronze">80+ Bronze</option>
+        <option value="80+ Silver">80+ Silver</option>
+        <option value="80+ Gold">80+ Gold</option>
+        <option value="80+ Platium">80+ Platinum</option>
+        <option value="80+ Titanium">80+ Titanium</option>
+      </select>
     </div>
   </div>
   <div class="col-xs-4">
     <div class="form-group">
       <label class="control-label">+12V kapasiteetti (A)</label>
-      {{input class="form-control input-sm" placeholder="#" value=model.amps12v}}
+      {{input min=0 max=999 type="number" class="form-control input-sm" placeholder="0" value=product.amps12v}}
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-xs-4">
+    <div class="checkbox label-small">
+      <label>
+        {{input type="checkbox" checked=product.fullModular}} täysmodulaarinen
+      </label>
+    </div>
+  </div>
+
+  <div class="col-xs-8">
+    <div class="checkbox label-small">
+      <label>
+        {{input type="checkbox" checked=product.semiModular}} semimodulaarinen
+      </label>
     </div>
   </div>
 </div>
@@ -23,13 +56,13 @@
   <div class="col-xs-8">
     <div class="form-group">
       <label class="control-label">Alkuperäinen valmistaja</label>
-      {{input class="form-control input-sm" value=model.oem}}
+      {{input maxlength=64 class="form-control input-sm" value=product.oem}}
     </div>
   </div>
   <div class="col-xs-4">
     <div class="form-group">
       <label class="control-label">EPS-kaapeli (cm)</label>
-      {{input class="form-control input-sm" placeholder="#" value=model.epsLengthCm}}
+      {{input type="number" min=0 max=999 class="form-control input-sm" placeholder="0" value=product.epsLengthCm}}
     </div>
   </div>
 </div>
@@ -38,59 +71,42 @@
   <div class="col-xs-4">
     <div class="form-group">
       <label class="control-label">8-pin PCIe (kpl)</label>
-      {{input class="form-control input-sm" placeholder="#" value=model.pcie8pinQty}}
+      {{input type="number" min=0 max=99 class="form-control input-sm" placeholder="0" value=product.pcie8pinQty}}
     </div>
   </div>
   <div class="col-xs-4">
     <div class="form-group">
       <label class="control-label">6-pin PCIe (kpl)</label>
-      {{input class="form-control input-sm" placeholder="#" value=model.pcie6pinQty}}
+      {{input type="number" min=0 max=99 class="form-control input-sm" placeholder="0" value=product.pcie6pinQty}}
     </div>
   </div>
   <div class="col-xs-4">
     <div class="form-group">
       <label class="control-label">SATA (kpl)</label>
-      {{input class="form-control input-sm" placeholder="#" value=model.sataQty}}
+      {{input type="number" min=0 max=99 class="form-control input-sm" placeholder="0" value=product.sataQty}}
     </div>
   </div>
 </div>
 
 <div class="row">
+  <div class="col-xs-3">
+    <div class="form-group">
+      <label class="control-label">tuulettimen id</label>
+      {{input type="number" min=1 max=999 class="form-control input-sm" placeholder="0" value=product.fan_id}}
+    </div>
+  </div>
   <div class="col-xs-4">
-    <div class="checkbox label-small">
+    <div class="checkbox offset label-small">
       <label>
-        {{input type="checkbox" checked=model.fullModular}} täysmodulaarinen
+        {{input type="checkbox" checked=product.semipassive}} semipassiivinen
       </label>
     </div>
   </div>
-
-  <div class="col-xs-4">
-    <div class="checkbox label-small">
-      <label>
-        {{input type="checkbox" checked=model.semiModular}} semimodulaarinen
-      </label>
-    </div>
-  </div>
-</div>
-
-<div class="row">
   <div class="col-xs-5">
-    <div class="checkbox label-small">
+    <div class="checkbox offset label-small">
       <label>
-        {{input type="checkbox" checked=model.semipassive}} semipassiivinen tuuletin
-      </label>
-    </div>
-  </div>
-
-  <div class="col-xs-7">
-    <div class="checkbox label-small">
-      <label>
-        {{input type="checkbox" checked=model.hasFanSwitch}} tuuletinmoodin kytkin
+        {{input type="checkbox" checked=product.hasFanSwitch}} tuuletinmoodin kytkin
       </label>
     </div>
   </div>
 </div>
-
-<!-- quiet: DS.attr('boolean'),
-hasPrettyCables: DS.attr('boolean'),
-fan: DS.belongsTo('fan'), -->

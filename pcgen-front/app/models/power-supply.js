@@ -17,7 +17,7 @@ export default Product.extend({
   pcie6pinQty: DS.attr('number'),
   sataQty: DS.attr('number'),
   hasPrettyCables: DS.attr('boolean'),
-  fan: DS.belongsTo('fan'),
+  // fan: DS.belongsTo('fan'),
 
   // quantity of PCIe of connectors as a string
   pcieConnectors: Ember.computed('pcie8pinQty', 'pcie6pinQty', function() {
