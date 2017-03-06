@@ -33,13 +33,17 @@
           <div class="row">
             <div class="col-xs-4">
               <div class="form-group">
-                <label class="control-label">merkki</label>
+                <label class="control-label">merkki
+                  <span class="required">*</span>
+                </label>
                 {{input maxlength=64 class="form-control input-sm" value=model.propertyList.brand}}
               </div>
             </div>
             <div class="col-xs-8">
               <div class="form-group">
-                <label class="control-label">tuotenimi</label>
+                <label class="control-label">tuotenimi
+                  <span class="required">*</span>
+                </label>
                 {{input maxlength=64 class="form-control input-sm" value=model.propertyList.productName}}
               </div>
             </div>
@@ -61,7 +65,9 @@
           <div class="row">
             <div class="col-xs-8 col-sm-9">
               <div class="form-group">
-                <label class="control-label">valmistajan tuotenumero</label>
+                <label class="control-label">valmistajan tuotenumero
+                  <span class="required">*</span>
+                </label>
                 {{input maxlength=64 class="form-control input-sm" value=model.propertyList.sku}}
               </div>
             </div>
@@ -199,7 +205,9 @@
         <div class="row">
           <div class="col-xs-3">
             <div class="form-group">
-              <label class="control-label">laatu</label>
+              <label class="control-label">laatu
+                <span class="required">*</span>
+              </label>
               {{input type="number" min=0 max=999 class="form-control input-sm" placeholder="0" value=model.propertyList.quality}}
             </div>
           </div>

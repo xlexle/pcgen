@@ -68,3 +68,8 @@ form .row .checkbox.offset {
 .form-area .control-label {
   font-size: 10px;
 }
+
+form label > span.required {
+  padding: 0px 4px;
+  color: #f00;
+}

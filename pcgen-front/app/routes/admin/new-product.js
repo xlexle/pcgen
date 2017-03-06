@@ -15,10 +15,11 @@ export default Ember.Route.extend({
       newPropertyList.save()
       // .then(() => this.transitionTo('admin'))
       .then(() => window.location.reload(true))
-      .catch((adapterError) => {
-        console.log(newPropertyList.get('isValid'));
-        console.log(newPropertyList.get('errors'));
-      });
+      // .catch((adapterError) => {
+        // console.log(adapterError);
+        // console.log(newPropertyList.get('isValid'));
+        // console.log(newPropertyList);
+      // });
       // newPropertyList.save()
       // .then(() => newProduct.save())
       // .then(() => this.transitionTo('admin'));

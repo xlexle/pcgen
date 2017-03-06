@@ -65,7 +65,26 @@ class PropertyListsController < ApplicationController
       # )
 
       # Doesn't allow tests to run correctly, but needed for Ember:
-      ActiveModelSerializers::Deserialization.jsonapi_parse(params)
+      ActiveModelSerializers::Deserialization.jsonapi_parse(
+        params, only: [
+          :listed,
+          :quality,
+          :product_name,
+          :sku,
+          :brand,
+          :prices_url,
+          :specs_url,
+          :description,
+          :warranty,
+          :length_mm,
+          :width_mm,
+          :height_mm,
+          :colors,
+          :led_color
+          # :product_id,
+          # :product_type
+        ]
+      )
       # res = ActiveModelSerializers::Deserialization.jsonapi_parse(params, polymorphic: [:product])
       # res[:product_type] = res[:product_type].singularize.capitalize
       # res
