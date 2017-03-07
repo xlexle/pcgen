@@ -69,6 +69,12 @@ form .row .checkbox.offset {
   font-size: 10px;
 }
 
+form > .required-fields {
+  font-size: 10px;
+  font-weight: 600;
+  color: #f00;
+}
+
 form label > span.required {
   padding: 0px 4px;
   color: #f00;
