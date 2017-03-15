@@ -1,16 +1,20 @@
 import DS from 'ember-data';
 import Ember from 'ember';
 
+const { String: { singularize, camelize, underscore, capitalize } } = Ember;
+
 export default DS.JSONAPISerializer.extend({
   payloadKeyFromModelName(modelName) {
-    return Ember.String.singularize(Ember.String.capitalize(modelName));
-  },
-
-  keyForAttribute(attr) {
-    return Ember.String.underscore(attr);
-  },
-
-  keyForRelationship: function(attr) {
-    return Ember.String.underscore(attr);
+    let converted = singularize(camelize(capitalize(modelName)));
+    console.log(converted);
+    return converted;
   }
+  //
+  // keyForAttribute(attr) {
+  //   return underscore(attr);
+  // },
+  //
+  // keyForRelationship: function(attr) {
+  //   return underscore(attr);
+  // }
 });

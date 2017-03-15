@@ -1,7 +1,3 @@
-// import ActiveModelAdapter from 'active-model-adapter';
-//
-// export default ActiveModelAdapter.extend();
-
 import Ember from 'ember';
 import JSONAPIAdapter from 'ember-data/adapters/json-api';
 

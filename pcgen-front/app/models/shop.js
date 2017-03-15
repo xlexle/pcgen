@@ -5,5 +5,5 @@ export default DS.Model.extend({
   description: DS.attr('string'),
   url: DS.attr('string'),
   sources: DS.hasMany('source'),
-  services: DS.hasMany('service')
+  // services: DS.hasMany('service')
 });

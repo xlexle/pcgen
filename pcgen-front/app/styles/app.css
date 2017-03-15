@@ -76,7 +76,7 @@
 }
 
 /* keeps links more centered for medium screens */
-@media (min-width: 767px) {
+@media (min-width: 768px) {
   .navbar-wrapper .navbar {
     padding-right: calc(50% - 384px + 28px);
     padding-left: calc(50% - 384px + 28px);

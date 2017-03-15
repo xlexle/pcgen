@@ -2,8 +2,8 @@
 /* - - CONTENTS  - - - - - - */
 /* - - ========  - - - - - - */
 /* - - 1. Layout - - - - - - */
-/* - - 2. Form - - - - - - - */
-/* - - 3.    - */
+/* - - 2. Header - - - - - - */
+/* - - 3. Form - - - - - - - */
 /* - - - - - - - - - - - - - */
 
 /* ================== */
@@ -12,7 +12,6 @@
 
 .form-area {
   margin: 0px auto 20px auto;
-  /*padding: 15px;*/
   min-width: 324px;
   max-width: 400px;
 }
@@ -29,9 +28,29 @@
   padding: 0px;
 }
 
+/* ================== */
+/* . . . Header . . . */
+/* ================== */
+
+.form-area select.category {
+  border-width: 2px;
+}
+
 /* ================ */
 /* . . . Form . . . */
 /* ================ */
+
+.form-area .required-fields {
+  font-size: 12px;
+  font-weight: 400;
+  color: #888;
+  height: 30px;
+  padding: 4px 10px;
+  /* same color as Bootstrap form-control :focus state: */
+  border: 1px solid transparent;
+  border-left: 3px solid #66AFE9;
+  border-radius: 4px;
+}
 
 form > .form-section {
   margin-bottom: 10px;
@@ -69,13 +88,7 @@ form .row .checkbox.offset {
   font-size: 10px;
 }
 
-form > .required-fields {
-  font-size: 10px;
-  font-weight: 600;
-  color: #f00;
-}
-
-form label > span.required {
-  padding: 0px 4px;
-  color: #f00;
+.form-group > input.required,
+.form-group > select.required {
+  border-left: 3px solid #66AFE9;
 }

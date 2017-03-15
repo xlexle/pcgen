@@ -2,7 +2,6 @@ import Ember from 'ember';
 
 export default Ember.Route.extend({
   model() {
-    // return this.store.createRecord('property-list')
     return Ember.RSVP.hash({
       propertyList: this.store.createRecord('property-list'),
       product: this.store.createRecord('power-supply')
@@ -11,10 +10,21 @@ export default Ember.Route.extend({
 
   actions: {
     saveNewProduct(newPropertyList, newProduct) {
-      newPropertyList.save()
+      newProduct.set('propertyList', newPropertyList);
+      newPropertyList.set('product', newProduct);
+
+      newProduct.save()
+      .then(() => newPropertyList.save())
       .then(() => window.location.reload(true))
       .catch((adapterError) => {
         console.log(adapterError);
+
+        console.log(newProduct.get('isValid'));
+        console.log(newProduct);
+        if (newProduct.get('isValid')) {
+          newProduct.destroyRecord();
+        }
+
         console.log(newPropertyList.get('isValid'));
         console.log(newPropertyList);
       });

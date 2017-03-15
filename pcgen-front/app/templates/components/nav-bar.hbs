@@ -13,11 +13,11 @@
 
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
-        {{#active-link}}{{link-to "Komponentit" 'parts'}}{{/active-link}}
-        {{#active-link}}{{link-to "Kokoonpano" 'build'}}{{/active-link}}
+        {{#active-link}}{{link-to "Komponentit" 'parts' data-toggle="collapse" data-target=".in"}}{{/active-link}}
+        {{#active-link}}{{link-to "Kokoonpano" 'build' data-toggle="collapse" data-target=".in"}}{{/active-link}}
       </ul>
       <ul class="nav navbar-nav navbar-right">
-        {{#active-link}}{{link-to "Ylläpito" 'admin'}}{{/active-link}}
+        {{#active-link}}{{link-to "Ylläpito" 'admin' data-toggle="collapse" data-target=".in"}}{{/active-link}}
 
         <!-- Login dropdown  -->
         <li class="dropdown">

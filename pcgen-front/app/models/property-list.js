@@ -14,6 +14,6 @@ export default DS.Model.extend({
   widthMm: DS.attr('number'),
   heightMm: DS.attr('number'),
   colors: DS.attr('string'),
-  ledColor: DS.attr('string')
-  // product: DS.belongsTo('product', { polymorphic: true })
+  ledColor: DS.attr('string'),
+  product: DS.belongsTo('product', { polymorphic: true })
 });

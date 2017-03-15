@@ -5,9 +5,9 @@
       <h2>Uusi tuote</h2>
 
       <div class="row">
-        <div class="col-xs-8">
+        <div class="col-xs-7">
           <div class="form-group">
-            <select class="form-control" onchange={{action 'selectCategory' value="target.value"}}>
+            <select class="form-control category input-sm" onchange={{action 'selectCategory' value="target.value"}}>
               <option value="">valitse kategoria</option>
               <option value="processor">prosessori</option>
               <option value="cooler">jäähdytin</option>
@@ -22,43 +22,43 @@
             </select>
           </div>
         </div>
+        <div class="col-xs-5">
+          <span class="required-fields pull-right">pakolliset kentät</span>
+        </div>
       </div>
 
       <form>
-        <span class="required-fields">* pakolliset kentät</span>
         <button class="btn btn-default btn-block" type="button" data-toggle="collapse" data-target="#generalInfo" aria-expanded="false" aria-controls="generalInfo">
-          yleiset tiedot
+          Yleiset tiedot
         </button>
 
-        <div class="form-section collapse in" id="generalInfo">
+        <div class="form-section collapse" id="generalInfo">
           <div class="row">
             <div class="col-xs-4">
               <div class="form-group">
-                <label class="control-label">merkki
-                  <span class="required">*</span>
+                <label class="control-label">Merkki
                 </label>
-                {{input maxlength=64 class="form-control input-sm" value=model.propertyList.brand}}
+                {{input maxlength=64 class="form-control input-sm required" value=model.propertyList.brand}}
               </div>
             </div>
             <div class="col-xs-8">
               <div class="form-group">
-                <label class="control-label">tuotenimi
-                  <span class="required">*</span>
+                <label class="control-label">Tuotenimi
                 </label>
-                {{input maxlength=64 class="form-control input-sm" value=model.propertyList.productName}}
+                {{input maxlength=64 class="form-control input-sm required" value=model.propertyList.productName}}
               </div>
             </div>
           </div>
 
           <div class="form-group">
-            <label class="control-label">kuvaus</label>
+            <label class="control-label">Kuvaus</label>
             {{textarea maxlength=512 class="form-control" rows="2" value=model.propertyList.description}}
           </div>
 
           {{#if (eq activeCategory "power-supply")}}
             <div class="checkbox label-small">
               <label>
-                {{input type="checkbox" checked=model.product.quiet}} hiljainen
+                {{input type="checkbox" checked=model.product.quiet}} Hiljainen
               </label>
             </div>
           {{/if}}
@@ -66,41 +66,40 @@
           <div class="row">
             <div class="col-xs-8 col-sm-9">
               <div class="form-group">
-                <label class="control-label">valmistajan tuotenumero
-                  <span class="required">*</span>
+                <label class="control-label">Valmistajan tuotenumero
                 </label>
-                {{input maxlength=64 class="form-control input-sm" value=model.propertyList.sku}}
+                {{input maxlength=64 class="form-control input-sm  required" value=model.propertyList.sku}}
               </div>
             </div>
 
             <div class="col-xs-4 col-sm-3">
               <div class="form-group">
-                <label class="control-label">takuu (v)</label>
+                <label class="control-label">Takuu (v)</label>
                 {{input type="number" min=0 max=99 class="form-control input-sm" placeholder="0" value=model.propertyList.warranty}}
               </div>
             </div>
           </div>
 
           <div class="form-group">
-            <label class="control-label">valmistajan tuotesivun URL</label>
+            <label class="control-label">Valmistajan tuotesivun URL</label>
             {{input maxlength=256 class="form-control input-sm" placeholder="http://" value=model.propertyList.specsUrl}}
           </div>
 
           <div class="form-group">
-            <label class="control-label">hinta.fi tuotesivun URL</label>
+            <label class="control-label">Hinta.fi tuotesivun URL</label>
             {{input maxlength=256 class="form-control input-sm" placeholder="http://" value=model.propertyList.pricesUrl}}
           </div>
         </div>  <!-- /form-section -->
 
         <button class="btn btn-default btn-block" type="button" data-toggle="collapse" data-target="#externalSpecs" aria-expanded="false" aria-controls="generalInfo">
-          ulkoiset ominaisuudet
+          Ulkoiset ominaisuudet
         </button>
 
         <div class="form-section collapse" id="externalSpecs">
           <div class="row">
             <div class="col-xs-4">
               <div class="form-group">
-                <label class="control-label">pituus (mm)</label>
+                <label class="control-label">Pituus (mm)</label>
                 {{input type="number" min=0 max=999 class="form-control input-sm" placeholder="0" value=model.propertyList.lengthMm}}
               </div>
             </div>
@@ -109,21 +108,21 @@
               <div class="col-xs-8">
                 <div class="checkbox offset label-small">
                   <label>
-                    {{input type="checkbox" checked=model.product.hasPrettyCables}} nätit kaapelit
+                    {{input type="checkbox" checked=model.product.hasPrettyCables}} Nätit kaapelit
                   </label>
                 </div>
               </div>
             {{else}}
               <div class="col-xs-4">
                 <div class="form-group">
-                  <label class="control-label">korkeus (mm)</label>
+                  <label class="control-label">Korkeus (mm)</label>
                   {{input type="number" min=0 max=999 class="form-control input-sm" placeholder="0" value=model.propertyList.heightMm}}
                 </div>
               </div>
 
               <div class="col-xs-4">
                 <div class="form-group">
-                  <label class="control-label">leveys (mm)</label>
+                  <label class="control-label">Leveys (mm)</label>
                   {{input type="number" min=0 max=999 class="form-control input-sm" placeholder="0" value=model.propertyList.widthMm}}
                 </div>
               </div>
@@ -133,7 +132,7 @@
           <div class="row">
             <div class="col-xs-6">
               <div class="form-group">
-                <label class="control-label">värit</label>
+                <label class="control-label">Värit</label>
                 {{input maxlength=64 class="form-control input-sm" placeholder="musta, valkoinen, ..." value=model.propertyList.colors}}
               </div>
             </div>
@@ -141,7 +140,7 @@
             <div class="col-xs-6">
               <div class="form-group">
                 <label class="control-label">LED</label>
-                <select class="form-control" onchange={{action 'setLed' model.propertyList}}>
+                <select class="form-control input-sm" onchange={{action 'setLed' model.propertyList}}>
                   <option value="">valitse</option>
                   <option value="valkoinen">valkoinen</option>
                   <option value="sininen">sininen</option>
@@ -158,11 +157,10 @@
             </div>
           </div>
 
-
         </div>  <!-- /form-section -->
 
         <button class="btn btn-default btn-block" type="button" data-toggle="collapse" data-target="#technicalSpecs" aria-expanded="false" aria-controls="generalInfo">
-          tekniset tiedot
+          Tekniset tiedot
         </button>
 
         <div class="form-section collapse" id="technicalSpecs">
@@ -206,23 +204,22 @@
         <div class="row">
           <div class="col-xs-3">
             <div class="form-group">
-              <label class="control-label">laatu
-                <span class="required">*</span>
+              <label class="control-label">Laatu
               </label>
-              {{input type="number" min=0 max=999 class="form-control input-sm" placeholder="0" value=model.propertyList.quality}}
+              {{input type="number" min=0 max=999 class="form-control input-sm required" placeholder="0" value=model.propertyList.quality}}
             </div>
           </div>
 
           <div class="col-xs-9">
             <div class="checkbox offset label-small">
               <label>
-                {{input type="checkbox" checked=model.propertyList.listed}} listaa tuote
+                {{input type="checkbox" checked=model.propertyList.listed}} Listaa tuote
               </label>
             </div>
           </div>
         </div>
 
-        <button class="btn btn-default btn-block" type="submit" {{action "saveNewProduct" model.propertyList model.Product}}>tallenna</button>
+        <button class="btn btn-default btn-block" type="submit" {{action "saveNewProduct" model.propertyList model.product}}>tallenna</button>
       </form>
 
     </div>
