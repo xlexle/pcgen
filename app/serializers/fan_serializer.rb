@@ -6,6 +6,6 @@ class FanSerializer < ActiveModel::Serializer
   has_many :power_supplies
   # has_many :cooler_fan_slots
   # has_many :case_fan_slots
-  has_many :product_conflicts
+  # has_many :product_conflicts
   has_many :sources
 end

@@ -15,13 +15,6 @@ ActiveRecord::Schema.define(version: 20170211133701) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "conflicts", force: :cascade do |t|
-    t.text     "reason"
-    t.boolean  "strict"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "fans", force: :cascade do |t|
     t.string   "bearing"
     t.integer  "min_rpm"
@@ -53,18 +46,8 @@ ActiveRecord::Schema.define(version: 20170211133701) do
     t.integer  "pcie6pin_qty"
     t.integer  "sata_qty"
     t.boolean  "has_pretty_cables"
-    t.integer  "fan_id"
     t.datetime "created_at",                                null: false
     t.datetime "updated_at",                                null: false
-    t.index ["fan_id"], name: "index_power_supplies_on_fan_id", using: :btree
-  end
-
-  create_table "product_conflicts", force: :cascade do |t|
-    t.string  "product_type"
-    t.integer "product_id"
-    t.integer "conflict_id"
-    t.index ["conflict_id"], name: "index_product_conflicts_on_conflict_id", using: :btree
-    t.index ["product_type", "product_id"], name: "index_product_conflicts_on_product_type_and_product_id", using: :btree
   end
 
   create_table "property_lists", force: :cascade do |t|
@@ -87,16 +70,6 @@ ActiveRecord::Schema.define(version: 20170211133701) do
     t.datetime "created_at",   null: false
     t.datetime "updated_at",   null: false
     t.index ["product_type", "product_id"], name: "index_property_lists_on_product_type_and_product_id", using: :btree
-  end
-
-  create_table "service_items", force: :cascade do |t|
-    t.string   "service_name"
-    t.text     "description"
-    t.decimal  "price_eur",    precision: 5, scale: 2
-    t.integer  "shop_id"
-    t.datetime "created_at",                           null: false
-    t.datetime "updated_at",                           null: false
-    t.index ["shop_id"], name: "index_service_items_on_shop_id", using: :btree
   end
 
   create_table "shops", force: :cascade do |t|
@@ -122,8 +95,5 @@ ActiveRecord::Schema.define(version: 20170211133701) do
     t.index ["shop_id"], name: "index_sources_on_shop_id", using: :btree
   end
 
-  add_foreign_key "power_supplies", "fans"
-  add_foreign_key "product_conflicts", "conflicts"
-  add_foreign_key "service_items", "shops"
   add_foreign_key "sources", "shops"
 end

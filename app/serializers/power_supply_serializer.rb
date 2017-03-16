@@ -5,7 +5,7 @@ class PowerSupplySerializer < ActiveModel::Serializer
   attributes :has_pretty_cables
 
   has_one :property_list
-  belongs_to :fan
-  has_many :product_conflicts
+  # belongs_to :fan
+  # has_many :product_conflicts
   has_many :sources
 end

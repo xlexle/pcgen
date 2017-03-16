@@ -9,45 +9,45 @@
 # has one property list
 # has many power supplies
 # has many sources
-fan1 = Fan.create(
-  bearing: "FDB",
-  min_rpm: 500,
-  max_rpm: 1300,
-  starting_voltage: 5,
-  max_amps: "0.32",
-  cable_length_cm: 30,
-  mtbf_hours: 50000,
-  has_pwm: false,
-  high_pressure: false,
-  quiet: true,
-  thickness_mm: 25
-)
-fan2 = Fan.create(
-  bearing: "HDB",
-  min_rpm: 300,
-  max_rpm: 1300,
-  starting_voltage: 7,
-  max_amps: "0.20",
-  cable_length_cm: 30,
-  mtbf_hours: 70000,
-  has_pwm: true,
-  high_pressure: false,
-  quiet: true,
-  thickness_mm: 25
-)
-fan3 = Fan.create(
-  bearing: "Sleeve",
-  min_rpm: 1000,
-  max_rpm: 2000,
-  starting_voltage: 5,
-  max_amps: "0.54",
-  cable_length_cm: 30,
-  mtbf_hours: 20000,
-  has_pwm: false,
-  high_pressure: true,
-  quiet: false,
-  thickness_mm: 25
-)
+# fan1 = Fan.create(
+#   bearing: "FDB",
+#   min_rpm: 500,
+#   max_rpm: 1300,
+#   starting_voltage: 5,
+#   max_amps: "0.32",
+#   cable_length_cm: 30,
+#   mtbf_hours: 50000,
+#   has_pwm: false,
+#   high_pressure: false,
+#   quiet: true,
+#   thickness_mm: 25
+# )
+# fan2 = Fan.create(
+#   bearing: "HDB",
+#   min_rpm: 300,
+#   max_rpm: 1300,
+#   starting_voltage: 7,
+#   max_amps: "0.20",
+#   cable_length_cm: 30,
+#   mtbf_hours: 70000,
+#   has_pwm: true,
+#   high_pressure: false,
+#   quiet: true,
+#   thickness_mm: 25
+# )
+# fan3 = Fan.create(
+#   bearing: "Sleeve",
+#   min_rpm: 1000,
+#   max_rpm: 2000,
+#   starting_voltage: 5,
+#   max_amps: "0.54",
+#   cable_length_cm: 30,
+#   mtbf_hours: 20000,
+#   has_pwm: false,
+#   high_pressure: true,
+#   quiet: false,
+#   thickness_mm: 25
+# )
 
 # has one property list
 # belongs to fan
@@ -67,7 +67,7 @@ psu1 = PowerSupply.create(
   pcie6pin_qty: 0,
   sata_qty: 6,
   has_pretty_cables: false,
-  fan: fan1
+  # fan: fan1
 )
 psu2 = PowerSupply.create(
   form_factor: "ATX",
@@ -84,7 +84,7 @@ psu2 = PowerSupply.create(
   pcie6pin_qty: 0,
   sata_qty: 6,
   has_pretty_cables: false,
-  fan: fan1
+  # fan: fan1
 )
 psu3 = PowerSupply.create(
   form_factor: "ATX",
@@ -101,7 +101,7 @@ psu3 = PowerSupply.create(
   pcie6pin_qty: 0,
   sata_qty: 8,
   has_pretty_cables: true,
-  fan: fan1
+  # fan: fan1
 )
 
 # belongs to product
@@ -153,52 +153,52 @@ property_list3 = PropertyList.create(
   colors: "musta, valkoinen",
   product: psu3
 )
-property_list4 = PropertyList.create(
-  listed: true,
-  quality: 50,
-  product_name: "Fan Product1",
-  sku: "00240ABC4",
-  brand: "Products Company",
-  prices_url: "http://prices.com/10004",
-  specs_url: "http://productscompany.com/00240ABC4",
-  description: "Nice Fan m8",
-  warranty: 3,
-  width_mm: 120,
-  height_mm: 120,
-  colors: "valkoinen",
-  product: fan1
-)
-property_list5 = PropertyList.create(
-  listed: true,
-  quality: 50,
-  product_name: "Fan Product2",
-  sku: "00240ABC5",
-  brand: "Products Company",
-  prices_url: "http://prices.com/10005",
-  specs_url: "http://productscompany.com/00240ABC5",
-  description: "Nice Fan m8",
-  warranty: 3,
-  width_mm: 120,
-  height_mm: 120,
-  colors: "musta, valkoinen",
-  product: fan2
-)
-property_list6 = PropertyList.create(
-  listed: true,
-  quality: 50,
-  product_name: "Fan Product3",
-  sku: "00240ABC6",
-  brand: "Products Company",
-  prices_url: "http://prices.com/10006",
-  specs_url: "http://productscompany.com/00240ABC6",
-  description: "Nice Fan m8",
-  warranty: 1,
-  width_mm: 120,
-  height_mm: 120,
-  colors: "musta, valkoinen",
-  led_color: "sininen",
-  product: fan3
-)
+# property_list4 = PropertyList.create(
+#   listed: true,
+#   quality: 50,
+#   product_name: "Fan Product1",
+#   sku: "00240ABC4",
+#   brand: "Products Company",
+#   prices_url: "http://prices.com/10004",
+#   specs_url: "http://productscompany.com/00240ABC4",
+#   description: "Nice Fan m8",
+#   warranty: 3,
+#   width_mm: 120,
+#   height_mm: 120,
+#   colors: "valkoinen",
+#   product: fan1
+# )
+# property_list5 = PropertyList.create(
+#   listed: true,
+#   quality: 50,
+#   product_name: "Fan Product2",
+#   sku: "00240ABC5",
+#   brand: "Products Company",
+#   prices_url: "http://prices.com/10005",
+#   specs_url: "http://productscompany.com/00240ABC5",
+#   description: "Nice Fan m8",
+#   warranty: 3,
+#   width_mm: 120,
+#   height_mm: 120,
+#   colors: "musta, valkoinen",
+#   product: fan2
+# )
+# property_list6 = PropertyList.create(
+#   listed: true,
+#   quality: 50,
+#   product_name: "Fan Product3",
+#   sku: "00240ABC6",
+#   brand: "Products Company",
+#   prices_url: "http://prices.com/10006",
+#   specs_url: "http://productscompany.com/00240ABC6",
+#   description: "Nice Fan m8",
+#   warranty: 1,
+#   width_mm: 120,
+#   height_mm: 120,
+#   colors: "musta, valkoinen",
+#   led_color: "sininen",
+#   product: fan3
+# )
 
 # has many sources
 shop1 = Shop.create(

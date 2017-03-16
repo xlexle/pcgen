@@ -3,12 +3,12 @@ class PowerSuppliesController < ApplicationController
 
   # GET /power_supplies
   def index
-    render json: PowerSupply.all, include: ['property_list', 'fan']
+    render json: PowerSupply.all, include: ['property_list']
   end
 
   # GET /power_supplies/1
   def show
-    render json: @power_supply, include: ['property_list', 'fan']
+    render json: @power_supply, include: ['property_list']
   end
 
   # POST /power_supplies
@@ -64,28 +64,26 @@ class PowerSuppliesController < ApplicationController
       # )
 
       # Doesn't allow tests to run correctly, but needed for Ember:
-      ActiveModelSerializers::Deserialization.jsonapi_parse(params)
+      # ActiveModelSerializers::Deserialization.jsonapi_parse(params)
 
-      # whitelisting, e.g.:
-      # ActiveModelSerializers::Deserialization .jsonapi_parse(params, only: [
-      #     :form_factor,
-      #     :amps12v,
-      #     :full_modular,
-      #     :semi_modular,
-      #     :efficiency,
-      #     :oem,
-      #     :semipassive,
-      #     :has_fan_switch,
-      #     :quiet,
-      #     :eps_length_cm,
-      #     :pcie8pin_qty,
-      #     :pcie6pin_qty,
-      #     :sata_qty,
-      #     :has_pretty_cables,
-      #     :fan_id,
-      #     :created_at,
-      #     :updated_at
-      #   ]
-      # )
+      ActiveModelSerializers::Deserialization.jsonapi_parse(params, only: [
+        :form_factor,
+        :amps12v,
+        :full_modular,
+        :semi_modular,
+        :efficiency,
+        :oem,
+        :semipassive,
+        :has_fan_switch,
+        :quiet,
+        :eps_length_cm,
+        :pcie8pin_qty,
+        :pcie6pin_qty,
+        :sata_qty,
+        :has_pretty_cables,
+        # :fan_id,
+        :created_at,
+        :updated_at
+      ])
     end
 end

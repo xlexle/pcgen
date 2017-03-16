@@ -71,7 +71,7 @@ class SetupAll < ActiveRecord::Migration[5.0]
       t.integer :pcie6pin_qty
       t.integer :sata_qty
       t.boolean :has_pretty_cables
-      t.references :fan, foreign_key: true, index: true
+      # t.references :fan, foreign_key: true, index: true
 
       t.timestamps
     end
