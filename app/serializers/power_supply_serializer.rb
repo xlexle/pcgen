@@ -4,7 +4,7 @@ class PowerSupplySerializer < ActiveModel::Serializer
   attributes :eps_length_cm, :pcie8pin_qty, :pcie6pin_qty, :sata_qty
   attributes :has_pretty_cables
 
-  has_one :property_list
+  # has_one :property_list
   # belongs_to :fan
   # has_many :product_conflicts
   has_many :sources

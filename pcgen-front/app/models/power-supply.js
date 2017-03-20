@@ -17,6 +17,7 @@ export default Product.extend({
   pcie6pinQty: DS.attr('number'),
   sataQty: DS.attr('number'),
   hasPrettyCables: DS.attr('boolean'),
+  propertyList: DS.belongsTo('property-list'),
   // fan: DS.belongsTo('fan'),
 
   // quantity of PCIe of connectors as a string

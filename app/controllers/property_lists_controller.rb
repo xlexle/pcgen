@@ -80,12 +80,10 @@ class PropertyListsController < ApplicationController
         :height_mm,
         :colors,
         :led_color,
-        :product_id,
-        :product_type
+        :product,
+        :created_at,
+        :updated_at
       ], polymorphic: [:product])
-      # res = ActiveModelSerializers::Deserialization.jsonapi_parse(params, polymorphic: [:product])
-      # res[:product_type] = res[:product_type].singularize.capitalize
-      # res
 
       # whitelisting, e.g.:
       # ActiveModelSerializers::Deserialization .jsonapi_parse(

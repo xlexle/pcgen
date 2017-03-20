@@ -13,20 +13,26 @@ export default Ember.Route.extend({
       newProduct.set('propertyList', newPropertyList);
       newPropertyList.set('product', newProduct);
 
-      newProduct.save()
-      .then(() => newPropertyList.save())
-      .then(() => window.location.reload(true))
-      .catch((adapterError) => {
-        console.log(adapterError);
+      newProduct.save().then(() => {
 
-        console.log(newProduct.get('isValid'));
-        console.log(newProduct);
-        if (newProduct.get('isValid')) {
-          newProduct.destroyRecord();
-        }
+        newPropertyList.save().then(() => {
+          window.location.reload(true)
+        }).catch((adapterError) => {
+          newProduct.destroyRecord().then(() => {
+            console.log(adapterError);
 
-        console.log(newPropertyList.get('isValid'));
-        console.log(newPropertyList);
+            console.log("PropertyList is valid: " + newPropertyList.get('isValid'));
+            console.log(newPropertyList);
+          })
+        });
+
+      }).catch((adapterError) => {
+        newPropertyList.destroyRecord().then(() => {
+          console.log(adapterError);
+
+          console.log("Product is valid: " + newProduct.get('isValid'));
+          console.log(newProduct);
+        })
       });
     }
   }

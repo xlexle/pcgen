@@ -88,7 +88,12 @@ form .row .checkbox.offset {
   font-size: 10px;
 }
 
-.form-group > input.required,
-.form-group > select.required {
-  border-left: 3px solid #66AFE9;
+.form-area form input,
+.form-area form select {
+  border-left-width: 3px;
+}
+
+.form-area form input.required,
+.form-area form select.required {
+  border-left-color: #66AFE9;
 }
