@@ -1,4 +1,10 @@
 <div class="container-fluid">
+  <div class="row count-area">
+    <div class="col-sm-12 count">
+      <span>{{count}} hakutulosta</span>
+    </div>
+  </div>
+
   <div class="row listings-area">
 
     {{#if model}}
@@ -30,12 +36,6 @@
           </div>
         </div>
       {{/each}}
-    {{else}}
-      <div class="row not-found">
-        <div class="col-xs-12">
-          <div class="centered">Virtalähteitä ei löytynyt.</div>
-        </div>
-      </div>
     {{/if}}
 
   </div> <!-- listings-area -->

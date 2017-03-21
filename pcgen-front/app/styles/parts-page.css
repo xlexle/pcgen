@@ -10,12 +10,6 @@
 /* . . . Layout . . . */
 /* ================== */
 
-.listings-area {
-  margin: 0px auto;
-  padding: 15px 0px 15px 0px;
-  min-width: 324px;
-}
-
 .category-area {
   margin: 0px auto;
   padding-top: 22px;
@@ -24,12 +18,23 @@
   min-width: 324px;
 }
 
+.count-area {
+  margin: 0px auto;
+}
+
+.listings-area {
+  margin: 0px auto;
+  padding: 15px 0px 15px 0px;
+  min-width: 324px;
+}
+
 .category-area > .col-xs-6 {
   padding: 0px 5px;
 }
 
 @media (max-width: 767px) {
-  .category-area {
+  .category-area,
+  .count-area {
     max-width: 370px;
   }
 
@@ -43,7 +48,8 @@
 }
 
 @media (min-width: 768px) {
-  .category-area {
+  .category-area,
+  .count-area {
     max-width: 810px;
   }
 
@@ -57,7 +63,8 @@
     width: 50%;
   }
 
-  .category-area {
+  .category-area,
+  .count-area {
     max-width: 820px;
   }
 }
@@ -115,6 +122,18 @@
   background-color: #f1eef7;
 }
 
+/* ====================== */
+/* . . . Count-area . . . */
+/* ====================== */
+
+.count-area > .count {
+  padding: 4px 0px;
+}
+
+.count-area > .count > span {
+  font-size: 12px;
+}
+
 /* =================== */
 /* . . . Filters . . . */
 /* =================== */
@@ -161,15 +180,4 @@
   #categories, #shop-filters, #specs-filters {
     display: block!important;
   }
-}
-
-/* ================= */
-/* . . . Other . . . */
-/* ================= */
-
-.listings-area > .not-found .centered {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 12px;
 }
