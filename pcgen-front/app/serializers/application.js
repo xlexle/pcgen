@@ -12,29 +12,6 @@ export default DS.JSONAPISerializer.extend({
     return converted;
   },
 
-  // serialize: function(snapshot, options) {
-  //   var json = {};
-  //
-  //   snapshot.eachAttribute(function(name) {
-  //     json[underscore(name)] = snapshot.attr(name);
-  //   })
-  //
-  //   snapshot.eachRelationship(function(name, relationship) {
-  //     json[underscore(name)] = snapshot.
-  //     if (relationship.kind === 'hasMany') {
-  //       json[serverHasManyName(name)] = snapshot.hasMany(name, { ids: true });
-  //     }
-  //
-  //
-  //   });
-  //
-  //   if (options.includeId) {
-  //     json.ID_ = snapshot.id;
-  //   }
-  //
-  //   return json;
-  // }
-
   // Converts "attribute-key" to "attribute_key" in PUT/POST requests
   keyForAttribute(attr, method) {
     if (method === "serialize") {

@@ -12,7 +12,7 @@ Router.map(function() {
     this.route('fans', { path: '/tuulettimet' });
   });
   this.route('admin', function() {
-    this.route('new-product', { path: '/uusi-tuote' });
+    this.route('products', { path: '/tuotteet' });
   });
   this.route('build', {path: '/kokoonpano'});
   // this.route('peripherals', {path: '/oheislaitteet'}, function() {
