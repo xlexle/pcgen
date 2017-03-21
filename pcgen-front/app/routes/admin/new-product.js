@@ -16,14 +16,14 @@ export default Ember.Route.extend({
       newProduct.save().then(() => {
 
         newPropertyList.save().then(() => {
-          window.location.reload(true)
+          window.location.reload(true);
         }).catch((adapterError) => {
           newProduct.destroyRecord().then(() => {
             console.log(adapterError);
 
             console.log("PropertyList is valid: " + newPropertyList.get('isValid'));
             console.log(newPropertyList);
-          })
+          });
         });
 
       }).catch((adapterError) => {
@@ -32,7 +32,7 @@ export default Ember.Route.extend({
 
           console.log("Product is valid: " + newProduct.get('isValid'));
           console.log(newProduct);
-        })
+        });
       });
     }
   }
