@@ -1,8 +1,7 @@
-<div>
-  {{#if model}}
-    <h3>Tuotteen id: {{model.id}}</h3>
-    <h3>Tuotteen nimi: {{model.propertyList.productName}}</h3>
-  {{else}}
-    <h3>Tuotetta ei löytynyt!</h3>
-  {{/if}}
-</div>
+{{#if model}}
+  {{#admin/products/product-modal sku=model.propertyList.sku}}
+  <p>
+    {{model.propertyList.brand}} {{model.propertyList.productName}}
+  </p>
+  {{/admin/products/product-modal}}
+{{/if}}
