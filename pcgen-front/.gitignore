@@ -21,8 +21,8 @@ testem.log
 # =============== #
 
 # components
-/app/components/parts/shop-filter.js
-/app/components/parts/specs-filter.js
+/app/components/products/shop-filter.js
+/app/components/products/specs-filter.js
 
 # models
 /app/models/doc.js
@@ -32,28 +32,24 @@ testem.log
 
 # routes
 /app/routes/docs
-/app/routes/peripherals
 
 # styles
 /app/styles/docs.css
 
 # templates
-/app/templates/components/parts/shop-filter.hbs
-/app/templates/components/parts/specs-filter.hbs
+/app/templates/components/products/shop-filter.hbs
+/app/templates/components/products/specs-filter.hbs
 /app/templates/docs
 /app/templates/docs.hbs
-/app/templates/peripherals
-/app/templates/peripherals.hbs
 
 # tests
-/tests/integration/components/parts/shop-filter-test.js
-/tests/integration/components/parts/specs-filter-test.js
+/tests/integration/components/products/shop-filter-test.js
+/tests/integration/components/products/specs-filter-test.js
 /tests/unit/models/doc-test.js
 /tests/unit/models/product-conflict-test.js
 /tests/unit/models/conflict-test.js
 /tests/unit/models/service-test.js
 /tests/unit/routes/docs
-/tests/unit/routes/peripherals
 /tests/unit/routes/product-conflicts-test.js
 /tests/unit/routes/conflicts-test.js
 /tests/unit/routes/services-test.js
