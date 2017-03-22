@@ -83,6 +83,21 @@
   }
 }
 
+.navbar .dropdown-form-container {
+  padding: 12px 12px 0px 12px;
+  min-width: 240px;
+}
+
+@media (max-width: 767px) {
+  .navbar .dropdown-form-container {
+    margin: 0px;
+  }
+
+  .navbar .dropdown-form-container > .col-xs-12 {
+    padding: 0px;
+  }
+}
+
 /* ================ */
 /* . . . Main . . . */
 /* ================ */

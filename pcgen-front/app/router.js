@@ -12,7 +12,15 @@ Router.map(function() {
     this.route('fans', { path: '/tuulettimet' });
   });
   this.route('admin', function() {
-    this.route('products', { path: '/tuotteet' });
+    this.route('products', { path: '/tuotteet' }, function() {
+      this.route('power-supplies', { path: '/virtalahteet' }, function() {
+        this.route('power-supply', { path: '/:product_id'});
+      });
+      this.route('fans', { path: '/tuulettimet' }, function() {
+        this.route('fan', { path: '/:product_id' });
+      });
+    });
+    this.route('new-product', { path: '/uusi-tuote' });
   });
   this.route('build', {path: '/kokoonpano'});
   // this.route('peripherals', {path: '/oheislaitteet'}, function() {

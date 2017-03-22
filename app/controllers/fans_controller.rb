@@ -3,12 +3,12 @@ class FansController < ApplicationController
 
   # GET /fans
   def index
-    render json: Fan.all, include: ['property_list']
+    render json: Fan.all
   end
 
   # GET /fans/1
   def show
-    render json: @fan, include: ['property_list']
+    render json: @fan
   end
 
   # POST /fans

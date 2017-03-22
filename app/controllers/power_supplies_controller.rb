@@ -3,12 +3,12 @@ class PowerSuppliesController < ApplicationController
 
   # GET /power_supplies
   def index
-    render json: PowerSupply.all, include: ['property_list']
+    render json: PowerSupply.all
   end
 
   # GET /power_supplies/1
   def show
-    render json: @power_supply, include: ['property_list']
+    render json: @power_supply
   end
 
   # POST /power_supplies

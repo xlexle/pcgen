@@ -9,45 +9,45 @@
 # has one property list
 # has many power supplies
 # has many sources
-# fan1 = Fan.create(
-#   bearing: "FDB",
-#   min_rpm: 500,
-#   max_rpm: 1300,
-#   starting_voltage: 5,
-#   max_amps: "0.32",
-#   cable_length_cm: 30,
-#   mtbf_hours: 50000,
-#   has_pwm: false,
-#   high_pressure: false,
-#   quiet: true,
-#   thickness_mm: 25
-# )
-# fan2 = Fan.create(
-#   bearing: "HDB",
-#   min_rpm: 300,
-#   max_rpm: 1300,
-#   starting_voltage: 7,
-#   max_amps: "0.20",
-#   cable_length_cm: 30,
-#   mtbf_hours: 70000,
-#   has_pwm: true,
-#   high_pressure: false,
-#   quiet: true,
-#   thickness_mm: 25
-# )
-# fan3 = Fan.create(
-#   bearing: "Sleeve",
-#   min_rpm: 1000,
-#   max_rpm: 2000,
-#   starting_voltage: 5,
-#   max_amps: "0.54",
-#   cable_length_cm: 30,
-#   mtbf_hours: 20000,
-#   has_pwm: false,
-#   high_pressure: true,
-#   quiet: false,
-#   thickness_mm: 25
-# )
+fan1 = Fan.create(
+  bearing: "FDB",
+  min_rpm: 500,
+  max_rpm: 1300,
+  starting_voltage: 5,
+  max_amps: "0.32",
+  cable_length_cm: 30,
+  mtbf_hours: 50000,
+  has_pwm: false,
+  high_pressure: false,
+  quiet: true,
+  thickness_mm: 25
+)
+fan2 = Fan.create(
+  bearing: "HDB",
+  min_rpm: 300,
+  max_rpm: 1300,
+  starting_voltage: 7,
+  max_amps: "0.20",
+  cable_length_cm: 30,
+  mtbf_hours: 70000,
+  has_pwm: true,
+  high_pressure: false,
+  quiet: true,
+  thickness_mm: 25
+)
+fan3 = Fan.create(
+  bearing: "Sleeve",
+  min_rpm: 1000,
+  max_rpm: 2000,
+  starting_voltage: 5,
+  max_amps: "0.54",
+  cable_length_cm: 30,
+  mtbf_hours: 20000,
+  has_pwm: false,
+  high_pressure: true,
+  quiet: false,
+  thickness_mm: 25
+)
 
 # has one property list
 # belongs to fan

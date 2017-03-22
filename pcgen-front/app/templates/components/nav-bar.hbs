@@ -1,4 +1,5 @@
 <nav class="navbar navbar-inverse navbar-static-top">
+
   <div class="container-fluid">
 
     <div class="navbar-header">
@@ -16,16 +17,48 @@
         {{#active-link}}{{link-to "Komponentit" 'parts' data-toggle="collapse" data-target=".in"}}{{/active-link}}
         {{#active-link}}{{link-to "Kokoonpano" 'build' data-toggle="collapse" data-target=".in"}}{{/active-link}}
       </ul>
+
+      <hr class="visible-xs"/>
+
       <ul class="nav navbar-nav navbar-right">
-        {{#active-link}}{{link-to "Ylläpito" 'admin' data-toggle="collapse" data-target=".in"}}{{/active-link}}
+
+        <!-- Admin dropdown -->
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown">Ylläpito <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              {{#active-link}}{{link-to "Tuotekategoriat" 'admin.products' data-toggle="collapse" data-target=".in"}}{{/active-link}}
+              {{#active-link}}{{link-to "Luo uusi tuote" 'admin.new-product' data-toggle="collapse" data-target=".in"}}{{/active-link}}
+
+              <li class="divider"></li>
+
+              <li>
+                <div class="row dropdown-form-container">
+                  <div class="col-xs-12">
+                    <form>
+                      <div class="row">
+                        <div class="col-xs-8">
+                          <div class="form-group">
+                            {{input maxlength=64 class="form-control input-sm" placeholder="Tuotenumero"}}
+                          </div>
+                        </div>
+                        <div class="col-xs-4">
+                          <button type="submit" class="btn btn-sm btn-default">Hae</button>
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </li>
+            </ul>
+        </li>
 
         <!-- Login dropdown  -->
         <li class="dropdown">
-          <a class="dropdown-toggle" data-toggle="dropdown">Kirjaudu</a>
-          <ul class="dropdown-menu" style="padding: 15px;min-width: 250px;">
+          <a class="dropdown-toggle" data-toggle="dropdown">Kirjaudu <span class="caret"></span></a>
+          <ul class="dropdown-menu">
             <li>
-              <div class="row">
-                <div class="col-sm-12">
+              <div class="row dropdown-form-container">
+                <div class="col-xs-12">
                   <form class="form" role="form" method="post" action="login" accept-charset="UTF-8" id="login-nav">
                     <div class="form-group">
                       <label class="sr-only" for="exampleInputEmail2">Tunnus</label>
@@ -46,10 +79,12 @@
               </div>
             </li>
           </ul>
-        </li> <!-- login dropdown -->
+        </li>
 
-      </ul>
-    </div>
+      </ul> <!-- navbar-right -->
 
-  </div>
+    </div> <!-- navbar-collapse -->
+
+  </div> <!-- container-fluid -->
+
 </nav>

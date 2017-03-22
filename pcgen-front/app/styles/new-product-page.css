@@ -10,21 +10,21 @@
 /* . . . Layout . . . */
 /* ================== */
 
-.form-area {
+.new-product-area {
   margin: 0px auto 20px auto;
   min-width: 324px;
   max-width: 400px;
 }
 
-.form-area h2 {
+.new-product-area h2 {
   margin-bottom: 25px;
 }
 
-.form-area .form-group {
+.new-product-area .form-group {
   margin-bottom: 10px;
 }
 
-.form-area > .col-xs-12 {
+.new-product-area > .col-xs-12 {
   padding: 0px;
 }
 
@@ -32,7 +32,7 @@
 /* . . . Header . . . */
 /* ================== */
 
-.form-area select.category {
+.new-product-area select.category {
   border-width: 2px;
 }
 
@@ -40,7 +40,7 @@
 /* . . . Form . . . */
 /* ================ */
 
-.form-area .required-fields {
+.new-product-area .required-fields {
   font-size: 12px;
   font-weight: 400;
   color: #888;
@@ -84,16 +84,16 @@ form .row .checkbox.offset {
   line-height: 200%;
 }
 
-.form-area .control-label {
+.new-product-area .control-label {
   font-size: 10px;
 }
 
-.form-area form input,
-.form-area form select {
+.new-product-area form input,
+.new-product-area form select {
   border-left-width: 3px;
 }
 
-.form-area form input.required,
-.form-area form select.required {
+.new-product-area form input.required,
+.new-product-area form select.required {
   border-left-color: #66AFE9;
 }

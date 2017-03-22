@@ -3,7 +3,7 @@ class FanSerializer < ActiveModel::Serializer
   attributes :mtbf_hours, :has_pwm, :high_pressure, :quiet, :thickness_mm
 
   has_one :property_list
-  has_many :power_supplies
+  # has_many :power_supplies
   # has_many :cooler_fan_slots
   # has_many :case_fan_slots
   # has_many :product_conflicts
