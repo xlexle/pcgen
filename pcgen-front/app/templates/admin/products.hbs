@@ -4,23 +4,26 @@
     <div class="row">
       <div class="col-xs-12">
         <ul class="nav nav-tabs">
-          <li class="{{if showComponentsList 'active'}}"><a {{action "selectComponents"}}>Komponentit</a></li>
-          <li class="{{if showPeripheralsList 'active'}}"><a {{action "selectPeripherals"}}>Oheislaitteet</a></li>
+          <li class="tab-selector {{if showComponentCategories 'active'}}"><a {{action "selectComponents"}}>Komponentit</a></li>
+          <li class="tab-selector {{if showPeripheralCategories 'active'}}"><a {{action "selectPeripherals"}}>Oheislaitteet</a></li>
+          {{#link-to 'admin.new-product' tagName='button' classNames='btn btn-default pull-right'}}
+            <i class="fa fa-plus" aria-hidden="true"></i><span class="text">Uusi tuote</span>
+          {{/link-to}}
         </ul>
       </div>
     </div>
 
-    <div class="row">
-      <div class="col-sm-3 category-list">
-        {{#if showComponentsList}}
-          {{admin/products/list-components}}
+    <div class="row products-main">
+      <div class="category-list">
+        {{#if showComponentCategories}}
+          {{admin/products/categories-components}}
         {{/if}}
-        {{#if showPeripheralsList}}
-          {{admin/products/list-peripherals}}
+        {{#if showPeripheralCategories}}
+          {{admin/products/categories-peripherals}}
         {{/if}}
       </div>
 
-      <div class="col-sm-9">
+      <div class="products-list">
         {{outlet}}
       </div>
     </div>

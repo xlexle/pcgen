@@ -1,7 +1,7 @@
 import { moduleForComponent, test } from 'ember-qunit';
 import hbs from 'htmlbars-inline-precompile';
 
-moduleForComponent('admin/products/list-components', 'Integration | Component | admin/products/list components', {
+moduleForComponent('admin/products/categories-peripherals', 'Integration | Component | admin/products/categories peripherals', {
   integration: true
 });
 
@@ -10,15 +10,15 @@ test('it renders', function(assert) {
   // Set any properties with this.set('myProperty', 'value');
   // Handle any actions with this.on('myAction', function(val) { ... });
 
-  this.render(hbs`{{admin/products/list-components}}`);
+  this.render(hbs`{{admin/products/categories-peripherals}}`);
 
   assert.equal(this.$().text().trim(), '');
 
   // Template block usage:
   this.render(hbs`
-    {{#admin/products/list-components}}
+    {{#admin/products/categories-peripherals}}
       template block text
-    {{/admin/products/list-components}}
+    {{/admin/products/categories-peripherals}}
   `);
 
   assert.equal(this.$().text().trim(), 'template block text');

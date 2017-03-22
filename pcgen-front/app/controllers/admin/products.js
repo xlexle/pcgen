@@ -1,18 +1,18 @@
 import Ember from 'ember';
 
 export default Ember.Controller.extend({
-  showComponentsList: true,
-  showPeripheralsList: false,
+  showComponentCategories: true,
+  showPeripheralCategories: false,
 
   actions: {
     selectComponents() {
-      this.set('showComponentsList', true);
-      this.set('showPeripheralsList', false);
+      this.set('showComponentCategories', true);
+      this.set('showPeripheralCategories', false);
     },
 
     selectPeripherals() {
-      this.set('showComponentsList', false);
-      this.set('showPeripheralsList', true);
+      this.set('showComponentCategories', false);
+      this.set('showPeripheralCategories', true);
     }
   }
 });

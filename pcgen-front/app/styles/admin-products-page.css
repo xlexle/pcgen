@@ -3,7 +3,7 @@
 /* - - ========  - - - - - - */
 /* - - 1. Layout - - - - - - */
 /* - - 2. Categories - - - - */
-/* - - 3.   - - - - - */
+/* - - 3. Product list - - - */
 /* - - - - - - - - - - - - - */
 
 /* ================== */
@@ -17,9 +17,24 @@
   min-width: 324px;
 }
 
+.products-area > .products-main {
+  margin: 0px;
+}
+
+.products-main > .category-list,
+.products-main > .products-list {
+  position: relative;
+  padding: 15px 15px 0px 15px;
+}
+
 @media (min-width: 768px) {
   .products-area {
     max-width: 992px;
+  }
+
+  .products-main > .category-list,
+  .products-main > .products-list {
+    float: left;
   }
 }
 
@@ -27,8 +42,45 @@
 /* . . . Categories . . . */
 /* ====================== */
 
-.products-area > .row > .category-list {
-  margin: 0px 15px;
-  padding-top: 15px;
-  border-left: 1px solid #ddd;
+.products-main > .category-list .col-xs-6 {
+  /* aligns with tabs combined width */
+  /*max-width: 232px;*/
+}
+
+.products-area .nav-tabs > li.tab-selector > a {
+  min-width: 114px;
+}
+
+.products-area .nav-stacked.nav-pills > li > a {
+  padding: 6px 9px;
+}
+
+@media (max-width: 767px) {
+  .products-main > .category-list .col-xs-6 {
+    padding-bottom: 15px;
+    border-bottom: 1px solid #ddd;
+  }
+}
+
+@media (min-width: 768px) {
+  .products-main > .category-list {
+    border-left: 1px solid #ddd;
+    /* border aligns with nav tabs combined width 114+2+114 px */
+    width: 230px;
+  }
+
+  .products-main > .category-list .col-xs-6 {
+    border-right: 1px solid #ddd;
+  }
+}
+
+/* ======================== */
+/* . . . Product list . . . */
+/* ======================== */
+
+.products-main > .products-list {
+  .products-main > .category-list {
+    margin-left: 230px;
+    width: calc(100% - 230px);
+  }
 }
