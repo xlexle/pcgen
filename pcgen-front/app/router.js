@@ -23,11 +23,6 @@ Router.map(function() {
     this.route('new-product', { path: '/uusi-tuote' });
   });
   this.route('build', {path: '/kokoonpano'});
-  // this.route('docs', {path: '/ohjeet'}, function() {
-  //   this.route('parts', { path: '/komponentit' });
-  //   this.route('peripherals', { path: '/oheislaitteet' });
-  //   this.route('assembly', { path: '/kasaus' });
-  // });
 });
 
 export default Router;

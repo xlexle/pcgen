@@ -16,10 +16,12 @@
             </div>
 
             <div class="row">
-              {{#products/tile-heading brand=item.propertyList.brand name=item.propertyList.productName sku=item.propertyList.sku}}
-                <span class="sub-text">{{item.formFactor}}</span>
-                <span class="sub-text">{{item.efficiency}}</span>
-              {{/products/tile-heading}}
+              <div class="col-xs-12 product-heading">
+                {{#products/tile-heading brand=item.propertyList.brand name=item.propertyList.productName sku=item.propertyList.sku}}
+                  <span class="sub-text">{{item.formFactor}}</span>
+                  <span class="sub-text">{{item.efficiency}}</span>
+                {{/products/tile-heading}}
+              </div>
             </div>
 
             <div class="row">

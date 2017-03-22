@@ -23,7 +23,7 @@
 }
 
 .listings-area {
-  margin: 0px auto;
+  /*margin: 0px auto;*/
   padding: 0px 0px 15px 0px;
   min-width: 324px;
 }
@@ -122,15 +122,11 @@
   background-color: #f1eef7;
 }
 
-/* ====================== */
-/* . . . Count-area . . . */
-/* ====================== */
+/* ================ */
+/* . . . Other. . . */
+/* ================ */
 
-.count-area > .count {
-  padding: 4px 0px;
-}
-
-.count-area > .count > span {
+span.count {
   font-size: 12px;
 }
 

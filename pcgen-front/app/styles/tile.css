@@ -84,25 +84,27 @@
 /* . . . product heading . . . */
 /* =========================== */
 
-.col-xs-12.product-heading {
+.product-heading {
   padding: 6px 0px;
   border-bottom: 1px solid #eee;
+  overflow: hidden;
 }
 
-.product-heading > span.text {
+span.name {
   display: block;
   font-size: 16px;
   line-height: 100%;
+  padding-bottom: 4px;
 }
 
-.product-heading > span.sub-text,
-.product-heading > span.sku-text {
+span.sub-text,
+span.sku-text {
   font-size: 12px;
   padding-right: 8px;
   font-weight: 600;
 }
 
-.product-heading > span.sku-text {
+span.sku-text {
   color: rgba(50,50,50,0.4);
 }
 

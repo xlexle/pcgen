@@ -67,6 +67,11 @@ button > .text {
   padding-left: 6px;
 }
 
+.vertical-space {
+  width: 100%;
+  margin: 20px 0px;
+}
+
 /* ================== */
 /* . . . Navbar . . . */
 /* ================== */
