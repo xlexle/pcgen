@@ -1,0 +1,28 @@
+/* - - - - - - - - - - - - - */
+/* - - CONTENTS  - - - - - - */
+/* - - ========  - - - - - - */
+/* - - 1. Layout - - - - - - */
+/* - - 2. Categories - - - - */
+/* - - 3.   - - - - - */
+/* - - - - - - - - - - - - - */
+
+/* ================== */
+/* . . . Layout . . . */
+/* ================== */
+
+.products-area {
+  margin: 0px auto;
+  padding-top: 22px;
+  padding-bottom: 15px;
+  min-width: 324px;
+}
+
+@media (min-width: 768px) {
+  .products-area {
+    max-width: 992px;
+  }
+}
+
+/* ====================== */
+/* . . . Categories . . . */
+/* ====================== */

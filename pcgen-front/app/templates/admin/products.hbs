@@ -1,1 +1,29 @@
-{{outlet}}
+<div class="container-fluid">
+  <div class="row products-area">
+
+    <div class="row">
+      <div class="col-xs-12">
+        <ul class="nav nav-tabs">
+          <li class="{{if showComponentsList 'active'}}"><a {{action "selectComponents"}}>Komponentit</a></li>
+          <li class="{{if showPeripheralsList 'active'}}"><a {{action "selectPeripherals"}}>Oheislaitteet</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-sm-3">
+        {{#if showComponentsList}}
+          {{admin/products/list-components}}
+        {{/if}}
+        {{#if showPeripheralsList}}
+          {{admin/products/list-peripherals}}
+        {{/if}}
+      </div>
+
+      <div class="col-sm-9">
+        {{outlet}}
+      </div>
+    </div>
+
+  </div> <!-- products-area -->
+</div> <!-- container-fluid -->
