@@ -26,3 +26,9 @@
 /* ====================== */
 /* . . . Categories . . . */
 /* ====================== */
+
+.products-area > .row > .category-list {
+  margin: 0px 15px;
+  padding-top: 15px;
+  border-left: 1px solid #ddd;
+}
