@@ -72,6 +72,18 @@ button > .text {
   margin: 20px 0px;
 }
 
+.nav-justified > li {
+  display: table-cell;
+  width: 1%;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .nav-tabs.nav-justified > li {
+    display: table-cell;
+    width: 1%;
+}
+
 /* ================== */
 /* . . . Navbar . . . */
 /* ================== */

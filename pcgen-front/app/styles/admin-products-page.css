@@ -3,7 +3,7 @@
 /* - - ========  - - - - - - */
 /* - - 1. Layout - - - - - - */
 /* - - 2. Categories - - - - */
-/* - - 3. Product list - - - */
+/* - - 3. Modal  - - - - - - */
 /* - - - - - - - - - - - - - */
 
 /* ================== */
@@ -53,7 +53,8 @@
 /* ====================== */
 
 .products-area .nav-tabs > li.tab-selector > a {
-  min-width: 114px;
+  width: 114px;
+  text-align: center;
 }
 
 .products-area .nav-stacked.nav-pills > li > a {
@@ -76,5 +77,57 @@
 
   .products-main > .category-list .col-xs-6 {
     border-right: 1px solid #ddd;
+  }
+}
+
+/* ================= */
+/* . . . Modal . . . */
+/* ================= */
+
+.modal h2 {
+  font-size: 14px;
+}
+
+.modal h3 {
+  font-size: 12px;
+  font-weight: 600;
+  margin-top: 0px;
+}
+
+.modal-body {
+  padding-top: 0px;
+  padding-bottom: 0px;
+  font-size: 12px;
+}
+
+.modal-body > .row {
+  padding-top: 10px;
+}
+
+tbody.modal-table > tr > td,
+tbody.modal-table > tr > th {
+  border-top: 0px;
+}
+
+.modal-table > tr > td {
+  cursor: pointer;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 50vw;
+}
+
+.modal-table > tr > td:hover {
+  background-color: #eee;
+}
+
+@media (min-width: 768px) {
+  .modal-table > tr > th {
+    min-width: 178px;
+    max-width: 178px;
+  }
+
+  .modal-table > tr > td {
+    min-width: 391px;
+    max-width: 391px;
   }
 }

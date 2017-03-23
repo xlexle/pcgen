@@ -1,9 +1,6 @@
-<div class="modal" id="product-details" tabindex="-1">
-  {{#admin/products/product-modal product=selectedItem}}
-    <!-- Nest components here! -->
-    {{selectedItem.propertyList.brand}} {{selectedItem.propertyList.productName}}
-  {{/admin/products/product-modal}}
-</div>
+{{#admin/products/product-modal id=selectedItem.id as |modal|}}
+  {{component modal product=selectedItem}}
+{{/admin/products/product-modal}}
 
 <span>{{count}} hakutulosta</span>
 <div class="vertical-space"></div>
