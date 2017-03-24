@@ -1,89 +1,91 @@
-<nav class="navbar navbar-inverse navbar-static-top">
+<div class="navbar-wrapper">
+  <nav id="top-nav" class="navbar navbar-inverse navbar-static-top">
 
-  <div class="container-fluid">
+    <div class="container-fluid">
 
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      {{#link-to 'index' class="navbar-brand"}}PCgen{{/link-to}}
-    </div>
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        {{#link-to 'index' class="navbar-brand"}}PCgen{{/link-to}}
+      </div>
 
-    <div id="navbar" class="navbar-collapse collapse">
-      <ul class="nav navbar-nav">
-        {{#active-link}}{{link-to "Tuotteet" 'products' data-toggle="collapse" data-target=".in"}}{{/active-link}}
-        {{#active-link}}{{link-to "Kokoonpano" 'build' data-toggle="collapse" data-target=".in"}}{{/active-link}}
-      </ul>
+      <div id="navbar" class="navbar-collapse collapse">
+        <ul class="nav navbar-nav">
+          {{#active-link}}{{link-to "Tuotteet" 'products' data-toggle="collapse" data-target=".in"}}{{/active-link}}
+          {{#active-link}}{{link-to "Kokoonpano" 'build' data-toggle="collapse" data-target=".in"}}{{/active-link}}
+        </ul>
 
-      <hr class="visible-xs"/>
+        <hr class="visible-xs"/>
 
-      <ul class="nav navbar-nav navbar-right">
+        <ul class="nav navbar-nav navbar-right">
 
-        <!-- Admin dropdown -->
-        <li class="dropdown">
-          <a class="dropdown-toggle" data-toggle="dropdown">Ylläpito <span class="caret"></span></a>
+          <!-- Admin dropdown -->
+          <li class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown">Ylläpito <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                {{#active-link}}{{link-to "Tuotteet" 'admin.products' data-toggle="collapse" data-target=".in"}}{{/active-link}}
+
+                <li class="divider"></li>
+
+                <li>
+                  <div class="row dropdown-form-container">
+                    <div class="col-xs-12">
+                      <form>
+                        <div class="row">
+                          <div class="col-xs-8">
+                            <div class="form-group">
+                              {{input maxlength=64 class="form-control input-sm" placeholder="Tuotenumero"}}
+                            </div>
+                          </div>
+                          <div class="col-xs-4">
+                            <button type="submit" class="btn btn-sm btn-default">Hae</button>
+                          </div>
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+          </li>
+
+          <!-- Login dropdown  -->
+          <li class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown">Kirjaudu <span class="caret"></span></a>
             <ul class="dropdown-menu">
-              {{#active-link}}{{link-to "Tuotteet" 'admin.products' data-toggle="collapse" data-target=".in"}}{{/active-link}}
-
-              <li class="divider"></li>
-
               <li>
                 <div class="row dropdown-form-container">
                   <div class="col-xs-12">
-                    <form>
-                      <div class="row">
-                        <div class="col-xs-8">
-                          <div class="form-group">
-                            {{input maxlength=64 class="form-control input-sm" placeholder="Tuotenumero"}}
-                          </div>
-                        </div>
-                        <div class="col-xs-4">
-                          <button type="submit" class="btn btn-sm btn-default">Hae</button>
-                        </div>
+                    <form class="form" role="form" method="post" action="login" accept-charset="UTF-8" id="login-nav">
+                      <div class="form-group">
+                        <label class="sr-only" for="exampleInputEmail2">Tunnus</label>
+                        <input type="email" class="form-control" id="exampleInputEmail2" placeholder="Tunnus" required>
+                      </div>
+                      <div class="form-group">
+                        <label class="sr-only" for="exampleInputPassword2">Salasana</label>
+                        <input type="password" class="form-control" id="exampleInputPassword2" placeholder="Salasana" required>
+                      </div>
+                      <div class="checkbox">
+                        <label><input type="checkbox"> Muista minut</label>
+                      </div>
+                      <div class="form-group">
+                        <button type="submit" class="btn btn-success btn-block">Kirjaudu sisään</button>
                       </div>
                     </form>
                   </div>
                 </div>
               </li>
             </ul>
-        </li>
+          </li>
 
-        <!-- Login dropdown  -->
-        <li class="dropdown">
-          <a class="dropdown-toggle" data-toggle="dropdown">Kirjaudu <span class="caret"></span></a>
-          <ul class="dropdown-menu">
-            <li>
-              <div class="row dropdown-form-container">
-                <div class="col-xs-12">
-                  <form class="form" role="form" method="post" action="login" accept-charset="UTF-8" id="login-nav">
-                    <div class="form-group">
-                      <label class="sr-only" for="exampleInputEmail2">Tunnus</label>
-                      <input type="email" class="form-control" id="exampleInputEmail2" placeholder="Tunnus" required>
-                    </div>
-                    <div class="form-group">
-                      <label class="sr-only" for="exampleInputPassword2">Salasana</label>
-                      <input type="password" class="form-control" id="exampleInputPassword2" placeholder="Salasana" required>
-                    </div>
-                    <div class="checkbox">
-                      <label><input type="checkbox"> Muista minut</label>
-                    </div>
-                    <div class="form-group">
-                      <button type="submit" class="btn btn-success btn-block">Kirjaudu sisään</button>
-                    </div>
-                  </form>
-                </div>
-              </div>
-            </li>
-          </ul>
-        </li>
+        </ul> <!-- navbar-right -->
 
-      </ul> <!-- navbar-right -->
+      </div> <!-- navbar-collapse -->
 
-    </div> <!-- navbar-collapse -->
+    </div> <!-- container-fluid -->
 
-  </div> <!-- container-fluid -->
-
-</nav>
+  </nav>
+</div> <!-- navbar-wrapper -->

@@ -9,12 +9,10 @@ const Router = Ember.Router.extend({
 Router.map(function() {
   this.route('products', { path: '/tuotteet' }, function() {
     this.route('power-supplies', { path: '/virtalahteet' });
-    this.route('fans', { path: '/tuulettimet' });
   });
   this.route('admin', function() {
     this.route('products', { path: '/tuotteet' }, function() {
       this.route('power-supplies', { path: '/virtalahteet' });
-      this.route('fans', { path: '/tuulettimet' });
     });
     this.route('new-product', { path: '/uusi-tuote' });
   });

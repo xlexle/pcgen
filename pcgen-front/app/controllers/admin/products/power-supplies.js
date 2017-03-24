@@ -10,8 +10,3 @@ export default Ember.Controller.extend({
     }
   }
 });
-
-// unneeded?
-Ember.LinkComponent.reopen({
-  attributeBindings: ['data-toggle', 'data-target']
-});

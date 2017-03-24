@@ -34,13 +34,13 @@ testem.log
 /app/routes/docs
 
 # styles
-/app/styles/docs.css
+/app/styles/docs-page.css
+/app/styles/sign-in-page.css
 
 # templates
 /app/templates/components/products/shop-filter.hbs
 /app/templates/components/products/specs-filter.hbs
 /app/templates/docs
-/app/templates/docs.hbs
 
 # tests
 /tests/integration/components/products/shop-filter-test.js
