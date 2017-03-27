@@ -147,7 +147,7 @@ span.count {
 .products-area > .products-main { margin: 0px; }
 
 .products-main > .category-list,
-.products-main > .products-list { position: relative; padding: 15px 15px 0px 15px; width: 100%; }
+.products-main > .products-list { position: relative; margin: 0px; padding-top: 15px; width: 100%; }
 
 @media (min-width: 768px) {
   .products-area { max-width: 992px; }

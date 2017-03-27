@@ -1,0 +1,45 @@
+<div class="modal" id="product-details" tabindex="-1">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h2 class="modal-title">id: <span class="attribute-value">{{id}}</span></h2>
+      </div>
+
+      <div class="modal-body">
+        <div class="row">
+          <div class="col-xs-12">
+            <ul class="nav nav-tabs nav-justified">
+              <li class="{{if showGeneralData 'active'}}"><a {{action "selectGeneral"}}>Yleiset tiedot</a></li>
+              <li class="{{if showExternalData 'active'}}"><a {{action "selectExternal"}}>Ulkoiset ominaisudet</a></li>
+              <li class="{{if showTechnicalData 'active'}}"><a {{action "selectTechnical"}}>Tekniset tiedot</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="row attributes">
+          <div class="col-xs-12">
+            {{#if showGeneralData}}
+              {{yield (component "products/modal-tab-general" product=product)}}
+            {{/if}}
+            {{#if showExternalData}}
+              {{yield (component "products/modal-tab-external" product=product)}}
+            {{/if}}
+            {{#if showTechnicalData}}
+              {{yield (component "products/modal-tab-technical" product=product)}}
+            {{/if}}
+          </div>
+        </div>
+      </div>
+
+      <div class="modal-footer">
+        {{#if isAdmin}}
+        <button type="button" class="btn btn-danger pull-left">
+          <i class="fa fa-trash" aria-hidden="true"></i>
+        </button>
+        {{/if}}
+        <span>tietoa</span>
+      </div>
+    </div>
+  </div>
+</div>

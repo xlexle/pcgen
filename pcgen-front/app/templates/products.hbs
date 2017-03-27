@@ -1,60 +1,9 @@
 <div class="container-fluid">
 
-  <!-- CATEGORIES -->
-  <div class="row category-area">
-    <div class="col-xs-6 col-sm-1of5 category">
-      <ul class="nav nav-stacked">
-        {{#active-link}}{{link-to "Prosessorit" 'products'}}{{/active-link}}
-      </ul>
+    {{#products/tabs-navigation}}
+    <div class="products-list">
+      {{outlet}}
     </div>
-    <div class="col-xs-6 col-sm-1of5 category">
-      <ul class="nav nav-stacked">
-        {{#active-link}}{{link-to "Jäähdyttimet" 'products'}}{{/active-link}}
-      </ul>
-    </div>
-    <div class="col-xs-6 col-sm-1of5 category">
-      <ul class="nav nav-stacked">
-        {{#active-link}}{{link-to "Emolevyt" 'products'}}{{/active-link}}
-      </ul>
-    </div>
-    <div class="col-xs-6 col-sm-1of5 category">
-      <ul class="nav nav-stacked">
-        {{#active-link}}{{link-to "Keskusmuistit" 'products'}}{{/active-link}}
-      </ul>
-    </div>
-    <div class="col-xs-6 col-sm-1of5 category">
-      <ul class="nav nav-stacked">
-        {{#active-link}}{{link-to "Näytönohjaimet" 'products'}}{{/active-link}}
-      </ul>
-    </div>
-    <div class="col-xs-6 col-sm-1of5 category">
-      <ul class="nav nav-stacked">
-        {{#active-link}}{{link-to "Tallennustila" 'products'}}{{/active-link}}
-      </ul>
-    </div>
-    <div class="col-xs-6 col-sm-1of5 category">
-      <ul class="nav nav-stacked">
-        {{#active-link}}{{link-to "Virtalähteet" 'products.power-supplies'}}{{/active-link}}
-      </ul>
-    </div>
-    <div class="col-xs-6 col-sm-1of5 category">
-      <ul class="nav nav-stacked">
-        {{#active-link}}{{link-to "Kotelot" 'products'}}{{/active-link}}
-      </ul>
-    </div>
-    <div class="col-xs-6 col-sm-1of5 category">
-      <ul class="nav nav-stacked">
-        {{#active-link}}{{link-to "Tuulettimet" 'products'}}{{/active-link}}
-      </ul>
-    </div>
-    <div class="col-xs-6 col-sm-1of5 category">
-      <ul class="nav nav-stacked">
-        {{#active-link}}{{link-to "Lisätarvikkeet" 'products'}}{{/active-link}}
-      </ul>
-    </div>
-  </div>  <!-- /row -->
-  <!-- /CATEGORIES -->
+    {{/products/tabs-navigation}}
 
-</div> <!-- /container-fluid -->
-
-{{outlet}}
+</div> <!-- container-fluid -->

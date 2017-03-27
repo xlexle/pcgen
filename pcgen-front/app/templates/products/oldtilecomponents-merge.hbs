@@ -1,0 +1,51 @@
+<div class="col-sm-6 col-md-4">
+  <div class="product-container">
+    <div class="row">
+      <div class="col-xs-12 product-infobar">
+        <span>1</span>
+        <button type="button"><i class="fa fa-share" aria-hidden="true"></i></button>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-xs-12 product-heading">
+        <span class="name">Brand Product</span>
+        <span class="sub-text">ATX</span>
+        <span class="sub-text">80+ Bronze</span>
+        <span class="sku-text">ABCD1234</span>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-xs-6 product-specs">
+        <div class="specs-link">
+          <a href={{specsUrl}}>Ominaisuudet</a>
+        </div>
+        <ul class="list-group">
+          <li class="list-group-item">400W +12V</li>
+          <li class="list-group-item">4 x 6+2pin PCIe</li>
+          <li class="list-group-item">4 x SATA</li>
+          <li class="list-group-item">modulaariset kaapelit</li>
+          <li class="list-group-item">6 vuoden takuu</li>
+        </ul>
+      </div>
+
+      <div class="col-xs-6 product-prices">
+        <div class="prices-link">
+          <a href="{{pricesUrl}}">Hinnat</a>
+        </div>
+        <div class="list-group">
+          {{!sources=item.cheapestThreeSources}}
+          {{!#each sources as |source index|}}
+          <button type="button" class="list-group-item">
+            <span class="price">50€</span>
+            <span class="delivery">1 - 4 pv</span>
+            <span class="fa fa-check-circle fa-2x" aria-hidden="true"></span>
+            <span class="shop-name">PCStore</span>
+          </button>
+          {{!/each}}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

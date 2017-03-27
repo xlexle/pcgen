@@ -1,0 +1,60 @@
+<div class="row">
+  <div class="col-xs-12">
+    <ul class="nav nav-tabs">
+      <li class="tab-selector {{if showComponentCategories 'active'}}"><a {{action "selectComponents"}}>Komponentit</a></li>
+      <li class="tab-selector {{if showPeripheralCategories 'active'}}"><a {{action "selectPeripherals"}}>Oheislaitteet</a></li>
+      {{#if isAdmin}}
+        {{#link-to 'index' tagName='button' classNames='btn btn-default pull-right'}}
+        <i class="fa fa-plus" aria-hidden="true"></i><span class="text">Uusi</span>
+        {{/link-to}}
+      {{/if}}
+    </ul>
+  </div>
+</div>
+
+<div class="row products-main">
+  <div class="category-list row">
+
+    {{#if showComponentCategories}}
+    <div class="col-xs-6 col-sm-12">
+      <ul class="nav nav-stacked nav-pills">
+        {{#active-link}}{{link-to "Prosessorit" 'index'}}{{/active-link}}
+        {{#active-link}}{{link-to "Jäähdyttimet" 'index'}}{{/active-link}}
+        {{#active-link}}{{link-to "Emolevyt" 'index'}}{{/active-link}}
+        {{#active-link}}{{link-to "Keskusmuistit" 'index'}}{{/active-link}}
+        {{#active-link}}{{link-to "Näytönohjaimet" 'index'}}{{/active-link}}
+      </ul>
+    </div>
+    <div class="col-xs-6 col-sm-12">
+      <ul class="nav nav-stacked nav-pills">
+        {{#active-link}}{{link-to "Tallennustila" 'index'}}{{/active-link}}
+        {{#active-link}}{{link-to "Virtalähteet" 'products.power-supplies'}}{{/active-link}}
+        {{#active-link}}{{link-to "Kotelot" 'index'}}{{/active-link}}
+        {{#active-link}}{{link-to "Tuulettimet" 'index'}}{{/active-link}}
+        {{#active-link}}{{link-to "Lisätarvikkeet" 'index'}}{{/active-link}}
+      </ul>
+    </div>
+    {{/if}}
+
+    {{#if showPeripheralCategories}}
+    <div class="col-xs-6 col-sm-12">
+      <ul class="nav nav-stacked nav-pills">
+        {{#active-link}}{{link-to "Monitorit" 'index'}}{{/active-link}}
+        {{#active-link}}{{link-to "Näppäimistöt" 'index'}}{{/active-link}}
+        {{#active-link}}{{link-to "Hiiret" 'index'}}{{/active-link}}
+      </ul>
+    </div>
+    <div class="col-xs-6 col-sm-12">
+      <ul class="nav nav-stacked nav-pills">
+        {{#active-link}}{{link-to "Hiirimatot" 'index'}}{{/active-link}}
+        {{#active-link}}{{link-to "Kaiuttimet" 'index'}}{{/active-link}}
+        {{#active-link}}{{link-to "Kuulokkeet" 'index'}}{{/active-link}}
+      </ul>
+    </div>
+    {{/if}}
+
+  </div> <!-- category-list row -->
+
+  {{yield}}
+
+</div>
