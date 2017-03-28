@@ -1,15 +1,180 @@
-{{#products/modal-main id=selectedItem.id as |tab|}}
-  {{component tab product=selectedItem}}
+{{#products/modal-main id=selectedItem.propertyList.id onSelectTab=(action 'setActiveTab')}}
+  <table class="table table-condensed">
+    <tbody>
+      {{#if (eq activeTab "general")}}
+        {{products/modal-editable-row
+        attributeLabel="Merkki"
+        attributeKey="brand"
+        attributeValue=selectedItem.propertyList.brand
+        onApplyChange=(action 'updateSelectedItemPropertyList')}}
+
+        {{products/modal-editable-row
+        attributeLabel="Tuotenimi"
+        attributeKey="productName"
+        attributeValue=selectedItem.propertyList.productName
+        onApplyChange=(action 'updateSelectedItemPropertyList')}}
+
+        {{products/modal-editable-row
+        attributeLabel="Tuotenumero"
+        attributeKey="sku"
+        attributeValue=selectedItem.propertyList.sku
+        onApplyChange=(action 'updateSelectedItemPropertyList')}}
+
+        {{products/modal-editable-row
+        attributeLabel="Kuvaus"
+        attributeKey="description"
+        attributeValue=selectedItem.propertyList.description
+        onApplyChange=(action 'updateSelectedItemPropertyList')}}
+
+        {{products/modal-editable-row
+        attributeLabel="Takuun kesto"
+        attributeKey="warranty"
+        attributeValue=selectedItem.propertyList.warranty
+        onApplyChange=(action 'updateSelectedItemPropertyList')}}
+
+        {{products/modal-editable-row
+        attributeLabel="Valmistajan URL"
+        attributeKey="specsUrl"
+        attributeValue=selectedItem.propertyList.specsUrl
+        onApplyChange=(action 'updateSelectedItemPropertyList')}}
+
+        {{products/modal-editable-row
+        attributeLabel="Hinta.fi URL"
+        attributeKey="pricesUrl"
+        attributeValue=selectedItem.propertyList.pricesUrl
+        onApplyChange=(action 'updateSelectedItemPropertyList')}}
+
+        {{products/modal-editable-row
+        attributeLabel="Laatu"
+        attributeKey="quality"
+        attributeValue=selectedItem.propertyList.quality
+        onApplyChange=(action 'updateSelectedItemPropertyList')}}
+
+        {{products/modal-editable-row
+        attributeLabel="Listattu"
+        attributeKey="listed"
+        attributeValue=selectedItem.propertyList.listed
+        onApplyChange=(action 'updateSelectedItemPropertyList')}}
+      {{/if}}
+
+      {{#if (eq activeTab "external")}}
+        {{products/modal-editable-row
+        attributeLabel="Pituus"
+        attributeKey="lengthMm"
+        attributeValue=selectedItem.propertyList.lengthMm
+        onApplyChange=(action 'updateSelectedItemPropertyList')}}
+
+        {{products/modal-editable-row
+        attributeLabel="Korkeus"
+        attributeKey="heightMm"
+        attributeValue=selectedItem.propertyList.heightMm
+        onApplyChange=(action 'updateSelectedItemPropertyList')}}
+
+        {{products/modal-editable-row
+        attributeLabel="Leveys"
+        attributeKey="widthMm"
+        attributeValue=selectedItem.propertyList.widthMm
+        onApplyChange=(action 'updateSelectedItemPropertyList')}}
+
+        {{products/modal-editable-row
+        attributeLabel="värit"
+        attributeKey="colors"
+        attributeValue=selectedItem.propertyList.colors
+        onApplyChange=(action 'updateSelectedItemPropertyList')}}
+
+        {{products/modal-editable-row
+        attributeLabel="LED"
+        attributeKey="ledColor"
+        attributeValue=selectedItem.propertyList.ledColor
+        onApplyChange=(action 'updateSelectedItemPropertyList')}}
+
+        {{products/modal-editable-row
+        attributeLabel="Nätit kaapelit"
+        attributeKey="prettyCables"
+        attributeValue=selectedItem.prettyCables
+        onApplyChange=(action 'updateSelectedItem')}}
+      {{/if}}
+
+      {{#if (eq activeTab "technical")}}
+        {{products/modal-editable-row
+        attributeLabel="Kokoluokka"
+        attributeKey="formFactor"
+        attributeValue=selectedItem.formFactor
+        onApplyChange=(action 'updateSelectedItem')}}
+
+        {{products/modal-editable-row
+        attributeLabel="Hyötysuhde"
+        attributeKey="efficiency"
+        attributeValue=selectedItem.efficiency
+        onApplyChange=(action 'updateSelectedItem')}}
+
+        {{products/modal-editable-row
+        attributeLabel="+12V kapasiteetti"
+        attributeKey="amps12v"
+        attributeValue=selectedItem.amps12v
+        onApplyChange=(action 'updateSelectedItem')}}
+
+        {{products/modal-editable-row
+        attributeLabel="Alkuperäinen valmistaja"
+        attributeKey="oem"
+        attributeValue=selectedItem.oem
+        onApplyChange=(action 'updateSelectedItem')}}
+
+        {{products/modal-editable-row
+        attributeLabel="Kaapelit"
+        attributeKey="cables"
+        attributeValue=selectedItem.cables
+        onApplyChange=(action 'updateSelectedItem')}}
+
+        {{products/modal-editable-row
+        attributeLabel="EPS-kaapelin pituus"
+        attributeKey="epsLengthCm"
+        attributeValue=selectedItem.epsLengthCm
+        onApplyChange=(action 'updateSelectedItem')}}
+
+        {{products/modal-editable-row
+        attributeLabel="EPS-kaapelin pituus"
+        attributeKey="8-pin PCIe-liittimiä"
+        attributeValue=selectedItem.pcie8pinQty
+        onApplyChange=(action 'updateSelectedItem')}}
+
+        {{products/modal-editable-row
+        attributeLabel="EPS-kaapelin pituus"
+        attributeKey="6-pin PCIe-liittimiä"
+        attributeValue=selectedItem.pcie6pinQty
+        onApplyChange=(action 'updateSelectedItem')}}
+
+        {{products/modal-editable-row
+        attributeLabel="SATA-liittimiä"
+        attributeKey="sataQty"
+        attributeValue=selectedItem.sataQty
+        onApplyChange=(action 'updateSelectedItem')}}
+
+        {{products/modal-editable-row
+        attributeLabel="Semipassiivinen tuuletin"
+        attributeKey="semipassive"
+        attributeValue=selectedItem.semipassive
+        onApplyChange=(action 'updateSelectedItem')}}
+
+        <!-- Tuuletinmoodin kytkin puuttuu -->
+
+        {{products/modal-editable-row
+        attributeLabel="Tuulettimen id"
+        attributeKey=""
+        attributeValue=""
+        onApplyChange=(action 'updateSelectedItem')}}
+      {{/if}}
+    </tbody>
+  </table>
 {{/products/modal-main}}
 
 <div class="col-xs-12">
-
-{{#if model}}
-{{#each model as |item index|}}
+  {{#if model}}
+  {{#each model as |item index|}}
   <div class="product-container">
 
     <div class="row">
-      <div class="col-xs-12" data-toggle="modal" data-target="#product-details" {{action "setSelectedItem" item on="click"}}>
+      <div class="col-xs-12" data-toggle="modal" data-target="#product-details" data-keyboard=false {{action "setSelectedItem" item on="click"}}>
         <div class="row">
           <div class="col-xs-12 product-heading">
             <span class="name">{{item.propertyList.brand}} {{item.propertyList.productName}}</span>
@@ -20,8 +185,8 @@
         </div>
       </div>
     </div>
-  </div>
-{{/each}}
-{{/if}}
 
+  </div>
+  {{/each}}
+  {{/if}}
 </div>
