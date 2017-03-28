@@ -2,12 +2,10 @@
   {{component tab product=selectedItem}}
 {{/products/modal-main}}
 
-<span>{{count}} hakutulosta</span>
-<div class="vertical-space"></div>
-<div class="row listings-area">
-  <div class="col-xs-12">
-  {{#if model}}
-  {{#each model as |item index|}}
+<div class="col-xs-12">
+
+{{#if model}}
+{{#each model as |item index|}}
   <div class="product-container">
 
     <div class="row">
@@ -23,7 +21,7 @@
       </div>
     </div>
   </div>
-  {{/each}}
-  {{/if}}
-  </div>
+{{/each}}
+{{/if}}
+
 </div>

@@ -34,8 +34,8 @@ testem.log
 /app/routes/docs
 
 # styles
-/app/styles/docs-page.css
-/app/styles/sign-in-page.css
+/app/styles/not*.css
+/app/styles/old*.css
 
 # templates
 /app/templates/components/products/shop-filter.hbs
