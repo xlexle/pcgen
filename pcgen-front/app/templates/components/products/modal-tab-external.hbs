@@ -1,0 +1,51 @@
+{{products/modal-editable-row
+attributeLabel="Pituus"
+attributeKey="lengthMm"
+attributeValue=propertyList.lengthMm
+type="number"
+min=0
+max=999
+placeholder="0"
+units=" mm"
+onApplyChange=(action 'requestUpdatePropertyList')}}
+
+{{products/modal-editable-row
+attributeLabel="Korkeus"
+attributeKey="heightMm"
+attributeValue=propertyList.heightMm
+type="number"
+min=0
+max=999
+placeholder="0"
+units=" mm"
+onApplyChange=(action 'requestUpdatePropertyList')}}
+
+{{products/modal-editable-row
+attributeLabel="Leveys"
+attributeKey="widthMm"
+attributeValue=propertyList.widthMm
+type="number"
+min=0
+max=999
+placeholder="0"
+units=" mm"
+onApplyChange=(action 'requestUpdatePropertyList')}}
+
+{{products/modal-editable-row
+attributeLabel="värit"
+attributeKey="colors"
+attributeValue=propertyList.colors
+type="text"
+maxlength=64
+placeholder="musta, valkoinen, ..."
+onApplyChange=(action 'requestUpdatePropertyList')}}
+
+{{products/modal-editable-row
+attributeLabel="LED"
+attributeKey="ledColor"
+attributeValue=propertyList.ledColor
+type="text"
+maxlength=64
+onApplyChange=(action 'requestUpdatePropertyList')}}
+
+{{yield}}

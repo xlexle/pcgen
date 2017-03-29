@@ -2,19 +2,24 @@
 
 {{#if isEditing}}
 <td class="modal-cell editable">
-  {{input maxlength=64 class="form-control input-sm" value=value escape-press="cancelEditing" enter="applyChange"}}
+  <!-- need components for
+  - text input -> customizable: maxlength placeholder
+  - number input -> customizable: min max placeholder
+  - select -> everything in yielded block?
+  - yes/no input - checkbox? buttons? -->
+  {{#if (eq type "text")}}
+  {{input maxlength=maxlength placeholder=placeholder class="form-control input-sm" value=value escape-press="cancelEditing" enter="applyChange"}}
+  {{/if}}
+  {{#if (eq type "number")}}
+  {{input type=type min=min max=max placeholder=placeholder class="form-control input-sm" value=value escape-press="cancelEditing" enter="applyChange"}}
+  {{/if}}
+
   <button type="button" class="btn btn-xs btn-danger" {{action "cancelEditing"}}><i class="fa fa-times" aria-hidden="true"></i></button>
   <button type="button" class="btn btn-xs btn-success" {{action "applyChange"}}><i class="fa fa-check" aria-hidden="true"></i></button>
 </td>
 
 {{else}}
 <td class="modal-cell clickable" {{action "enableEditing" attributeKey attributeValue on="click"}}>
-  <span>
-    {{#if (eq attributeKey 'warranty')}}
-    {{attributeValue}} vuotta
-    {{else}}
-    {{attributeValue}}
-    {{/if}}
-  </span>
+  <span>{{attributeValue}}{{units}}</span>
 </td>
 {{/if}}

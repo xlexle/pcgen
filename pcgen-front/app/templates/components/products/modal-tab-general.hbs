@@ -1,0 +1,70 @@
+{{products/modal-editable-row
+attributeLabel="Merkki"
+attributeKey="brand"
+attributeValue=propertyList.brand
+type="text"
+maxlength=64
+onApplyChange=(action 'requestUpdatePropertyList')}}
+
+{{products/modal-editable-row
+attributeLabel="Tuotenimi"
+attributeKey="productName"
+attributeValue=propertyList.productName
+type="text"
+maxlength=64
+onApplyChange=(action 'requestUpdatePropertyList')}}
+
+{{products/modal-editable-row
+attributeLabel="Tuotenumero"
+attributeKey="sku"
+attributeValue=propertyList.sku
+type="text"
+maxlength=64
+onApplyChange=(action 'requestUpdatePropertyList')}}
+
+{{products/modal-editable-row
+attributeLabel="Kuvaus"
+attributeKey="description"
+attributeValue=propertyList.description
+type="text"
+maxlength=256
+onApplyChange=(action 'requestUpdatePropertyList')}}
+
+{{products/modal-editable-row
+attributeLabel="Takuun kesto"
+attributeKey="warranty"
+attributeValue=propertyList.warranty
+type="number"
+min=0
+max=99
+placeholder="0"
+units=" vuotta"
+onApplyChange=(action 'requestUpdatePropertyList')}}
+
+{{products/modal-editable-row
+attributeLabel="Valmistajan URL"
+attributeKey="specsUrl"
+attributeValue=propertyList.specsUrl
+type="text"
+maxlength=256
+onApplyChange=(action 'requestUpdatePropertyList')}}
+
+{{products/modal-editable-row
+attributeLabel="Hinta.fi URL"
+attributeKey="pricesUrl"
+attributeValue=propertyList.pricesUrl
+type="text"
+maxlength=256
+onApplyChange=(action 'requestUpdatePropertyList')}}
+
+{{products/modal-editable-row
+attributeLabel="Laatu"
+attributeKey="quality"
+attributeValue=propertyList.quality
+type="number"
+min=0
+max=999
+placeholder="0"
+onApplyChange=(action 'requestUpdatePropertyList')}}
+
+{{yield}}

@@ -15,7 +15,7 @@ export default Ember.Controller.extend({
       this.set("activeTab", tab);
     },
 
-    updateSelectedItem(key, value){
+    updateProduct(key, value){
       let product = this.get('selectedItem');
 
       product.set(key, value);
@@ -26,7 +26,7 @@ export default Ember.Controller.extend({
       });
     },
 
-    updateSelectedItemPropertyList(key, value){
+    updatePropertyList(key, value){
       this.get('selectedItem').get('propertyList').then((propertyList) => {
         propertyList.set(key, value);
         propertyList.save().catch((adapterError) => {
